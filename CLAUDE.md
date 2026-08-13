@@ -37,6 +37,12 @@ Its identity and retrieval record are in `sources/aicpa/2026-01/`.
 
 ## Gotchas
 
+- GitHub CLI authentication is persisted in the Windows keyring. Inside the
+  restricted sandbox, blocked API access can make `gh auth status` falsely
+  report that the keyring token is invalid (often alongside a
+  `127.0.0.1:9` proxy failure). Before asking James to authenticate again,
+  rerun `gh auth status -h github.com` and `gh api user` with normal network
+  permission. Do not infer credential loss from the sandboxed check alone.
 - `goal.md` was ratified by James on 2026-08-13. Contract changes require an
   explicit dated amendment.
 - The project baseline is intentionally zero. No question, taxonomy row,
