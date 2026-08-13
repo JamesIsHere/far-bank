@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "reference_id": "far-ref-schema-fixture-current-assets",
+  "reference_version_id": "far-ref-schema-fixture-current-assets.v001",
+  "version_number": 1,
+  "record_purpose": "schema_fixture",
+  "authority_class": "authoritative_accounting",
+  "identity": {
+    "issuer": "Synthetic fixture issuer",
+    "title": "Synthetic current-assets reference used only to exercise the schema",
+    "document_id": "SCHEMA-FIXTURE-001",
+    "publication_or_update_date": "2026-08-13",
+    "effective_from": "2026-08-13",
+    "effective_through": null
+  },
+  "retrieval": {
+    "retrieved_at": "2026-08-13T18:00:00Z",
+    "locator": "fixture://schema-only/current-assets",
+    "content_identity": "Synthetic fixture; not an admitted source and not accounting authority."
+  },
+  "currency": {
+    "assessed_at": "2026-08-13T18:00:00Z",
+    "assessment": "current",
+    "basis": "Synthetic calibration fixture is current only within its closed fixture world; it cannot support a real candidate."
+  }
+}

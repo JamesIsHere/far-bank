@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "far-source-impact-schema-fixture-001",
+  "recorded_at": "2026-08-13T18:15:00Z",
+  "actor": {
+    "actor_type": "human",
+    "actor_id": "fixture-reviewer",
+    "display_name": "Synthetic fixture reviewer"
+  },
+  "changed_reference": {
+    "prior_reference_version_id": "far-ref-schema-fixture-current-assets.v001",
+    "new_reference_version_id": "far-ref-schema-fixture-current-assets.v002"
+  },
+  "impact_outcome": "unaffected",
+  "basis": "Schema-only illustration of a bounded impact finding; not an actual currency ruling.",
+  "subjects": [
+    {
+      "question_id": "far-q-000001",
+      "version_id": "far-q-000001.v001",
+      "content_sha256": "76b28b75f1097ad3971259e9383b4415f4903a0de0ac561feba1794d9dd3c598",
+      "impact_detail": "Fixture-only assertion of no impact used to exercise the append-only event shape."
+    }
+  ]
+}

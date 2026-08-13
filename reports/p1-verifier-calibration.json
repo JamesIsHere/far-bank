@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0.0",
+  "checker_id": "far-p1-question-verifier",
+  "checker_version": "1.0.0",
+  "required_check_set_id": "far-p1-sample-candidate-checks.v001",
+  "baseline": {
+    "purpose": "schema_fixture",
+    "question_id": "far-q-000001",
+    "version_id": "far-q-000001.v001",
+    "content_sha256": "76b28b75f1097ad3971259e9383b4415f4903a0de0ac561feba1794d9dd3c598",
+    "claim_limit": "Fixture-world calibration only; not correctness, source admission, human approval, or learner readiness."
+  },
+  "checks": [
+    {
+      "check_id": "SCHEMA_CONTRACT",
+      "category": "SCHEMA",
+      "clean_outcome": "pass",
+      "clean_detail": "Closed record shapes and cross-record structural contracts pass.",
+      "calibration_fixture_id": "schema-missing-provenance",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "QUESTION_SCHEMA: ['content']: 'authorship' is a required property"
+    },
+    {
+      "check_id": "RECOMPUTE_INDEPENDENT",
+      "category": "RECOMPUTE",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent generic linear-combination route recomputed 180000 USD.",
+      "calibration_fixture_id": "recompute-wrong-coefficient",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "Independent result 100000 does not equal keyed structured value 180000."
+    },
+    {
+      "check_id": "RULE_TRACE_CURRENT",
+      "category": "RULE_TRACE",
+      "clean_outcome": "pass",
+      "clean_detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+      "calibration_fixture_id": "rule-trace-superseded",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "rule version is not assessed current"
+    },
+    {
+      "check_id": "DISTRACTOR_MODELS",
+      "category": "DISTRACTORS",
+      "clean_outcome": "pass",
+      "clean_detail": "All three named distractor error models reproduce their distinct option values.",
+      "calibration_fixture_id": "distractor-model-wrong-result",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "option B model produced 180000, not 330000"
+    },
+    {
+      "check_id": "LANGUAGE_FAIRNESS",
+      "category": "LANGUAGE",
+      "clean_outcome": "pass",
+      "clean_detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+      "calibration_fixture_id": "language-double-negative",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "stem contains a forbidden or gratuitous double-negative pattern"
+    },
+    {
+      "check_id": "ORIGINALITY_BOUNDARY",
+      "category": "ORIGINALITY",
+      "clean_outcome": "pass",
+      "clean_detail": "Originality language stays within the exact named comparison boundary.",
+      "calibration_fixture_id": "originality-global-claim",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "unsupported originality claim: globally unique, legal clearance"
+    },
+    {
+      "check_id": "APPROVAL_INTEGRITY",
+      "category": "APPROVAL_INTEGRITY",
+      "clean_outcome": "pass",
+      "clean_detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+      "calibration_fixture_id": "approval-stale-after-content-edit",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "event subject does not match the immutable question version; event subject does not match the immutable question version"
+    },
+    {
+      "check_id": "VARIETY_EVIDENCE",
+      "category": "VARIETY",
+      "clean_outcome": "pass",
+      "clean_detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+      "calibration_fixture_id": "variety-observation-mismatch",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "irrelevant_fact_count records 99, expected observable value 2"
+    }
+  ],
+  "calibration_summary": {
+    "individual_check_count": 8,
+    "purpose_built_red_fixture_count": 8,
+    "waiver_count": 0,
+    "uncalibrated_check_ids": []
+  }
+}

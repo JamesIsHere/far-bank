@@ -1,0 +1,67 @@
+[
+  {
+    "check_id": "SOURCE_SCHEMA",
+    "passed": true,
+    "detail": "valid"
+  },
+  {
+    "check_id": "SOURCE_FILE",
+    "passed": true,
+    "detail": "size expected=788395 actual=788395"
+  },
+  {
+    "check_id": "SOURCE_HASH",
+    "passed": true,
+    "detail": "sha256 expected=0fca69b073bb0ed46b06ca51c2e1dfaec434346e628f6996fa34b19c2bc02680 actual=0fca69b073bb0ed46b06ca51c2e1dfaec434346e628f6996fa34b19c2bc02680"
+  },
+  {
+    "check_id": "SOURCE_PDF_IDENTITY",
+    "passed": true,
+    "detail": "pages expected=115 actual=115; encrypted=False"
+  },
+  {
+    "check_id": "SOURCE_EFFECTIVE",
+    "passed": true,
+    "detail": "effective_from=2026-01-01; cover phrases=['Uniform CPA Examination Blueprints', 'Aug. 18, 2025', 'Effective date: January 2026']"
+  },
+  {
+    "check_id": "TAXONOMY_SCHEMA",
+    "passed": true,
+    "detail": "valid"
+  },
+  {
+    "check_id": "TAXONOMY_SOURCE_BINDING",
+    "passed": true,
+    "detail": "source_id=aicpa-cpa-exam-blueprints-2026 expected=aicpa-cpa-exam-blueprints-2026; manifest=sources/aicpa/2026-01/source-manifest.json"
+  },
+  {
+    "check_id": "TAXONOMY_IDS",
+    "passed": true,
+    "detail": "duplicates=[]; missing=0"
+  },
+  {
+    "check_id": "TAXONOMY_PARENTAGE_ORDER",
+    "passed": true,
+    "detail": "valid"
+  },
+  {
+    "check_id": "TAXONOMY_LOCATORS",
+    "passed": true,
+    "detail": "valid"
+  },
+  {
+    "check_id": "TAXONOMY_TASK_SOURCE",
+    "passed": true,
+    "detail": "valid"
+  },
+  {
+    "check_id": "TAXONOMY_COMPLETENESS",
+    "passed": true,
+    "detail": "counts 3/22/18/113"
+  },
+  {
+    "check_id": "TAXONOMY_RENDER",
+    "passed": true,
+    "detail": "expected_sha256=55c4ea79a22ed66db982f8aa38dcb7132528cfcbdcab130524238f432e6a9634 actual_sha256=55c4ea79a22ed66db982f8aa38dcb7132528cfcbdcab130524238f432e6a9634"
+  }
+]

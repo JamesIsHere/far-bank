@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "reference_id": "far-ref-fasb-codification-live",
+  "reference_version_id": "far-ref-fasb-codification-live.v001",
+  "version_number": 1,
+  "record_purpose": "admitted_evidence",
+  "authority_class": "authoritative_accounting",
+  "identity": {
+    "issuer": "Financial Accounting Standards Board",
+    "title": "FASB Accounting Standards Codification - live official research system",
+    "document_id": "FASB-ASC-LIVE",
+    "publication_or_update_date": "2009-06-30",
+    "effective_from": "2009-09-15",
+    "effective_through": null
+  },
+  "retrieval": {
+    "retrieved_at": "2026-08-13T20:00:00Z",
+    "locator": "https://asc.fasb.org/",
+    "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+  },
+  "currency": {
+    "assessed_at": "2026-08-13T20:00:00Z",
+    "assessment": "current",
+    "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+  },
+  "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+}

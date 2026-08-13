@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "rule_id": "far-rule-subsequent-event-recognition",
+  "rule_version_id": "far-rule-subsequent-event-recognition.v001",
+  "version_number": 1,
+  "content_sha256": "d05989802c766c85b8b7a2a30e62a9ba5168e3a832b768e33f82807d46529b14",
+  "content": {
+    "title": "Recognized and nonrecognized subsequent events",
+    "rule_statement": "A subsequent event is recognized when it provides additional evidence about conditions existing at the balance-sheet date; an event evidencing conditions arising after that date is not recognized in those statements, although material nonrecognized events may require disclosure.",
+    "applicability": "For-profit entity evaluating events after year-end but before financial statements are issued.",
+    "assertions": [
+      {
+        "assertion_id": "assertion-recognized-subsequent-event",
+        "claim": "Recognize the effects of subsequent evidence about a condition that existed at the balance-sheet date."
+      },
+      {
+        "assertion_id": "assertion-nonrecognized-subsequent-event",
+        "claim": "Do not adjust for a condition arising after the balance-sheet date; disclose it if material under the applicable requirements."
+      }
+    ],
+    "source_citations": [
+      {
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "locator": "FASB ASC 855-10-25-1, 855-10-25-3, and 855-10-50-2 (live official Codification)",
+        "role": "controlling",
+        "supports_assertion_ids": [
+          "assertion-recognized-subsequent-event",
+          "assertion-nonrecognized-subsequent-event"
+        ]
+      }
+    ],
+    "currency": {
+      "assessed_at": "2026-08-13T20:00:00Z",
+      "assessment": "current",
+      "basis": "The live official Codification locators and FASB-hosted 2025 agenda-consultation materials quoting the recognition principle were cross-checked on 2026-08-13; no effective amendment affecting these facts was identified."
+    },
+    "authorship_provenance": {
+      "purpose": "admitted_evidence",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "model_id": "openai-codex-gpt-5",
+      "material_input_ids": [
+        "far-ref-fasb-codification-live.v001",
+        "FASB ASC 855-10-25-1, 855-10-25-3, and 855-10-50-2 (live official Codification)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "content-hash-mismatch",
+  "base": "valid-question-version.json",
+  "expected_contract": "CONTENT_HASH",
+  "mutations": [
+    {"operation": "replace", "path": "/content/stem", "value": "Mutated after exact-version binding."}
+  ]
+}

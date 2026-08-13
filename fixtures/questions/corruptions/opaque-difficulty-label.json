@@ -1,0 +1,8 @@
+{
+  "fixture_id": "opaque-difficulty-label",
+  "base": "valid-question-version.json",
+  "expected_contract": "QUESTION_SCHEMA",
+  "mutations": [
+    {"operation": "replace", "path": "/content/difficulty_profile/0", "value": {"label": "hard"}}
+  ]
+}

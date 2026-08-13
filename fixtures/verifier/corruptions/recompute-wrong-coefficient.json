@@ -1,0 +1,9 @@
+{
+  "fixture_id": "recompute-wrong-coefficient",
+  "check_id": "RECOMPUTE_INDEPENDENT",
+  "mutations": [
+    {"record": "question", "operation": "replace", "path": "/content/correctness_evidence/route/linear_combination/terms/2/coefficient", "value": 0}
+  ],
+  "rehash": ["question"],
+  "rebind_events": true
+}

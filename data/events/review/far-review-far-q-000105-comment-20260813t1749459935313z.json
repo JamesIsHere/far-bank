@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "far-review-far-q-000105-comment-20260813t1749459935313z",
+  "recorded_at": "2026-08-13T17:49:45.9935313Z",
+  "action": "comment",
+  "actor": {
+    "actor_type": "human",
+    "actor_id": "james",
+    "display_name": "James"
+  },
+  "subject": {
+    "question_id": "far-q-000105",
+    "version_id": "far-q-000105.v001",
+    "content_sha256": "927cd265746bfb68773d846e5a675f461d8ce8dda92f37bc258f59afb9d1efb4"
+  },
+  "comment": "The sample cannot use answer A as the correct position for every item."
+}

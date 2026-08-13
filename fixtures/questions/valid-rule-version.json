@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "rule_id": "far-rule-schema-fixture-current-assets",
+  "rule_version_id": "far-rule-schema-fixture-current-assets.v001",
+  "version_number": 1,
+  "content_sha256": "ec6be089c08ea307fd5e6b955ec25b257ec7d64073c3f02977101c87fda83ce8",
+  "content": {
+    "title": "Synthetic classification rule fixture",
+    "rule_statement": "For this schema fixture only, cash, receivables, and inventory are treated as current assets while equipment is not.",
+    "applicability": "Schema validation only; this record is neither admitted accounting evidence nor a G2 sample rule.",
+    "assertions": [
+      {
+        "assertion_id": "assertion-current-assets-fixture",
+        "claim": "Add the fixture's cash, receivables, and inventory amounts to obtain its current-assets subtotal."
+      }
+    ],
+    "source_citations": [
+      {
+        "reference_version_id": "far-ref-schema-fixture-current-assets.v001",
+        "locator": "Synthetic fixture statement",
+        "role": "controlling",
+        "supports_assertion_ids": ["assertion-current-assets-fixture"]
+      }
+    ],
+    "currency": {
+      "assessed_at": "2026-08-13T18:00:00Z",
+      "assessment": "current",
+      "basis": "Synthetic calibration rule is current only within its closed fixture world; a real candidate must bind admitted current authority."
+    },
+    "authorship_provenance": {
+      "purpose": "schema_fixture",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "model_id": "openai-codex-fixture-author",
+      "material_input_ids": ["goal-question-contract", "far-ref-schema-fixture-current-assets.v001"]
+    }
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000106",
+  "version_id": "far-q-000106.v002",
+  "version_number": 2,
+  "content_sha256": "5cce1108d25cc564ba5b7df23544c55c78155105a7e4e116daa981a0bb9fb639",
+  "content": {
+    "authorship": {
+      "purpose": "sample_candidate",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T20:15:00Z",
+      "model_id": "openai-codex-gpt-5",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Bind the exact FAR task and skill."
+        },
+        {
+          "input_id": "far-rule-subsequent-event-recognition.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Control the accounting treatment and answer."
+        },
+        {
+          "input_id": "far-ref-fasb-codification-live.v001",
+          "input_kind": "source",
+          "version_or_date": "retrieved-2026-08-13",
+          "use": "Provide authoritative U.S. GAAP provenance."
+        },
+        {
+          "input_id": "far-p1-g2-sample.v001",
+          "input_kind": "human_brief",
+          "version_or_date": "v001",
+          "use": "Bounded G2 sample design under the ratified goal."
+        },
+        {
+          "input_id": "far-g2-answer-position-comment-20260813",
+          "input_kind": "human_brief",
+          "version_or_date": "2026-08-13",
+          "use": "Rebalance keyed answer positions across the six-item G2 sample following James's exact-version comment."
+        }
+      ]
+    },
+    "stem": "Before issuing its year-end financial statements, a company learns that a customer owing $90,000 entered bankruptcy because of severe financial difficulty already present at year-end; no credit loss has yet been recorded for that receivable. A warehouse with a carrying amount of $400,000 was destroyed by a fire that began after year-end. The company also settles a year-end lawsuit for $60,000 after having accrued $35,000. After distinguishing adjustment from disclosure, what total additional loss should the company recognize in its year-end financial statements?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$490,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 490000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-recognize-fire-omit-lawsuit",
+          "name": "Recognize fire and omit lawsuit update",
+          "misconception": "Adjusts for the post-year-end fire but overlooks the lawsuit increment.",
+          "derivation": "$90,000 + $400,000 = $490,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-bankrupt-receivable",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-fire-loss",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "B",
+        "text": "$515,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 515000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-recognize-all-events",
+          "name": "Recognize all events",
+          "misconception": "Includes the nonrecognized fire along with both recognized adjustments.",
+          "derivation": "$90,000 + $400,000 + ($60,000 - $35,000) = $515,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-bankrupt-receivable",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-fire-loss",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-lawsuit-settlement",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-lawsuit-accrual",
+                  "coefficient": -1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "C",
+        "text": "$115,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 115000,
+          "unit": "USD"
+        },
+        "is_keyed": true
+      },
+      {
+        "option_id": "D",
+        "text": "$150,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 150000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-ignore-prior-accrual",
+          "name": "Ignore prior lawsuit accrual",
+          "misconception": "Adds the full settlement rather than only the increment over the existing accrual.",
+          "derivation": "$90,000 + $60,000 = $150,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-bankrupt-receivable",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-lawsuit-settlement",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.3",
+        "group_id": "far.area.3.group.g",
+        "topic_id": null,
+        "representative_task_id": "far.area.3.group.g.task.003",
+        "skill_level": "analysis",
+        "mapping_rationale": "The item requires analyzing three event narratives to derive adjustment and disclosure consequences.",
+        "mcq_scope_limit": "The MCQ derives a numerical adjustment but does not draft complete note disclosures or investigate source documents."
+      }
+    ],
+    "accounting_model_id": "far-model-subsequent-events",
+    "facts": [
+      {
+        "fact_id": "fact-bankrupt-receivable",
+        "statement": "The receivable supported as impaired at year-end is $90,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 90000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Recognized because the bankruptcy confirms a year-end condition."
+      },
+      {
+        "fact_id": "fact-fire-loss",
+        "statement": "The post-year-end warehouse carrying amount is $400,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 400000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "The fire condition arose after year-end and is not recognized in the year-end statements."
+      },
+      {
+        "fact_id": "fact-lawsuit-settlement",
+        "statement": "The lawsuit settled for $60,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 60000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Provides the final amount for a year-end condition."
+      },
+      {
+        "fact_id": "fact-lawsuit-accrual",
+        "statement": "The company already accrued $35,000 for the lawsuit.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 35000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Subtracted to obtain the additional lawsuit loss."
+      }
+    ],
+    "assumptions": [
+      {
+        "assumption_id": "assumption-no-prior-credit-loss",
+        "statement": "No credit loss has yet been recorded for the bankrupt customer's receivable.",
+        "basis": "explicit_in_stem"
+      }
+    ],
+    "solution": {
+      "end_ask": "Total only the additional year-end losses supported by recognized subsequent events.",
+      "representation": {
+        "kind": "financial_statement_view",
+        "setup": "Additional loss = confirmed year-end receivable loss + (lawsuit settlement - existing accrual); exclude post-year-end fire from recognition."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Classify each event by when its underlying condition arose.",
+          "fact_ids_used": [
+            "fact-bankrupt-receivable",
+            "fact-fire-loss",
+            "fact-lawsuit-settlement",
+            "fact-lawsuit-accrual"
+          ],
+          "assertion_ids_used": [
+            "assertion-recognized-subsequent-event",
+            "assertion-nonrecognized-subsequent-event"
+          ],
+          "result": "Recognize the bankruptcy evidence and lawsuit update; do not recognize the later-arising fire in the year-end amounts."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Calculate the additional lawsuit loss.",
+          "fact_ids_used": [
+            "fact-lawsuit-settlement",
+            "fact-lawsuit-accrual"
+          ],
+          "assertion_ids_used": [
+            "assertion-recognized-subsequent-event"
+          ],
+          "result": "$60,000 - $35,000 = $25,000."
+        },
+        {
+          "step_number": 3,
+          "instruction": "Total the recognized additional losses.",
+          "fact_ids_used": [
+            "fact-bankrupt-receivable",
+            "fact-lawsuit-settlement",
+            "fact-lawsuit-accrual"
+          ],
+          "assertion_ids_used": [
+            "assertion-recognized-subsequent-event"
+          ],
+          "result": "$90,000 + $25,000 = $115,000."
+        }
+      ],
+      "keyed_answer_option_id": "C",
+      "keyed_answer_rationale": "The bankruptcy confirms a year-end loss of $90,000 and the lawsuit needs another $25,000; the later-arising fire is not recognized.",
+      "faster_or_safer_route": "Draw a year-end line: put pre-existing conditions on the adjustment side, later-arising conditions on the disclosure-only side, then subtract any amount already accrued."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-subsequent-events",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {
+              "fact_id": "fact-bankrupt-receivable",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-lawsuit-settlement",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-lawsuit-accrual",
+              "coefficient": -1
+            }
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {
+            "mode": "none",
+            "decimal_places": 0
+          }
+        }
+      },
+      "producer_component_id": "p1-sample-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T20:15:00Z",
+        "model_id": "openai-codex-gpt-5"
+      },
+      "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-subsequent-event-recognition.v001",
+        "assertion_ids": [
+          "assertion-recognized-subsequent-event",
+          "assertion-nonrecognized-subsequent-event"
+        ],
+        "applied_to_fact_ids": [
+          "fact-bankrupt-receivable",
+          "fact-fire-loss",
+          "fact-lawsuit-settlement",
+          "fact-lawsuit-accrual"
+        ],
+        "application": "The bankruptcy and lawsuit provide evidence about year-end conditions; the post-year-end fire is excluded from recognition and remains a disclosure consideration."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "timing",
+        "observable_evidence": [
+          "Three events must be placed on the correct side of the year-end condition boundary."
+        ]
+      },
+      {
+        "tag": "fact_selection",
+        "observable_evidence": [
+          "The largest amount belongs to a nonrecognized event and is excluded from the numerical adjustment."
+        ]
+      },
+      {
+        "tag": "financial_statement_view",
+        "observable_evidence": [
+          "The solver must distinguish additional recognized loss from disclosure-only information."
+        ]
+      },
+      {
+        "tag": "end_ask_location",
+        "observable_evidence": [
+          "The numerical end ask follows a dense three-event narrative."
+        ]
+      },
+      {
+        "tag": "elimination_leverage",
+        "observable_evidence": [
+          "Options reveal fire recognition and failure to net the prior accrual."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "rule_count",
+            "value": 1,
+            "unit": "rules",
+            "interpretation": "Exact rule traces applied to the item."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "dependent_step_count",
+            "value": 3,
+            "unit": "steps",
+            "interpretation": "Ordered solution steps required by the authored route."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "irrelevant_fact_count",
+            "value": 1,
+            "unit": "facts",
+            "interpretation": "Structured facts excluded from the numerical end ask."
+          }
+        ]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "classification_boundary_count",
+            "value": 3,
+            "unit": "boundaries",
+            "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+          }
+        ]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "plausible_error_model_count",
+            "value": 3,
+            "unit": "models",
+            "interpretation": "Each nonkey has a distinct executable error model."
+          }
+        ]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "arithmetic_operation_count",
+            "value": 2,
+            "unit": "operations",
+            "interpretation": "Arithmetic operations in the independent keyed route."
+          }
+        ]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [
+        "far-p1-g2-sample.v002"
+      ],
+      "methods": [
+        "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+      ],
+      "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+    }
+  }
+}

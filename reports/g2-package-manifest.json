@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "far-g2-review-package.v001",
+  "package_status": "ready_for_human_gate_not_ratified",
+  "sample_id": "far-p1-g2-sample.v001",
+  "item_count": 6,
+  "learner_ready_count": 0,
+  "coverage_contribution": 0,
+  "canonical_review_event_count": 0,
+  "gate_sequence": [
+    "six exact-version item verdicts, one per turn",
+    "coverage floors",
+    "variety matrix and anti-cloning rules",
+    "difficulty rubric",
+    "prose and fairness rules",
+    "correctness-route expansion",
+    "artifact-first hybrid architecture",
+    "dated goal.md amendment ratification"
+  ],
+  "artifacts": [
+    {
+      "path": "data/sample/p1/manifest.json",
+      "sha256": "702cf9d0c7ff04ebf78507f672575cc1b1ac202a76dd2fdf8406cd045518abe9"
+    },
+    {
+      "path": "reports/p1-sample-verification.json",
+      "sha256": "ced71e6b486c22bdf78c51b0f19df9b4ce8b39b5825a0024d5bbaa0ce4670012"
+    },
+    {
+      "path": "reports/p1-verifier-calibration.json",
+      "sha256": "d2c5127c0b654748dea86ad6d7c145b11d79ab4b3794901db4745d03853ffba0"
+    },
+    {
+      "path": "review-surface/app/review-data.json",
+      "sha256": "4a8dfd4746ca56132332c43c62f73bd9e782fcd705e5025913ad091e4d4f5fcf"
+    },
+    {
+      "path": "docs/gates/g2-proposed-amendment.md",
+      "sha256": "6130ba3f90a709af2caff6c78490a2e52fc2f6817de4bda6c8b16ffead39acde"
+    },
+    {
+      "path": "docs/architecture/0001-artifact-first-hybrid.md",
+      "sha256": "e0434fabb18a999ca088a646295adf6642d32364e6924dc7a3342aa61949bf75"
+    },
+    {
+      "path": "docs/architecture/0002-p1-record-contracts.md",
+      "sha256": "ddea6e30f22edadad4abdd4b04945e3d20e9f702952e9fa40dc0ccf88488e103"
+    }
+  ],
+  "limitations": [
+    "All six sample items remain candidate-only and contribute zero approved coverage.",
+    "The within-bank originality comparison is bounded to the named six-item sample.",
+    "All sample correctness routes are linear; production requires additional red-calibrated route families.",
+    "The FASB Codification reference is live and mutable; exact locators require source-change revalidation.",
+    "No browser visual or G3 hands-on workflow approval is claimed.",
+    "Every coverage, variety, difficulty, and prose rule in the proposal is unratified until James acts."
+  ]
+}

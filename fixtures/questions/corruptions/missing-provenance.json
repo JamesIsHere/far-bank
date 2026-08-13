@@ -1,0 +1,8 @@
+{
+  "fixture_id": "missing-provenance",
+  "base": "valid-question-version.json",
+  "expected_contract": "QUESTION_SCHEMA",
+  "mutations": [
+    {"operation": "remove", "path": "/content/authorship"}
+  ]
+}

@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000105",
+  "version_id": "far-q-000105.v002",
+  "version_number": 2,
+  "content_sha256": "347b2387873b626926adec98d1b5e17130c573285cfd40b7b889a637f5437be1",
+  "content": {
+    "authorship": {
+      "purpose": "sample_candidate",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T20:15:00Z",
+      "model_id": "openai-codex-gpt-5",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Bind the exact FAR task and skill."
+        },
+        {
+          "input_id": "far-rule-loss-contingency-range.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Control the accounting treatment and answer."
+        },
+        {
+          "input_id": "far-ref-fasb-codification-live.v001",
+          "input_kind": "source",
+          "version_or_date": "retrieved-2026-08-13",
+          "use": "Provide authoritative U.S. GAAP provenance."
+        },
+        {
+          "input_id": "far-p1-g2-sample.v001",
+          "input_kind": "human_brief",
+          "version_or_date": "v001",
+          "use": "Bounded G2 sample design under the ratified goal."
+        },
+        {
+          "input_id": "far-g2-answer-position-comment-20260813",
+          "input_kind": "human_brief",
+          "version_or_date": "2026-08-13",
+          "use": "Rebalance keyed answer positions across the six-item G2 sample following James's exact-version comment."
+        }
+      ]
+    },
+    "stem": "A company concludes that a litigation loss is probable and estimates the loss between $300,000 and $500,000, with no amount in the range a better estimate than another. A separate claim has a reasonably possible loss of $200,000. What total loss should the company accrue?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$500,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 500000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-accrue-range-maximum",
+          "name": "Accrue maximum",
+          "misconception": "Uses conservatism to select the high end despite no better estimate.",
+          "derivation": "Accrue the $500,000 maximum.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-range-maximum",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "B",
+        "text": "$300,000 accrued",
+        "structured_value": {
+          "value_type": "number",
+          "value": 300000,
+          "unit": "USD"
+        },
+        "is_keyed": true
+      },
+      {
+        "option_id": "C",
+        "text": "$400,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 400000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-accrue-midpoint",
+          "name": "Accrue midpoint",
+          "misconception": "Averages the endpoints without evidence that the midpoint is a better estimate.",
+          "derivation": "($300,000 + $500,000) / 2 = $400,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-range-minimum",
+                  "coefficient": 0.5
+                },
+                {
+                  "fact_id": "fact-range-maximum",
+                  "coefficient": 0.5
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "D",
+        "text": "$700,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 700000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-accrue-possible-loss",
+          "name": "Accrue possible claim",
+          "misconception": "Adds a merely reasonably possible claim to the probable range maximum.",
+          "derivation": "$500,000 + $200,000 = $700,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-range-maximum",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-possible-loss",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.3",
+        "group_id": "far.area.3.group.b",
+        "topic_id": null,
+        "representative_task_id": "far.area.3.group.b.task.002",
+        "skill_level": "application",
+        "mapping_rationale": "The item applies recognition and range-measurement rules to calculate the accrued contingency.",
+        "mcq_scope_limit": "The MCQ calculates one accrual and does not draft the full journal entry or disclosures."
+      }
+    ],
+    "accounting_model_id": "far-model-loss-contingency-range",
+    "facts": [
+      {
+        "fact_id": "fact-range-minimum",
+        "statement": "The probable loss range minimum is $300,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 300000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Accrued because no point is a better estimate."
+      },
+      {
+        "fact_id": "fact-range-maximum",
+        "statement": "The probable loss range maximum is $500,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 500000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "The maximum is not accrued when no point is a better estimate."
+      },
+      {
+        "fact_id": "fact-possible-loss",
+        "statement": "The separate reasonably possible loss is $200,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 200000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "A reasonably possible loss is not accrued under the stated facts."
+      }
+    ],
+    "assumptions": [],
+    "solution": {
+      "end_ask": "Calculate the amount accrued for the stated loss contingencies.",
+      "representation": {
+        "kind": "rule_selection",
+        "setup": "Accrual = minimum of probable estimable range when no point is better; exclude reasonably possible claim."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Select the measurement rule for the probable range.",
+          "fact_ids_used": [
+            "fact-range-minimum",
+            "fact-range-maximum"
+          ],
+          "assertion_ids_used": [
+            "assertion-range-minimum"
+          ],
+          "result": "Use the $300,000 minimum because no amount is a better estimate."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Apply the likelihood threshold to the separate claim.",
+          "fact_ids_used": [
+            "fact-possible-loss"
+          ],
+          "assertion_ids_used": [
+            "assertion-possible-not-accrued"
+          ],
+          "result": "Exclude the $200,000 reasonably possible loss from accrual."
+        }
+      ],
+      "keyed_answer_option_id": "B",
+      "keyed_answer_rationale": "The minimum of the probable range is accrued, and the separate reasonably possible claim is not accrued.",
+      "faster_or_safer_route": "Underline 'no amount is a better estimate' and 'reasonably possible'; those phrases determine the minimum and exclusion without averaging."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-contingency-range",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {
+              "fact_id": "fact-range-minimum",
+              "coefficient": 1
+            }
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {
+            "mode": "none",
+            "decimal_places": 0
+          }
+        }
+      },
+      "producer_component_id": "p1-sample-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T20:15:00Z",
+        "model_id": "openai-codex-gpt-5"
+      },
+      "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-loss-contingency-range.v001",
+        "assertion_ids": [
+          "assertion-range-minimum",
+          "assertion-possible-not-accrued"
+        ],
+        "applied_to_fact_ids": [
+          "fact-range-minimum",
+          "fact-range-maximum",
+          "fact-possible-loss"
+        ],
+        "application": "The minimum of the probable range is selected and the separate reasonably possible loss is excluded."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "convention",
+        "observable_evidence": [
+          "The minimum-of-range rule applies only because no point is a better estimate."
+        ]
+      },
+      {
+        "tag": "rule_selection",
+        "observable_evidence": [
+          "The probable range and reasonably possible claim require different recognition outcomes."
+        ]
+      },
+      {
+        "tag": "language_trap",
+        "observable_evidence": [
+          "The midpoint and maximum appear prudent but are unsupported by the stated estimation conclusion."
+        ]
+      },
+      {
+        "tag": "elimination_leverage",
+        "observable_evidence": [
+          "Likelihood wording eliminates the option that accrues both matters."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "rule_count",
+            "value": 1,
+            "unit": "rules",
+            "interpretation": "Exact rule traces applied to the item."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "dependent_step_count",
+            "value": 2,
+            "unit": "steps",
+            "interpretation": "Ordered solution steps required by the authored route."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "irrelevant_fact_count",
+            "value": 2,
+            "unit": "facts",
+            "interpretation": "Structured facts excluded from the numerical end ask."
+          }
+        ]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "classification_boundary_count",
+            "value": 3,
+            "unit": "boundaries",
+            "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+          }
+        ]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "plausible_error_model_count",
+            "value": 3,
+            "unit": "models",
+            "interpretation": "Each nonkey has a distinct executable error model."
+          }
+        ]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "arithmetic_operation_count",
+            "value": 0,
+            "unit": "operations",
+            "interpretation": "Arithmetic operations in the independent keyed route."
+          }
+        ]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [
+        "far-p1-g2-sample.v002"
+      ],
+      "methods": [
+        "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+      ],
+      "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+    }
+  }
+}

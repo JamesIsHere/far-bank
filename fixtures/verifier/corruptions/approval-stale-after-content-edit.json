@@ -1,0 +1,14 @@
+{
+  "fixture_id": "approval-stale-after-content-edit",
+  "check_id": "APPROVAL_INTEGRITY",
+  "mutations": [
+    {
+      "record": "question",
+      "operation": "replace",
+      "path": "/content/stem",
+      "value": "A revised schema-only fixture lists cash of $40,000, accounts receivable of $60,000, inventory of $80,000, equipment of $150,000, and accounts payable of $55,000. Under the fixture rule, what current-assets subtotal should be displayed?"
+    }
+  ],
+  "rehash": ["question"],
+  "rebind_events": false
+}

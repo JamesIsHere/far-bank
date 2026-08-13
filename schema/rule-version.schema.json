@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/rule-version.schema.json",
+  "title": "Immutable FAR accounting rule version",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "rule_id", "rule_version_id", "version_number", "content_sha256", "content"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "rule_id": {"type": "string", "pattern": "^far-rule-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "rule_version_id": {"type": "string", "pattern": "^far-rule-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"},
+    "version_number": {"type": "integer", "minimum": 1},
+    "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "rule_statement", "applicability", "assertions", "source_citations", "currency", "authorship_provenance"],
+      "properties": {
+        "title": {"type": "string", "minLength": 1},
+        "rule_statement": {"type": "string", "minLength": 1},
+        "applicability": {"type": "string", "minLength": 1},
+        "assertions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["assertion_id", "claim"],
+            "properties": {
+              "assertion_id": {"type": "string", "pattern": "^assertion-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+              "claim": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "source_citations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["reference_version_id", "locator", "role", "supports_assertion_ids"],
+            "properties": {
+              "reference_version_id": {"type": "string", "pattern": "^far-ref-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"},
+              "locator": {"type": "string", "minLength": 1},
+              "role": {"enum": ["controlling", "supporting_explanation"]},
+              "supports_assertion_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^assertion-[a-z0-9]+(?:-[a-z0-9]+)*$"}}
+            }
+          }
+        },
+        "currency": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["assessed_at", "assessment", "basis"],
+          "properties": {
+            "assessed_at": {"type": "string", "format": "date-time"},
+            "assessment": {"enum": ["current", "superseded", "uncertain"]},
+            "basis": {"type": "string", "minLength": 1}
+          }
+        },
+        "authorship_provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["purpose", "mechanism", "created_by", "material_input_ids"],
+          "properties": {
+            "purpose": {"enum": ["schema_fixture", "candidate_evidence", "admitted_evidence"]},
+            "mechanism": {"enum": ["human", "ai_assisted", "deterministic_extraction"]},
+            "created_by": {"type": "string", "minLength": 1},
+            "model_id": {"type": "string", "minLength": 1},
+            "material_input_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+          },
+          "allOf": [
+            {
+              "if": {"properties": {"mechanism": {"const": "ai_assisted"}}, "required": ["mechanism"]},
+              "then": {"required": ["model_id"]}
+            }
+          ]
+        }
+      }
+    }
+  }
+}

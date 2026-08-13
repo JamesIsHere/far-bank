@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "far-verification-schema-fixture-001",
+  "recorded_at": "2026-08-13T18:05:00Z",
+  "subject": {
+    "question_id": "far-q-000001",
+    "version_id": "far-q-000001.v001",
+    "content_sha256": "76b28b75f1097ad3971259e9383b4415f4903a0de0ac561feba1794d9dd3c598"
+  },
+  "checker": {
+    "checker_id": "p1-schema-contract-fixture",
+    "checker_version": "1.0.0"
+  },
+  "required_check_set_id": "p1-schema-only-fixture-set",
+  "input_evidence": [
+    {
+      "path_or_id": "fixtures/questions/valid-question-version.json",
+      "sha256": "76b28b75f1097ad3971259e9383b4415f4903a0de0ac561feba1794d9dd3c598"
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "SCHEMA_FIXTURE_ONLY",
+      "category": "SCHEMA",
+      "outcome": "pass",
+      "detail": "Illustrative event shape only; this is not P1.2 verification evidence.",
+      "evidence": ["Question record conformed to its P1.1 schema contract."],
+      "calibration_fixture_ids": ["missing-provenance", "non-four-options", "multiple-keys"]
+    }
+  ]
+}

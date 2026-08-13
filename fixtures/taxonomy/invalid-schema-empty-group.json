@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomy_id": "far-2026-01-fixture",
+  "source_id": "aicpa-cpa-exam-blueprints-2026",
+  "source_manifest": "sources/aicpa/2026-01/source-manifest.json",
+  "exam_section": {
+    "code": "FAR",
+    "official_title": "Financial Accounting and Reporting"
+  },
+  "areas": [
+    {
+      "id": "far.area.1",
+      "code": "I",
+      "official_title": "Financial Reporting",
+      "official_heading": "Area I – Financial Reporting (30–40%)",
+      "allocation_percent": {"minimum": 30, "maximum": 40},
+      "source_locator": {
+        "physical_page": 35,
+        "printed_page_label": "FAR7",
+        "location_type": "section_heading",
+        "anchor_text": "Area I – Financial Reporting (30–40%)",
+        "occurrence_on_page": 1
+      },
+      "groups": [
+        {
+          "id": "far.area.1.group.a",
+          "code": "A",
+          "official_title": "General-Purpose Financial Reporting: For-Profit Business Entities",
+          "official_heading": "A. General-Purpose Financial Reporting: For-Profit Business Entities",
+          "source_locator": {
+            "physical_page": 35,
+            "printed_page_label": "FAR7",
+            "location_type": "table_heading",
+            "anchor_text": "A. General-Purpose Financial Reporting: For-Profit Business Entities",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": []
+        }
+      ]
+    }
+  ]
+}

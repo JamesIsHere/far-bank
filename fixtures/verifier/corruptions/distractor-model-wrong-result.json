@@ -1,0 +1,9 @@
+{
+  "fixture_id": "distractor-model-wrong-result",
+  "check_id": "DISTRACTOR_MODELS",
+  "mutations": [
+    {"record": "question", "operation": "replace", "path": "/content/options/1/error_model/reproduction/linear_combination/terms/3/coefficient", "value": 0}
+  ],
+  "rehash": ["question"],
+  "rebind_events": true
+}

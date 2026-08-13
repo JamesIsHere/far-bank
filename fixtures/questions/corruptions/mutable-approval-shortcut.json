@@ -1,0 +1,8 @@
+{
+  "fixture_id": "mutable-approval-shortcut",
+  "base": "valid-question-version.json",
+  "expected_contract": "QUESTION_SCHEMA",
+  "mutations": [
+    {"operation": "add", "path": "/learner_ready", "value": true}
+  ]
+}

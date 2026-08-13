@@ -1,0 +1,9 @@
+{
+  "fixture_id": "variety-observation-mismatch",
+  "check_id": "VARIETY_EVIDENCE",
+  "mutations": [
+    {"record": "question", "operation": "replace", "path": "/content/difficulty_profile/2/observable_measurements/0/value", "value": 99}
+  ],
+  "rehash": ["question"],
+  "rebind_events": true
+}

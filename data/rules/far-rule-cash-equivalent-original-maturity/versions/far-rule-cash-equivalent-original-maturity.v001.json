@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "rule_id": "far-rule-cash-equivalent-original-maturity",
+  "rule_version_id": "far-rule-cash-equivalent-original-maturity.v001",
+  "version_number": 1,
+  "content_sha256": "056e207e99191b08d11f2c1ad4ff55d60feb9646bac517cfc8d9e692e36c5fb9",
+  "content": {
+    "title": "Cash-equivalent original-maturity convention",
+    "rule_statement": "Cash equivalents are short-term, highly liquid investments readily convertible to known cash and so near maturity that interest-rate risk is insignificant; generally only investments with an original maturity to the holder of three months or less qualify.",
+    "applicability": "For-profit entity classifying highly liquid investments as cash equivalents under U.S. GAAP.",
+    "assertions": [
+      {
+        "assertion_id": "assertion-three-month-original-maturity",
+        "claim": "Apply the generally three-month-or-less test from the acquisition date to maturity, not from the reporting date."
+      },
+      {
+        "assertion_id": "assertion-cash-included",
+        "claim": "Unrestricted checking deposits are cash and are included with qualifying cash equivalents."
+      }
+    ],
+    "source_citations": [
+      {
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "locator": "FASB ASC Master Glossary definitions of Cash and Cash Equivalents (also reflected in ASC 230-10-20)",
+        "role": "controlling",
+        "supports_assertion_ids": [
+          "assertion-three-month-original-maturity",
+          "assertion-cash-included"
+        ]
+      }
+    ],
+    "currency": {
+      "assessed_at": "2026-08-13T20:00:00Z",
+      "assessment": "current",
+      "basis": "The live official Codification glossary and FASB-hosted EITF Issue 16-A materials reproducing the definition were cross-checked on 2026-08-13; no effective amendment affecting the convention was identified."
+    },
+    "authorship_provenance": {
+      "purpose": "admitted_evidence",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "model_id": "openai-codex-gpt-5",
+      "material_input_ids": [
+        "far-ref-fasb-codification-live.v001",
+        "FASB ASC Master Glossary definitions of Cash and Cash Equivalents (also reflected in ASC 230-10-20)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "fixture_id": "duplicate-option-text",
+  "base": "valid-question-version.json",
+  "expected_contract": "OPTION_TEXT_UNIQUENESS",
+  "mutations": [
+    {"operation": "replace", "path": "/content/options/2/text", "value": "$330,000"}
+  ]
+}

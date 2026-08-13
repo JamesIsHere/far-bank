@@ -1,0 +1,9 @@
+{
+  "fixture_id": "rule-trace-superseded",
+  "check_id": "RULE_TRACE_CURRENT",
+  "mutations": [
+    {"record": "rule", "operation": "replace", "path": "/content/currency/assessment", "value": "superseded"}
+  ],
+  "rehash": ["rule"],
+  "rebind_events": false
+}

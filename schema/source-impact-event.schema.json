@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/source-impact-event.schema.json",
+  "title": "Append-only source-change impact event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "recorded_at", "actor", "changed_reference", "impact_outcome", "basis", "subjects"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "event_id": {"type": "string", "pattern": "^far-source-impact-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_type", "actor_id", "display_name"],
+      "properties": {
+        "actor_type": {"enum": ["human", "system"]},
+        "actor_id": {"type": "string", "minLength": 1},
+        "display_name": {"type": "string", "minLength": 1}
+      }
+    },
+    "changed_reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prior_reference_version_id", "new_reference_version_id"],
+      "properties": {
+        "prior_reference_version_id": {"type": "string", "pattern": "^far-ref-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"},
+        "new_reference_version_id": {"type": "string", "pattern": "^far-ref-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"}
+      }
+    },
+    "impact_outcome": {"enum": ["quarantine", "revalidated", "unaffected"]},
+    "basis": {"type": "string", "minLength": 1},
+    "subjects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question_id", "version_id", "content_sha256", "impact_detail"],
+        "properties": {
+          "question_id": {"type": "string", "pattern": "^far-q-[0-9]{6}$"},
+          "version_id": {"type": "string", "pattern": "^far-q-[0-9]{6}\\.v[0-9]{3}$"},
+          "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "impact_detail": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

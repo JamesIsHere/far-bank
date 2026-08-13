@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000001",
+  "version_id": "far-q-000001.v001",
+  "version_number": 1,
+  "content_sha256": "76b28b75f1097ad3971259e9383b4415f4903a0de0ac561feba1794d9dd3c598",
+  "content": {
+    "authorship": {
+      "purpose": "schema_fixture",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T18:00:00Z",
+      "model_id": "openai-codex-fixture-author",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Exercise exact Blueprint path binding."
+        },
+        {
+          "input_id": "far-rule-schema-fixture-current-assets.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Exercise versioned rule tracing; not accounting evidence."
+        },
+        {
+          "input_id": "schema-fixture-brief",
+          "input_kind": "fixture",
+          "version_or_date": "2026-08-13",
+          "use": "Exercise the complete question contract before sample authoring."
+        }
+      ]
+    },
+    "stem": "A schema-only fixture lists cash of $40,000, accounts receivable of $60,000, inventory of $80,000, equipment of $150,000, and accounts payable of $55,000. Under the fixture rule, what current-assets subtotal should be displayed?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$180,000",
+        "structured_value": {"value_type": "number", "value": 180000, "unit": "USD"},
+        "is_keyed": true
+      },
+      {
+        "option_id": "B",
+        "text": "$330,000",
+        "structured_value": {"value_type": "number", "value": 330000, "unit": "USD"},
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-include-equipment",
+          "name": "Include noncurrent equipment",
+          "misconception": "Treats every asset balance as current.",
+          "derivation": "$40,000 + $60,000 + $80,000 + $150,000 = $330,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {"fact_id": "fact-cash", "coefficient": 1},
+                {"fact_id": "fact-receivables", "coefficient": 1},
+                {"fact_id": "fact-inventory", "coefficient": 1},
+                {"fact_id": "fact-equipment", "coefficient": 1}
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {"mode": "none", "decimal_places": 0}
+            }
+          }
+        }
+      },
+      {
+        "option_id": "C",
+        "text": "$125,000",
+        "structured_value": {"value_type": "number", "value": 125000, "unit": "USD"},
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-net-current-liability",
+          "name": "Net a current liability",
+          "misconception": "Subtracts accounts payable from current assets instead of presenting the categories separately.",
+          "derivation": "$180,000 - $55,000 = $125,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {"fact_id": "fact-cash", "coefficient": 1},
+                {"fact_id": "fact-receivables", "coefficient": 1},
+                {"fact_id": "fact-inventory", "coefficient": 1},
+                {"fact_id": "fact-payables", "coefficient": -1}
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {"mode": "none", "decimal_places": 0}
+            }
+          }
+        }
+      },
+      {
+        "option_id": "D",
+        "text": "$140,000",
+        "structured_value": {"value_type": "number", "value": 140000, "unit": "USD"},
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-omit-cash",
+          "name": "Omit cash",
+          "misconception": "Includes receivables and inventory but overlooks cash.",
+          "derivation": "$60,000 + $80,000 = $140,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {"fact_id": "fact-receivables", "coefficient": 1},
+                {"fact_id": "fact-inventory", "coefficient": 1}
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {"mode": "none", "decimal_places": 0}
+            }
+          }
+        }
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.1",
+        "group_id": "far.area.1.group.a",
+        "topic_id": "far.area.1.group.a.topic.1",
+        "representative_task_id": "far.area.1.group.a.topic.1.task.001",
+        "skill_level": "application",
+        "mapping_rationale": "The fixture exercises a classified-balance-sheet subtotal from trial-balance-style facts.",
+        "mcq_scope_limit": "An MCQ selects one subtotal and does not fully exercise preparation of a classified balance sheet."
+      }
+    ],
+    "accounting_model_id": "far-model-classified-balance-sheet",
+    "facts": [
+      {
+        "fact_id": "fact-cash",
+        "statement": "Cash is $40,000.",
+        "structured_value": {"value_type": "number", "value": 40000, "unit": "USD"},
+        "relevance": "relevant",
+        "use_in_solution": "Included in the fixture current-assets subtotal."
+      },
+      {
+        "fact_id": "fact-receivables",
+        "statement": "Accounts receivable is $60,000.",
+        "structured_value": {"value_type": "number", "value": 60000, "unit": "USD"},
+        "relevance": "relevant",
+        "use_in_solution": "Included in the fixture current-assets subtotal."
+      },
+      {
+        "fact_id": "fact-inventory",
+        "statement": "Inventory is $80,000.",
+        "structured_value": {"value_type": "number", "value": 80000, "unit": "USD"},
+        "relevance": "relevant",
+        "use_in_solution": "Included in the fixture current-assets subtotal."
+      },
+      {
+        "fact_id": "fact-equipment",
+        "statement": "Equipment is $150,000.",
+        "structured_value": {"value_type": "number", "value": 150000, "unit": "USD"},
+        "relevance": "irrelevant",
+        "irrelevance_reason": "The fixture rule classifies equipment outside current assets."
+      },
+      {
+        "fact_id": "fact-payables",
+        "statement": "Accounts payable is $55,000.",
+        "structured_value": {"value_type": "number", "value": 55000, "unit": "USD"},
+        "relevance": "irrelevant",
+        "irrelevance_reason": "The ask is a gross asset subtotal, not net working capital."
+      }
+    ],
+    "assumptions": [],
+    "solution": {
+      "end_ask": "Compute the fixture's current-assets subtotal.",
+      "representation": {
+        "kind": "financial_statement_view",
+        "setup": "Current assets = cash + accounts receivable + inventory."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Select only balances treated as current assets by the fixture rule.",
+          "fact_ids_used": ["fact-cash", "fact-receivables", "fact-inventory"],
+          "assertion_ids_used": ["assertion-current-assets-fixture"],
+          "result": "Cash, receivables, and inventory are included; equipment and payables are excluded."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Add the included balances.",
+          "fact_ids_used": ["fact-cash", "fact-receivables", "fact-inventory"],
+          "assertion_ids_used": ["assertion-current-assets-fixture"],
+          "result": "$40,000 + $60,000 + $80,000 = $180,000."
+        }
+      ],
+      "keyed_answer_option_id": "A",
+      "keyed_answer_rationale": "$180,000 is the sum of the three balances designated as current assets by the fixture rule.",
+      "faster_or_safer_route": "Cross out equipment and accounts payable first, then add the three remaining balances."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-current-assets-recompute",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {"fact_id": "fact-cash", "coefficient": 1},
+            {"fact_id": "fact-receivables", "coefficient": 1},
+            {"fact_id": "fact-inventory", "coefficient": 1}
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {"mode": "none", "decimal_places": 0}
+        }
+      },
+      "producer_component_id": "fixture-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T18:00:00Z",
+        "model_id": "openai-codex-fixture-author"
+      },
+      "independence_limit": "The generic verifier recomputes from facts without reading the keyed rationale, but this is an AI-authored schema fixture and not human or authoritative correctness evidence."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-schema-fixture-current-assets.v001",
+        "assertion_ids": ["assertion-current-assets-fixture"],
+        "applied_to_fact_ids": ["fact-cash", "fact-receivables", "fact-inventory", "fact-equipment", "fact-payables"],
+        "application": "The fixture assertion selects the three current-asset balances and excludes equipment and payables from this subtotal."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "fact_selection",
+        "observable_evidence": ["Five stated balances include two facts explicitly annotated as irrelevant to the end ask."]
+      },
+      {
+        "tag": "classification",
+        "observable_evidence": ["The solver must separate the current-asset balances from equipment and accounts payable."
+        ]
+      },
+      {
+        "tag": "financial_statement_view",
+        "observable_evidence": ["The requested result is a classified balance-sheet subtotal."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "fixture-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [{"measure_id": "rule_count", "value": 1, "unit": "rules", "interpretation": "One classification rule is applied."}]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "fixture-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [{"measure_id": "dependent_step_count", "value": 2, "unit": "steps", "interpretation": "Selection precedes one addition step."}]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "fixture-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [{"measure_id": "irrelevant_fact_count", "value": 2, "unit": "facts", "interpretation": "Two of five numeric facts are irrelevant to the subtotal."}]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "fixture-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [{"measure_id": "classification_boundary_count", "value": 2, "unit": "boundaries", "interpretation": "The item distinguishes current from noncurrent assets and assets from liabilities."}]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "fixture-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [{"measure_id": "plausible_error_model_count", "value": 3, "unit": "models", "interpretation": "Each distractor has a distinct arithmetic or classification derivation."}]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "fixture-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [{"measure_id": "arithmetic_operation_count", "value": 2, "unit": "operations", "interpretation": "Only two additions are needed after classification."}]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [],
+      "methods": ["No comparison performed; schema fixture only."],
+      "claim_limit": "This record makes no originality, clearance, correctness, approval, or learner-readiness claim."
+    }
+  }
+}

@@ -1,0 +1,2273 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomy_id": "far-2026-01",
+  "source_id": "aicpa-cpa-exam-blueprints-2026",
+  "source_manifest": "sources/aicpa/2026-01/source-manifest.json",
+  "exam_section": {
+    "code": "FAR",
+    "official_title": "Financial Accounting and Reporting"
+  },
+  "areas": [
+    {
+      "id": "far.area.1",
+      "code": "I",
+      "official_title": "Financial Reporting",
+      "official_heading": "Area I – Financial Reporting (30–40%)",
+      "allocation_percent": {
+        "minimum": 30,
+        "maximum": 40
+      },
+      "source_locator": {
+        "physical_page": 35,
+        "printed_page_label": "FAR7",
+        "location_type": "section_heading",
+        "anchor_text": "Area I – Financial Reporting (30–40%)",
+        "occurrence_on_page": 1
+      },
+      "groups": [
+        {
+          "id": "far.area.1.group.a",
+          "code": "A",
+          "official_title": "General-Purpose Financial Reporting: For-Profit Business Entities",
+          "official_heading": "A. General-Purpose Financial Reporting: For-Profit Business Entities",
+          "source_locator": {
+            "physical_page": 35,
+            "printed_page_label": "FAR7",
+            "location_type": "table_heading",
+            "anchor_text": "A. General-Purpose Financial Reporting: For-Profit Business Entities",
+            "occurrence_on_page": 1
+          },
+          "topics": [
+            {
+              "id": "far.area.1.group.a.topic.1",
+              "code": "1",
+              "official_title": "Balance sheet/Statement of financial position",
+              "official_heading": "1. Balance sheet/Statement of financial position",
+              "source_locator": {
+                "physical_page": 35,
+                "printed_page_label": "FAR7",
+                "location_type": "table_heading",
+                "anchor_text": "1. Balance sheet/Statement of financial position",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.1.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Prepare a classified balance sheet from a trial balance and supporting documentation.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a classified balance sheet from a trial balance and supporting documentation.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 1
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.1.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Adjust the balance sheet to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the balance sheet to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 2
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.1.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Detect, investigate and correct discrepancies while agreeing the balance sheet amounts to supporting documentation, including the source data.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Detect, investigate and correct discrepancies while agreeing the balance sheet amounts to supporting documentation, including the source data.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.a.topic.2",
+              "code": "2",
+              "official_title": "Income statement/Statement of profit or loss",
+              "official_heading": "2. Income statement/Statement of profit or loss",
+              "source_locator": {
+                "physical_page": 35,
+                "printed_page_label": "FAR7",
+                "location_type": "table_heading",
+                "anchor_text": "2. Income statement/Statement of profit or loss",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.2.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Prepare a single-step or multi-step income statement (e.g., operating, nonoperating, discontinued operations) from a trial balance and supporting documentation.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a single-step or multi-step income statement (e.g., operating, nonoperating, discontinued operations) from a trial balance and supporting documentation.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 4
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.2.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Adjust the income statement to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the income statement to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 5
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.2.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Calculate transaction gains or losses recognized from monetary transactions denominated in a foreign currency.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate transaction gains or losses recognized from monetary transactions denominated in a foreign currency.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 6
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.2.task.004",
+                  "ordinal_within_parent": 4,
+                  "official_text": "Detect, investigate and correct discrepancies while agreeing the income statement amounts to supporting documentation, including the source data.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Detect, investigate and correct discrepancies while agreeing the income statement amounts to supporting documentation, including the source data.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 7
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.a.topic.3",
+              "code": "3",
+              "official_title": "Statement of comprehensive income",
+              "official_heading": "3. Statement of comprehensive income",
+              "source_locator": {
+                "physical_page": 35,
+                "printed_page_label": "FAR7",
+                "location_type": "table_heading",
+                "anchor_text": "3. Statement of comprehensive income",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.3.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Recall the purpose, objectives and structure of the statement of comprehensive income.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Recall the purpose, objectives and structure of the statement of comprehensive income.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 8
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.3.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Identify items classified as other comprehensive income.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Identify items classified as other comprehensive income.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 9
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.a.topic.4",
+              "code": "4",
+              "official_title": "Statement of changes in equity",
+              "official_heading": "4. Statement of changes in equity",
+              "source_locator": {
+                "physical_page": 35,
+                "printed_page_label": "FAR7",
+                "location_type": "table_heading",
+                "anchor_text": "4. Statement of changes in equity",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.4.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Prepare a statement of changes in equity from a trial balance and supporting documentation.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a statement of changes in equity from a trial balance and supporting documentation.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 10
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.4.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Adjust the statement of changes in equity to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the statement of changes in equity to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 11
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.4.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Detect, investigate and correct discrepancies while agreeing the statement of changes in equity amounts to supporting documentation, including the source data.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 35,
+                    "printed_page_label": "FAR7",
+                    "location_type": "table_row",
+                    "anchor_text": "Detect, investigate and correct discrepancies while agreeing the statement of changes in equity amounts to supporting documentation, including the source data.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 12
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.a.topic.5",
+              "code": "5",
+              "official_title": "Statement of cash flows",
+              "official_heading": "5. Statement of cash flows",
+              "source_locator": {
+                "physical_page": 36,
+                "printed_page_label": "FAR8",
+                "location_type": "table_heading",
+                "anchor_text": "5. Statement of cash flows",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.5.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Prepare a statement of cash flow using the indirect method and required disclosures from supporting documentation.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a statement of cash flow using the indirect method and required disclosures from supporting documentation.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 1
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.5.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Adjust a statement of cash flows to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust a statement of cash flows to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 2
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.5.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Detect, investigate and correct discrepancies while agreeing the statement of cash flows amounts to supporting documentation, including the source data.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Detect, investigate and correct discrepancies while agreeing the statement of cash flows amounts to supporting documentation, including the source data.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 3
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.5.task.004",
+                  "ordinal_within_parent": 4,
+                  "official_text": "Derive the impact of transactions on the statement of cash flows.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Derive the impact of transactions on the statement of cash flows.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 4
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.a.topic.6",
+              "code": "6",
+              "official_title": "Consolidated financial statements (including wholly-owned subsidiaries and noncontrolling interests)",
+              "official_heading": "6. Consolidated financial statements (including wholly-owned subsidiaries and noncontrolling interests)",
+              "source_locator": {
+                "physical_page": 36,
+                "printed_page_label": "FAR8",
+                "location_type": "table_heading",
+                "anchor_text": "6. Consolidated financial statements (including wholly-owned subsidiaries and noncontrolling interests)",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.6.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Prepare consolidated financial statements (adjustments, and/or eliminations) from supporting documentation.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare consolidated financial statements (adjustments, and/or eliminations) from supporting documentation.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 5
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.6.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Adjust consolidated financial statements to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust consolidated financial statements to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 6
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.6.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Detect, investigate and correct discrepancies identified while agreeing the consolidated financial statement amounts to supporting documentation, including the source data.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Detect, investigate and correct discrepancies identified while agreeing the consolidated financial statement amounts to supporting documentation, including the source data.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 7
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.a.topic.7",
+              "code": "7",
+              "official_title": "Notes to financial statements",
+              "official_heading": "7. Notes to financial statements",
+              "source_locator": {
+                "physical_page": 36,
+                "printed_page_label": "FAR8",
+                "location_type": "table_heading",
+                "anchor_text": "7. Notes to financial statements",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.a.topic.7.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Adjust the notes to the financial statements to correct identified errors and omissions.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the notes to the financial statements to correct identified errors and omissions.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 8
+                  }
+                },
+                {
+                  "id": "far.area.1.group.a.topic.7.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Compare the notes to the financial statements to the financial statements and supporting documentation, including the source data, to identify inconsistencies and investigate those inconsistencies.",
+                  "skill_level": "analysis",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Compare the notes to the financial statements to the financial statements and supporting documentation, including the source data, to identify inconsistencies and investigate those inconsistencies.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 9
+                  }
+                }
+              ]
+            }
+          ],
+          "tasks": []
+        },
+        {
+          "id": "far.area.1.group.b",
+          "code": "B",
+          "official_title": "General-Purpose Financial Reporting: Nongovernmental Not-for-Profit Entities",
+          "official_heading": "B. General-Purpose Financial Reporting: Nongovernmental Not-for-Profit Entities",
+          "source_locator": {
+            "physical_page": 36,
+            "printed_page_label": "FAR8",
+            "location_type": "table_heading",
+            "anchor_text": "B. General-Purpose Financial Reporting: Nongovernmental Not-for-Profit Entities",
+            "occurrence_on_page": 1
+          },
+          "topics": [
+            {
+              "id": "far.area.1.group.b.topic.1",
+              "code": "1",
+              "official_title": "Statement of financial position",
+              "official_heading": "1. Statement of financial position",
+              "source_locator": {
+                "physical_page": 36,
+                "printed_page_label": "FAR8",
+                "location_type": "table_heading",
+                "anchor_text": "1. Statement of financial position",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.b.topic.1.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Recall the purpose and objectives of the statement of financial position for a nongovernmental, not-for-profit entity.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 36,
+                    "printed_page_label": "FAR8",
+                    "location_type": "table_row",
+                    "anchor_text": "Recall the purpose and objectives of the statement of financial position for a nongovernmental, not-for-profit entity.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 10
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.1.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Prepare a statement of financial position for a nongovernmental, not-for-profit entity from a trial balance and supporting documentation.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a statement of financial position for a nongovernmental, not-for-profit entity from a trial balance and supporting documentation.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 1
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.1.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Adjust the statement of financial position for a nongovernmental, not-for-profit entity to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the statement of financial position for a nongovernmental, not-for-profit entity to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 2
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.b.topic.2",
+              "code": "2",
+              "official_title": "Statement of activities",
+              "official_heading": "2. Statement of activities",
+              "source_locator": {
+                "physical_page": 37,
+                "printed_page_label": "FAR9",
+                "location_type": "table_heading",
+                "anchor_text": "2. Statement of activities",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.b.topic.2.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Recall the purpose and objectives of the statement of activities for a nongovernmental, not-for-profit entity.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Recall the purpose and objectives of the statement of activities for a nongovernmental, not-for-profit entity.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 3
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.2.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Prepare a statement of activities for a nongovernmental, not-for-profit entity from a trial balance and supporting documentation, including contributions that may be classified as with or without donor restrictions and releases from donor restrictions.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a statement of activities for a nongovernmental, not-for-profit entity from a trial balance and supporting documentation, including contributions that may be classified as with or without donor restrictions and releases from donor restrictions.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 4
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.2.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Adjust the statement of activities for a nongovernmental, not-for-profit entity to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the statement of activities for a nongovernmental, not-for-profit entity to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 5
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.2.task.004",
+                  "ordinal_within_parent": 4,
+                  "official_text": "Report expenses by nature and function in either the statement of activities, the notes to the financial statements or a statement of functional expenses for a nongovernmental, not-for-profit entity.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Report expenses by nature and function in either the statement of activities, the notes to the financial statements or a statement of functional expenses for a nongovernmental, not-for-profit entity.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 6
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.b.topic.3",
+              "code": "3",
+              "official_title": "Statement of cash flows",
+              "official_heading": "3. Statement of cash flows",
+              "source_locator": {
+                "physical_page": 37,
+                "printed_page_label": "FAR9",
+                "location_type": "table_heading",
+                "anchor_text": "3. Statement of cash flows",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.b.topic.3.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Recall the purpose and objectives of the statement of cash flows for a nongovernmental, not-for-profit entity.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Recall the purpose and objectives of the statement of cash flows for a nongovernmental, not-for-profit entity.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 7
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.3.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Prepare a statement of cash flows and required disclosures using the indirect method for a nongovernmental, not-for-profit entity.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Prepare a statement of cash flows and required disclosures using the indirect method for a nongovernmental, not-for-profit entity.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 8
+                  }
+                },
+                {
+                  "id": "far.area.1.group.b.topic.3.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Adjust the statement of cash flows for a nongovernmental, not-for-profit entity to correct identified errors.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the statement of cash flows for a nongovernmental, not-for-profit entity to correct identified errors.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 9
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.b.topic.4",
+              "code": "4",
+              "official_title": "Notes to the financial statements",
+              "official_heading": "4. Notes to the financial statements",
+              "source_locator": {
+                "physical_page": 37,
+                "printed_page_label": "FAR9",
+                "location_type": "table_heading",
+                "anchor_text": "4. Notes to the financial statements",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.b.topic.4.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Adjust the notes to the financial statements to correct identified errors and omissions.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 37,
+                    "printed_page_label": "FAR9",
+                    "location_type": "table_row",
+                    "anchor_text": "Adjust the notes to the financial statements to correct identified errors and omissions.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 10
+                  }
+                }
+              ]
+            }
+          ],
+          "tasks": []
+        },
+        {
+          "id": "far.area.1.group.c",
+          "code": "C",
+          "official_title": "State and Local Government Concepts",
+          "official_heading": "C. State and Local Government Concepts",
+          "source_locator": {
+            "physical_page": 38,
+            "printed_page_label": "FAR10",
+            "location_type": "table_heading",
+            "anchor_text": "C. State and Local Government Concepts",
+            "occurrence_on_page": 1
+          },
+          "topics": [
+            {
+              "id": "far.area.1.group.c.topic.1",
+              "code": "1",
+              "official_title": "Measurement focus and basis of accounting",
+              "official_heading": "1. Measurement focus and basis of accounting",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_heading",
+                "anchor_text": "1. Measurement focus and basis of accounting",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.c.topic.1.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Recall the measurement focus and basis of accounting used by state and local governments for fund and government-wide financial reporting.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 38,
+                    "printed_page_label": "FAR10",
+                    "location_type": "table_row",
+                    "anchor_text": "Recall the measurement focus and basis of accounting used by state and local governments for fund and government-wide financial reporting.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 1
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.1.group.c.topic.2",
+              "code": "2",
+              "official_title": "Purpose of funds",
+              "official_heading": "2. Purpose of funds",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_heading",
+                "anchor_text": "2. Purpose of funds",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.1.group.c.topic.2.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Determine the appropriate fund(s) that a state or local government should use to record its activities.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 38,
+                    "printed_page_label": "FAR10",
+                    "location_type": "table_row",
+                    "anchor_text": "Determine the appropriate fund(s) that a state or local government should use to record its activities.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "tasks": []
+        },
+        {
+          "id": "far.area.1.group.d",
+          "code": "D",
+          "official_title": "Public Company Reporting Topics",
+          "official_heading": "D. Public Company Reporting Topics",
+          "source_locator": {
+            "physical_page": 38,
+            "printed_page_label": "FAR10",
+            "location_type": "table_heading",
+            "anchor_text": "D. Public Company Reporting Topics",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.1.group.d.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall the purpose of forms 10-Q, 10-Kand 8-Kthat a U.S. registrant is required to file with the U.S. Securities and Exchange Commission under the Securities Exchange Act of 1934.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Recall the purpose of forms 10-Q, 10-Kand 8-Kthat a U.S. registrant is required to file with the U.S. Securities and Exchange Commission under the Securities Exchange Act of 1934.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.1.group.d.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Identify the items of Form 10-Q (Part I Items 1 through 3) and Form 10-K (Part II Items 7, 7A and 8) filed with the U.S. Securities and Exchange Commission.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Identify the items of Form 10-Q (Part I Items 1 through 3) and Form 10-K (Part II Items 7, 7A and 8) filed with the U.S. Securities and Exchange Commission.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            },
+            {
+              "id": "far.area.1.group.d.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Calculate basic earnings per share and diluted earnings per share considering the impact of stock options, preferred stock, convertible preferred stock and/or convertible debt.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Calculate basic earnings per share and diluted earnings per share considering the impact of stock options, preferred stock, convertible preferred stock and/or convertible debt.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.1.group.e",
+          "code": "E",
+          "official_title": "Special Purpose Frameworks",
+          "official_heading": "E. Special Purpose Frameworks",
+          "source_locator": {
+            "physical_page": 38,
+            "printed_page_label": "FAR10",
+            "location_type": "table_heading",
+            "anchor_text": "E. Special Purpose Frameworks",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.1.group.e.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall appropriate financial statement titles to be used for the financial statements prepared under a special purpose framework.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Recall appropriate financial statement titles to be used for the financial statements prepared under a special purpose framework.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.1.group.e.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Perform calculations to convert cash basis or modified cash basis financial statements to accrual basis financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Perform calculations to convert cash basis or modified cash basis financial statements to accrual basis financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            },
+            {
+              "id": "far.area.1.group.e.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Prepare financial statements using the cash basis or modified cash basis of accounting.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Prepare financial statements using the cash basis or modified cash basis of accounting.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 8
+              }
+            },
+            {
+              "id": "far.area.1.group.e.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Prepare income tax basis financial statements using the cash or accrual methods of accounting.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 38,
+                "printed_page_label": "FAR10",
+                "location_type": "table_row",
+                "anchor_text": "Prepare income tax basis financial statements using the cash or accrual methods of accounting.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 9
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.1.group.f",
+          "code": "F",
+          "official_title": "Financial Statement Ratios and Performance Metrics",
+          "official_heading": "F. Financial Statement Ratios and Performance Metrics",
+          "source_locator": {
+            "physical_page": 39,
+            "printed_page_label": "FAR11",
+            "location_type": "table_heading",
+            "anchor_text": "F. Financial Statement Ratios and Performance Metrics",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.1.group.f.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Identify the appropriate financial statement ratio or performance metric to perform a specified type of analysis.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 39,
+                "printed_page_label": "FAR11",
+                "location_type": "table_row",
+                "anchor_text": "Identify the appropriate financial statement ratio or performance metric to perform a specified type of analysis.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.1.group.f.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Calculate profitability ratios (e.g., gross profit margin, return on sales, return on assets, return on equity).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 39,
+                "printed_page_label": "FAR11",
+                "location_type": "table_row",
+                "anchor_text": "Calculate profitability ratios (e.g., gross profit margin, return on sales, return on assets, return on equity).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            },
+            {
+              "id": "far.area.1.group.f.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Calculate liquidity ratios (e.g., current, quick, accounts receivable turnover, inventory turnover, days of payable outstanding).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 39,
+                "printed_page_label": "FAR11",
+                "location_type": "table_row",
+                "anchor_text": "Calculate liquidity ratios (e.g., current, quick, accounts receivable turnover, inventory turnover, days of payable outstanding).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.1.group.f.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Calculate solvency ratios (e.g., debt-to-equity, total debt, times interest earned).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 39,
+                "printed_page_label": "FAR11",
+                "location_type": "table_row",
+                "anchor_text": "Calculate solvency ratios (e.g., debt-to-equity, total debt, times interest earned).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            },
+            {
+              "id": "far.area.1.group.f.task.005",
+              "ordinal_within_parent": 5,
+              "official_text": "Calculate performance metrics (e.g., EBITDA, price-to-earnings, dividend payout, asset turnover).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 39,
+                "printed_page_label": "FAR11",
+                "location_type": "table_row",
+                "anchor_text": "Calculate performance metrics (e.g., EBITDA, price-to-earnings, dividend payout, asset turnover).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            },
+            {
+              "id": "far.area.1.group.f.task.006",
+              "ordinal_within_parent": 6,
+              "official_text": "Calculate variances between budget and actual results.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 39,
+                "printed_page_label": "FAR11",
+                "location_type": "table_row",
+                "anchor_text": "Calculate variances between budget and actual results.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "far.area.2",
+      "code": "II",
+      "official_title": "Select Balance Sheet Accounts",
+      "official_heading": "Area II – Select Balance Sheet Accounts (30–40%)",
+      "allocation_percent": {
+        "minimum": 30,
+        "maximum": 40
+      },
+      "source_locator": {
+        "physical_page": 40,
+        "printed_page_label": "FAR12",
+        "location_type": "section_heading",
+        "anchor_text": "Area II – Select Balance Sheet Accounts (30–40%)",
+        "occurrence_on_page": 1
+      },
+      "groups": [
+        {
+          "id": "far.area.2.group.a",
+          "code": "A",
+          "official_title": "Cash and cash equivalents",
+          "official_heading": "A. Cash and cash equivalents",
+          "source_locator": {
+            "physical_page": 40,
+            "printed_page_label": "FAR12",
+            "location_type": "table_heading",
+            "anchor_text": "A. Cash and cash equivalents",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.a.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Calculate cash and cash equivalents balances to be reported in the financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Calculate cash and cash equivalents balances to be reported in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.2.group.a.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Reconcile the cash balance per the bank statement to the general ledger.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Reconcile the cash balance per the bank statement to the general ledger.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            },
+            {
+              "id": "far.area.2.group.a.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Investigate unreconciled cash balances to determine whether an adjustment to the general ledger is necessary.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Investigate unreconciled cash balances to determine whether an adjustment to the general ledger is necessary.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.2.group.b",
+          "code": "B",
+          "official_title": "Trade receivables",
+          "official_heading": "B. Trade receivables",
+          "source_locator": {
+            "physical_page": 40,
+            "printed_page_label": "FAR12",
+            "location_type": "table_heading",
+            "anchor_text": "B. Trade receivables",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.b.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Calculate trade receivables and allowances (e.g., credit losses, sales returns) and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Calculate trade receivables and allowances (e.g., credit losses, sales returns) and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            },
+            {
+              "id": "far.area.2.group.b.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Prepare any required journal entries to record the transfer of trade receivables (secured borrowings, factoring, assignment, pledging).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Prepare any required journal entries to record the transfer of trade receivables (secured borrowings, factoring, assignment, pledging).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            },
+            {
+              "id": "far.area.2.group.b.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Prepare a rollforward of the trade receivables account balance using various sources of data and information.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Prepare a rollforward of the trade receivables account balance using various sources of data and information.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.2.group.b.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Reconcile and investigate differences between the subledger and general ledger for trade receivables to determine whether an adjustment is necessary.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Reconcile and investigate differences between the subledger and general ledger for trade receivables to determine whether an adjustment is necessary.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.2.group.c",
+          "code": "C",
+          "official_title": "Inventory",
+          "official_heading": "C. Inventory",
+          "source_locator": {
+            "physical_page": 40,
+            "printed_page_label": "FAR12",
+            "location_type": "table_heading",
+            "anchor_text": "C. Inventory",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.c.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Calculate the carrying amount of inventory and prepare journal entries using various costing methods.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the carrying amount of inventory and prepare journal entries using various costing methods.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 8
+              }
+            },
+            {
+              "id": "far.area.2.group.c.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Use the lower of cost and net realizable value or the lower of cost or market approach to calculate the carrying amount of inventory.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Use the lower of cost and net realizable value or the lower of cost or market approach to calculate the carrying amount of inventory.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 9
+              }
+            },
+            {
+              "id": "far.area.2.group.c.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Prepare a rollforward of the inventory account balance using various sources of data and information.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Prepare a rollforward of the inventory account balance using various sources of data and information.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 10
+              }
+            },
+            {
+              "id": "far.area.2.group.c.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Reconcile and investigate differences between the subledger and general ledger for inventory to determine whether an adjustment is necessary.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 40,
+                "printed_page_label": "FAR12",
+                "location_type": "table_row",
+                "anchor_text": "Reconcile and investigate differences between the subledger and general ledger for inventory to determine whether an adjustment is necessary.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 11
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.2.group.d",
+          "code": "D",
+          "official_title": "Property, plant and equipment",
+          "official_heading": "D. Property, plant and equipment",
+          "source_locator": {
+            "physical_page": 41,
+            "printed_page_label": "FAR13",
+            "location_type": "table_heading",
+            "anchor_text": "D. Property, plant and equipment",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.d.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Calculate the gross and net property, plant and equipment balances and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the gross and net property, plant and equipment balances and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.2.group.d.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Calculate gains or losses on the disposal of long-lived assets to be recognized in the financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Calculate gains or losses on the disposal of long-lived assets to be recognized in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            },
+            {
+              "id": "far.area.2.group.d.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Calculate impairment losses on long-lived assets to be recognized in the financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Calculate impairment losses on long-lived assets to be recognized in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.2.group.d.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Determine whether an asset qualifies to be reported as held for sale in the financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Determine whether an asset qualifies to be reported as held for sale in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            },
+            {
+              "id": "far.area.2.group.d.task.005",
+              "ordinal_within_parent": 5,
+              "official_text": "Adjust the carrying amount of assets held for sale and calculate the loss to be recognized in the financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Adjust the carrying amount of assets held for sale and calculate the loss to be recognized in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            },
+            {
+              "id": "far.area.2.group.d.task.006",
+              "ordinal_within_parent": 6,
+              "official_text": "Prepare a rollforward of the property, plant and equipment account balance using various sources of data and information.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Prepare a rollforward of the property, plant and equipment account balance using various sources of data and information.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.2.group.d.task.007",
+              "ordinal_within_parent": 7,
+              "official_text": "Reconcile and investigate differences between the subledger and general ledger for property, plant and equipment to determine whether an adjustment is necessary.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_row",
+                "anchor_text": "Reconcile and investigate differences between the subledger and general ledger for property, plant and equipment to determine whether an adjustment is necessary.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.2.group.e",
+          "code": "E",
+          "official_title": "Investments",
+          "official_heading": "E. Investments",
+          "source_locator": {
+            "physical_page": 41,
+            "printed_page_label": "FAR13",
+            "location_type": "table_heading",
+            "anchor_text": "E. Investments",
+            "occurrence_on_page": 1
+          },
+          "topics": [
+            {
+              "id": "far.area.2.group.e.topic.1",
+              "code": "1",
+              "official_title": "Financial assets at fair value",
+              "official_heading": "1. Financial assets at fair value",
+              "source_locator": {
+                "physical_page": 41,
+                "printed_page_label": "FAR13",
+                "location_type": "table_heading",
+                "anchor_text": "1. Financial assets at fair value",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.2.group.e.topic.1.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Identify investments that are eligible or required to be reported at fair value in the financial statements.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 41,
+                    "printed_page_label": "FAR13",
+                    "location_type": "table_row",
+                    "anchor_text": "Identify investments that are eligible or required to be reported at fair value in the financial statements.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 8
+                  }
+                },
+                {
+                  "id": "far.area.2.group.e.topic.1.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Calculate the carrying amount of investments measured at fair value (excluding impairment).",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 41,
+                    "printed_page_label": "FAR13",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate the carrying amount of investments measured at fair value (excluding impairment).",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 9
+                  }
+                },
+                {
+                  "id": "far.area.2.group.e.topic.1.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Calculate investment income to be recognized in net income for investments measured at fair value and prepare journal entries.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 41,
+                    "printed_page_label": "FAR13",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate investment income to be recognized in net income for investments measured at fair value and prepare journal entries.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 10
+                  }
+                },
+                {
+                  "id": "far.area.2.group.e.topic.1.task.004",
+                  "ordinal_within_parent": 4,
+                  "official_text": "Calculate impairment losses to be recognized on applicable investments reported at fair value in the financial statements.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 41,
+                    "printed_page_label": "FAR13",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate impairment losses to be recognized on applicable investments reported at fair value in the financial statements.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 11
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.2.group.e.topic.2",
+              "code": "2",
+              "official_title": "Financial assets at amortized cost",
+              "official_heading": "2. Financial assets at amortized cost",
+              "source_locator": {
+                "physical_page": 42,
+                "printed_page_label": "FAR14",
+                "location_type": "table_heading",
+                "anchor_text": "2. Financial assets at amortized cost",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.2.group.e.topic.2.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Identify investments that are eligible to be reported at amortized cost in the financial statements.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 42,
+                    "printed_page_label": "FAR14",
+                    "location_type": "table_row",
+                    "anchor_text": "Identify investments that are eligible to be reported at amortized cost in the financial statements.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 1
+                  }
+                },
+                {
+                  "id": "far.area.2.group.e.topic.2.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Calculate the carrying amount of investments measured at amortized cost and prepare journal entries (excluding impairment).",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 42,
+                    "printed_page_label": "FAR14",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate the carrying amount of investments measured at amortized cost and prepare journal entries (excluding impairment).",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 2
+                  }
+                },
+                {
+                  "id": "far.area.2.group.e.topic.2.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Calculate impairment losses to be recognized on investments reported at amortized cost in the financial statements.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 42,
+                    "printed_page_label": "FAR14",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate impairment losses to be recognized on investments reported at amortized cost in the financial statements.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 3
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.2.group.e.topic.3",
+              "code": "3",
+              "official_title": "Equity method investments",
+              "official_heading": "3. Equity method investments",
+              "source_locator": {
+                "physical_page": 42,
+                "printed_page_label": "FAR14",
+                "location_type": "table_heading",
+                "anchor_text": "3. Equity method investments",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.2.group.e.topic.3.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Identify when the equity method of accounting can be applied to an investment.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 42,
+                    "printed_page_label": "FAR14",
+                    "location_type": "table_row",
+                    "anchor_text": "Identify when the equity method of accounting can be applied to an investment.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 4
+                  }
+                },
+                {
+                  "id": "far.area.2.group.e.topic.3.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Calculate the carrying amount of equity method investments and prepare journal entries (excluding impairment).",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 42,
+                    "printed_page_label": "FAR14",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate the carrying amount of equity method investments and prepare journal entries (excluding impairment).",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 5
+                  }
+                }
+              ]
+            }
+          ],
+          "tasks": []
+        },
+        {
+          "id": "far.area.2.group.f",
+          "code": "F",
+          "official_title": "Intangible assets",
+          "official_heading": "F. Intangible assets",
+          "source_locator": {
+            "physical_page": 42,
+            "printed_page_label": "FAR14",
+            "location_type": "table_heading",
+            "anchor_text": "F. Intangible assets",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.f.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Identify the criteria for recognizing intangible assets in the statement of financial position and classify intangible assets as either finite-lived or indefinite-lived.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 42,
+                "printed_page_label": "FAR14",
+                "location_type": "table_row",
+                "anchor_text": "Identify the criteria for recognizing intangible assets in the statement of financial position and classify intangible assets as either finite-lived or indefinite-lived.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.2.group.f.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Calculate the carrying amount of finite-lived intangible assets reported in the financial statements (initial measurement, amortization and impairment) and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 42,
+                "printed_page_label": "FAR14",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the carrying amount of finite-lived intangible assets reported in the financial statements (initial measurement, amortization and impairment) and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            },
+            {
+              "id": "far.area.2.group.f.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Calculate the carrying amount of purchased software and cloud computing arrangements reported in the financial statements (initial measurement, amortization and impairment) and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 42,
+                "printed_page_label": "FAR14",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the carrying amount of purchased software and cloud computing arrangements reported in the financial statements (initial measurement, amortization and impairment) and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 8
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.2.group.g",
+          "code": "G",
+          "official_title": "Payables and accrued liabilities",
+          "official_heading": "G. Payables and accrued liabilities",
+          "source_locator": {
+            "physical_page": 43,
+            "printed_page_label": "FAR15",
+            "location_type": "table_heading",
+            "anchor_text": "G. Payables and accrued liabilities",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.g.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall the recognition and measurement requirements for asset retirement obligations.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_row",
+                "anchor_text": "Recall the recognition and measurement requirements for asset retirement obligations.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.2.group.g.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Calculate the carrying amount of payables (e.g., accounts payable, dividends payable) and accrued liabilities (e.g., accrued wages, accrued vacation, accrued bonuses, self-insurance liabilities) and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the carrying amount of payables (e.g., accounts payable, dividends payable) and accrued liabilities (e.g., accrued wages, accrued vacation, accrued bonuses, self-insurance liabilities) and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            },
+            {
+              "id": "far.area.2.group.g.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Identify and calculate liabilities arising from exit or disposal activities (e.g., one-time termination benefits, severance arrangements) and determine the timing of recognition in the financial statements.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_row",
+                "anchor_text": "Identify and calculate liabilities arising from exit or disposal activities (e.g., one-time termination benefits, severance arrangements) and determine the timing of recognition in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.2.group.g.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Reconcile and investigate differences between the subledger and general ledger for accounts payable and accrued liabilities to determine whether an adjustment is necessary.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_row",
+                "anchor_text": "Reconcile and investigate differences between the subledger and general ledger for accounts payable and accrued liabilities to determine whether an adjustment is necessary.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.2.group.h",
+          "code": "H",
+          "official_title": "Debt (financial liabilities)",
+          "official_heading": "H. Debt (financial liabilities)",
+          "source_locator": {
+            "physical_page": 43,
+            "printed_page_label": "FAR15",
+            "location_type": "table_heading",
+            "anchor_text": "H. Debt (financial liabilities)",
+            "occurrence_on_page": 1
+          },
+          "topics": [
+            {
+              "id": "far.area.2.group.h.topic.1",
+              "code": "1",
+              "official_title": "Notes and bonds payable",
+              "official_heading": "1. Notes and bonds payable",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_heading",
+                "anchor_text": "1. Notes and bonds payable",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.2.group.h.topic.1.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Recall the criteria to classify a change to a debt instrument as either a modification of terms or an extinguishment of debt.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 43,
+                    "printed_page_label": "FAR15",
+                    "location_type": "table_row",
+                    "anchor_text": "Recall the criteria to classify a change to a debt instrument as either a modification of terms or an extinguishment of debt.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 5
+                  }
+                },
+                {
+                  "id": "far.area.2.group.h.topic.1.task.002",
+                  "ordinal_within_parent": 2,
+                  "official_text": "Understand when a change to the terms of a debt instrument qualifies as a troubled debt restructuring.",
+                  "skill_level": "remembering_and_understanding",
+                  "source_locator": {
+                    "physical_page": 43,
+                    "printed_page_label": "FAR15",
+                    "location_type": "table_row",
+                    "anchor_text": "Understand when a change to the terms of a debt instrument qualifies as a troubled debt restructuring.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 6
+                  }
+                },
+                {
+                  "id": "far.area.2.group.h.topic.1.task.003",
+                  "ordinal_within_parent": 3,
+                  "official_text": "Calculate the interest expense attributable to notes and bonds payable reported in the financial statements (e.g., discounts, premiums, debt issuance costs).",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 43,
+                    "printed_page_label": "FAR15",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate the interest expense attributable to notes and bonds payable reported in the financial statements (e.g., discounts, premiums, debt issuance costs).",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 7
+                  }
+                },
+                {
+                  "id": "far.area.2.group.h.topic.1.task.004",
+                  "ordinal_within_parent": 4,
+                  "official_text": "Calculate the carrying amount of notes and bonds payable and prepare journal entries.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 43,
+                    "printed_page_label": "FAR15",
+                    "location_type": "table_row",
+                    "anchor_text": "Calculate the carrying amount of notes and bonds payable and prepare journal entries.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 8
+                  }
+                }
+              ]
+            },
+            {
+              "id": "far.area.2.group.h.topic.2",
+              "code": "2",
+              "official_title": "Debt covenant compliance",
+              "official_heading": "2. Debt covenant compliance",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_heading",
+                "anchor_text": "2. Debt covenant compliance",
+                "occurrence_on_page": 1
+              },
+              "tasks": [
+                {
+                  "id": "far.area.2.group.h.topic.2.task.001",
+                  "ordinal_within_parent": 1,
+                  "official_text": "Perform debt covenant calculations as stipulated in a debt agreement to ascertain compliance.",
+                  "skill_level": "application",
+                  "source_locator": {
+                    "physical_page": 43,
+                    "printed_page_label": "FAR15",
+                    "location_type": "table_row",
+                    "anchor_text": "Perform debt covenant calculations as stipulated in a debt agreement to ascertain compliance.",
+                    "occurrence_on_page": 1,
+                    "row_ordinal_on_page": 9
+                  }
+                }
+              ]
+            }
+          ],
+          "tasks": []
+        },
+        {
+          "id": "far.area.2.group.i",
+          "code": "I",
+          "official_title": "Equity",
+          "official_heading": "I. Equity",
+          "source_locator": {
+            "physical_page": 43,
+            "printed_page_label": "FAR15",
+            "location_type": "table_heading",
+            "anchor_text": "I. Equity",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.2.group.i.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Prepare journal entries to recognize equity transactions in the financial statements (e.g., equity issuance, stock dividends, stock splits, treasury stock, capital account activity in pass-through entities).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 43,
+                "printed_page_label": "FAR15",
+                "location_type": "table_row",
+                "anchor_text": "Prepare journal entries to recognize equity transactions in the financial statements (e.g., equity issuance, stock dividends, stock splits, treasury stock, capital account activity in pass-through entities).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 10
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "far.area.3",
+      "code": "III",
+      "official_title": "Select Transactions",
+      "official_heading": "Area III – Select Transactions (25–35%)",
+      "allocation_percent": {
+        "minimum": 25,
+        "maximum": 35
+      },
+      "source_locator": {
+        "physical_page": 44,
+        "printed_page_label": "FAR16",
+        "location_type": "section_heading",
+        "anchor_text": "Area III – Select Transactions (25–35%)",
+        "occurrence_on_page": 1
+      },
+      "groups": [
+        {
+          "id": "far.area.3.group.a",
+          "code": "A",
+          "official_title": "Accounting changes and error corrections",
+          "official_heading": "A. Accounting changes and error corrections",
+          "source_locator": {
+            "physical_page": 44,
+            "printed_page_label": "FAR16",
+            "location_type": "table_heading",
+            "anchor_text": "A. Accounting changes and error corrections",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.a.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Calculate a required adjustment to the financial statements due to an accounting change (change in accounting principle or change in accounting estimate) or error correction and determine whether it requires prospective or retrospective application.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Calculate a required adjustment to the financial statements due to an accounting change (change in accounting principle or change in accounting estimate) or error correction and determine whether it requires prospective or retrospective application.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.3.group.a.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Derive the impact to the financial statements and related note disclosures of an identified accounting change or an error correction.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Derive the impact to the financial statements and related note disclosures of an identified accounting change or an error correction.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.3.group.b",
+          "code": "B",
+          "official_title": "Contingencies and commitments",
+          "official_heading": "B. Contingencies and commitments",
+          "source_locator": {
+            "physical_page": 44,
+            "printed_page_label": "FAR16",
+            "location_type": "table_heading",
+            "anchor_text": "B. Contingencies and commitments",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.b.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall the recognition and disclosure criteria used to identify commitments and contingencies.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Recall the recognition and disclosure criteria used to identify commitments and contingencies.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.3.group.b.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Calculate amounts of contingencies and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Calculate amounts of contingencies and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            },
+            {
+              "id": "far.area.3.group.b.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Review supporting documentation to determine whether a commitment or contingency requires recognition and/or disclosure in the financial statements.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Review supporting documentation to determine whether a commitment or contingency requires recognition and/or disclosure in the financial statements.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.3.group.c",
+          "code": "C",
+          "official_title": "Revenue recognition",
+          "official_heading": "C. Revenue recognition",
+          "source_locator": {
+            "physical_page": 44,
+            "printed_page_label": "FAR16",
+            "location_type": "table_heading",
+            "anchor_text": "C. Revenue recognition",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.c.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall concepts of accounting for revenue using the five-step model.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Recall concepts of accounting for revenue using the five-step model.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.3.group.c.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Recall the recognition requirements associated with conditional and unconditional promises to give (pledges) for a nongovernmental, not-for-profit entity.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Recall the recognition requirements associated with conditional and unconditional promises to give (pledges) for a nongovernmental, not-for-profit entity.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            },
+            {
+              "id": "far.area.3.group.c.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Identify transfers to a nongovernmental, not-for-profit entity acting as an agent or intermediary that are not recognized as contributions.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Identify transfers to a nongovernmental, not-for-profit entity acting as an agent or intermediary that are not recognized as contributions.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 8
+              }
+            },
+            {
+              "id": "far.area.3.group.c.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Determine the amount and timing of revenue to be recognized using the five-step model and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Determine the amount and timing of revenue to be recognized using the five-step model and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 9
+              }
+            },
+            {
+              "id": "far.area.3.group.c.task.005",
+              "ordinal_within_parent": 5,
+              "official_text": "Determine the recognition and subsequent measurement requirements for contract costs and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 44,
+                "printed_page_label": "FAR16",
+                "location_type": "table_row",
+                "anchor_text": "Determine the recognition and subsequent measurement requirements for contract costs and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 10
+              }
+            },
+            {
+              "id": "far.area.3.group.c.task.006",
+              "ordinal_within_parent": 6,
+              "official_text": "Determine the amount and timing of revenue to be recognized by a nongovernmental, not-for-profit entity for contributed services received and prepare journal entries.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Determine the amount and timing of revenue to be recognized by a nongovernmental, not-for-profit entity for contributed services received and prepare journal entries.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.3.group.c.task.007",
+              "ordinal_within_parent": 7,
+              "official_text": "Calculate the amount to be recognized for contributions (financial assets and non-financial assets) to a nongovernmental, not-for-profit entity.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the amount to be recognized for contributions (financial assets and non-financial assets) to a nongovernmental, not-for-profit entity.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.3.group.d",
+          "code": "D",
+          "official_title": "Accounting for income taxes",
+          "official_heading": "D. Accounting for income taxes",
+          "source_locator": {
+            "physical_page": 45,
+            "printed_page_label": "FAR17",
+            "location_type": "table_heading",
+            "anchor_text": "D. Accounting for income taxes",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.d.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall the accounting treatment for uncertainty in income taxes.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Recall the accounting treatment for uncertainty in income taxes.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.3.group.d.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Recall the criteria for recognizing or adjusting a valuation allowance for a deferred tax asset.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Recall the criteria for recognizing or adjusting a valuation allowance for a deferred tax asset.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            },
+            {
+              "id": "far.area.3.group.d.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Calculate the income tax expense and current taxes payable/receivable.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the income tax expense and current taxes payable/receivable.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            },
+            {
+              "id": "far.area.3.group.d.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Calculate deferred tax assets/liabilities resulting from book-to-tax basis differences (e.g., allowance for credit losses, inventory costing methods, property, plant and equipment).",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Calculate deferred tax assets/liabilities resulting from book-to-tax basis differences (e.g., allowance for credit losses, inventory costing methods, property, plant and equipment).",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.3.group.d.task.005",
+              "ordinal_within_parent": 5,
+              "official_text": "Prepare journal entries to record the tax provision.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Prepare journal entries to record the tax provision.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.3.group.e",
+          "code": "E",
+          "official_title": "Fair value measurements",
+          "official_heading": "E. Fair value measurements",
+          "source_locator": {
+            "physical_page": 45,
+            "printed_page_label": "FAR17",
+            "location_type": "table_heading",
+            "anchor_text": "E. Fair value measurements",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.e.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Identify the valuation techniques used to measure fair value.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Identify the valuation techniques used to measure fair value.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 8
+              }
+            },
+            {
+              "id": "far.area.3.group.e.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Use assumptions (e.g., highest and best use, market participant assumptions, unit of account) and approaches (cost, income, market) to measure fair value according to the fair value hierarchy.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 45,
+                "printed_page_label": "FAR17",
+                "location_type": "table_row",
+                "anchor_text": "Use assumptions (e.g., highest and best use, market participant assumptions, unit of account) and approaches (cost, income, market) to measure fair value according to the fair value hierarchy.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 9
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.3.group.f",
+          "code": "F",
+          "official_title": "Lessee accounting",
+          "official_heading": "F. Lessee accounting",
+          "source_locator": {
+            "physical_page": 46,
+            "printed_page_label": "FAR18",
+            "location_type": "table_heading",
+            "anchor_text": "F. Lessee accounting",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.f.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Recall the appropriate accounting treatment for residual value guarantees, purchase options and variable lease payments included in leasing arrangements for a lessee.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Recall the appropriate accounting treatment for residual value guarantees, purchase options and variable lease payments included in leasing arrangements for a lessee.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 1
+              }
+            },
+            {
+              "id": "far.area.3.group.f.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Identify the criteria for classifying a lease arrangement for a lessee.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Identify the criteria for classifying a lease arrangement for a lessee.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 2
+              }
+            },
+            {
+              "id": "far.area.3.group.f.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Calculate the carrying amount of lease-related assets and liabilities and prepare journal entries that a lessee should record.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the carrying amount of lease-related assets and liabilities and prepare journal entries that a lessee should record.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 3
+              }
+            },
+            {
+              "id": "far.area.3.group.f.task.004",
+              "ordinal_within_parent": 4,
+              "official_text": "Calculate the lease costs that a lessee should recognize in the income statement.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Calculate the lease costs that a lessee should recognize in the income statement.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 4
+              }
+            }
+          ]
+        },
+        {
+          "id": "far.area.3.group.g",
+          "code": "G",
+          "official_title": "Subsequent events",
+          "official_heading": "G. Subsequent events",
+          "source_locator": {
+            "physical_page": 46,
+            "printed_page_label": "FAR18",
+            "location_type": "table_heading",
+            "anchor_text": "G. Subsequent events",
+            "occurrence_on_page": 1
+          },
+          "topics": [],
+          "tasks": [
+            {
+              "id": "far.area.3.group.g.task.001",
+              "ordinal_within_parent": 1,
+              "official_text": "Identify a subsequent event and recall its appropriate accounting treatment.",
+              "skill_level": "remembering_and_understanding",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Identify a subsequent event and recall its appropriate accounting treatment.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 5
+              }
+            },
+            {
+              "id": "far.area.3.group.g.task.002",
+              "ordinal_within_parent": 2,
+              "official_text": "Calculate required adjustments to financial statements and/or note disclosures based on identified subsequent events.",
+              "skill_level": "application",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Calculate required adjustments to financial statements and/or note disclosures based on identified subsequent events.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 6
+              }
+            },
+            {
+              "id": "far.area.3.group.g.task.003",
+              "ordinal_within_parent": 3,
+              "official_text": "Derive the impact to the financial statements and required note disclosures due to identified subsequent events.",
+              "skill_level": "analysis",
+              "source_locator": {
+                "physical_page": 46,
+                "printed_page_label": "FAR18",
+                "location_type": "table_row",
+                "anchor_text": "Derive the impact to the financial statements and required note disclosures due to identified subsequent events.",
+                "occurrence_on_page": 1,
+                "row_ordinal_on_page": 7
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

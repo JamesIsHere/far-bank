@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "far-p1-g2-sample.v001",
+  "manifest_sha256": "702cf9d0c7ff04ebf78507f672575cc1b1ac202a76dd2fdf8406cd045518abe9",
+  "summary": {
+    "outcome": "pass",
+    "item_count": 6,
+    "area_ids": [
+      "far.area.1",
+      "far.area.2",
+      "far.area.3"
+    ],
+    "skill_levels": [
+      "analysis",
+      "application",
+      "remembering_and_understanding"
+    ],
+    "distinct_challenge_tags": [
+      "classification",
+      "convention",
+      "elimination_leverage",
+      "end_ask_location",
+      "fact_selection",
+      "financial_statement_view",
+      "formula_translation",
+      "journal_effect",
+      "language_trap",
+      "roll_forward",
+      "rule_selection",
+      "time_pressure",
+      "timing"
+    ],
+    "all_checks_pass": true,
+    "all_items_candidate_only": true,
+    "canonical_review_event_count": 0,
+    "normalized_exact_stem_duplicate_count": 0,
+    "maximum_pairwise_word_5gram_jaccard": 0.008696,
+    "claim_limit": "This is a bounded six-item within-bank comparison and candidate verification report, not human approval, learner readiness, external-corpus originality, or coverage-floor evidence."
+  },
+  "items": [
+    {
+      "question_id": "far-q-000101",
+      "version_id": "far-q-000101.v001",
+      "content_sha256": "498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400",
+      "area_id": "far.area.1",
+      "skill_level": "remembering_and_understanding",
+      "challenge_tags": [
+        "classification",
+        "elimination_leverage",
+        "financial_statement_view"
+      ],
+      "checks": [
+        {
+          "check_id": "SCHEMA_CONTRACT",
+          "category": "SCHEMA",
+          "outcome": "pass",
+          "detail": "Closed record shapes and cross-record structural contracts pass.",
+          "evidence": [
+            "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+          ]
+        },
+        {
+          "check_id": "RECOMPUTE_INDEPENDENT",
+          "category": "RECOMPUTE",
+          "outcome": "pass",
+          "detail": "Independent generic linear-combination route recomputed 14000 USD.",
+          "evidence": [
+            "producer_component_id=p1-sample-content-author",
+            "verifier_component_id=independent-linear-combination-checker",
+            "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+          ]
+        },
+        {
+          "check_id": "RULE_TRACE_CURRENT",
+          "category": "RULE_TRACE",
+          "outcome": "pass",
+          "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+          "evidence": [
+            "rule_version_id=far-rule-oci-components.v001",
+            "reference_version_id=far-ref-fasb-codification-live.v001",
+            "Fixture-world currency cannot be carried into a sample-candidate claim."
+          ]
+        },
+        {
+          "check_id": "DISTRACTOR_MODELS",
+          "category": "DISTRACTORS",
+          "outcome": "pass",
+          "detail": "All three named distractor error models reproduce their distinct option values.",
+          "evidence": [
+            "B=error-include-trading",
+            "C=error-net-realized-loss",
+            "D=error-include-dividend"
+          ]
+        },
+        {
+          "check_id": "LANGUAGE_FAIRNESS",
+          "category": "LANGUAGE",
+          "outcome": "pass",
+          "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+          "evidence": [
+            "structured_numeric_fact_count=4",
+            "structured_assumption_count=0"
+          ]
+        },
+        {
+          "check_id": "ORIGINALITY_BOUNDARY",
+          "category": "ORIGINALITY",
+          "outcome": "pass",
+          "detail": "Originality language stays within the exact named comparison boundary.",
+          "evidence": [
+            "compared_corpus_ids=['far-p1-g2-sample.v001']",
+            "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+          ]
+        },
+        {
+          "check_id": "APPROVAL_INTEGRITY",
+          "category": "APPROVAL_INTEGRITY",
+          "outcome": "pass",
+          "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+          "evidence": [
+            "version_id=far-q-000101.v001",
+            "content_sha256=498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400",
+            "An absent review event is valid candidate state and grants no approval."
+          ]
+        },
+        {
+          "check_id": "VARIETY_EVIDENCE",
+          "category": "VARIETY",
+          "outcome": "pass",
+          "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+          "evidence": [
+            "arithmetic_operation_count=0",
+            "dependent_step_count=2",
+            "irrelevant_fact_count=3",
+            "plausible_error_model_count=3",
+            "rule_count=1",
+            "No variety distribution or difficulty rubric is treated as ratified."
+          ]
+        }
+      ],
+      "verification_event_matches_observed_results": true,
+      "learner_ready": false,
+      "readiness_hold_reasons": [
+        "latest_decisive_review_not_approve",
+        "approval_not_human",
+        "required_reviewer_missing"
+      ]
+    },
+    {
+      "question_id": "far-q-000102",
+      "version_id": "far-q-000102.v001",
+      "content_sha256": "0a53576a16fd6ceb945d250ebe41b079e403e2a3480ba2dfbaaa24a2670b31a4",
+      "area_id": "far.area.1",
+      "skill_level": "application",
+      "challenge_tags": [
+        "formula_translation",
+        "fact_selection",
+        "time_pressure",
+        "journal_effect"
+      ],
+      "checks": [
+        {
+          "check_id": "SCHEMA_CONTRACT",
+          "category": "SCHEMA",
+          "outcome": "pass",
+          "detail": "Closed record shapes and cross-record structural contracts pass.",
+          "evidence": [
+            "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+          ]
+        },
+        {
+          "check_id": "RECOMPUTE_INDEPENDENT",
+          "category": "RECOMPUTE",
+          "outcome": "pass",
+          "detail": "Independent generic linear-combination route recomputed 132000 USD.",
+          "evidence": [
+            "producer_component_id=p1-sample-content-author",
+            "verifier_component_id=independent-linear-combination-checker",
+            "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+          ]
+        },
+        {
+          "check_id": "RULE_TRACE_CURRENT",
+          "category": "RULE_TRACE",
+          "outcome": "pass",
+          "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+          "evidence": [
+            "rule_version_id=far-rule-indirect-operating-cash-flow.v001",
+            "reference_version_id=far-ref-fasb-codification-live.v001",
+            "Fixture-world currency cannot be carried into a sample-candidate claim."
+          ]
+        },
+        {
+          "check_id": "DISTRACTOR_MODELS",
+          "category": "DISTRACTORS",
+          "outcome": "pass",
+          "detail": "All three named distractor error models reproduce their distinct option values.",
+          "evidence": [
+            "B=error-omit-receivable-change",
+            "C=error-add-sale-gain",
+            "D=error-subtract-dividends"
+          ]
+        },
+        {
+          "check_id": "LANGUAGE_FAIRNESS",
+          "category": "LANGUAGE",
+          "outcome": "pass",
+          "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+          "evidence": [
+            "structured_numeric_fact_count=7",
+            "structured_assumption_count=1"
+          ]
+        },
+        {
+          "check_id": "ORIGINALITY_BOUNDARY",
+          "category": "ORIGINALITY",
+          "outcome": "pass",
+          "detail": "Originality language stays within the exact named comparison boundary.",
+          "evidence": [
+            "compared_corpus_ids=['far-p1-g2-sample.v001']",
+            "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+          ]
+        },
+        {
+          "check_id": "APPROVAL_INTEGRITY",
+          "category": "APPROVAL_INTEGRITY",
+          "outcome": "pass",
+          "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+          "evidence": [
+            "version_id=far-q-000102.v001",
+            "content_sha256=0a53576a16fd6ceb945d250ebe41b079e403e2a3480ba2dfbaaa24a2670b31a4",
+            "An absent review event is valid candidate state and grants no approval."
+          ]
+        },
+        {
+          "check_id": "VARIETY_EVIDENCE",
+          "category": "VARIETY",
+          "outcome": "pass",
+          "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+          "evidence": [
+            "arithmetic_operation_count=5",
+            "dependent_step_count=3",
+            "irrelevant_fact_count=1",
+            "plausible_error_model_count=3",
+            "rule_count=1",
+            "No variety distribution or difficulty rubric is treated as ratified."
+          ]
+        }
+      ],
+      "verification_event_matches_observed_results": true,
+      "learner_ready": false,
+      "readiness_hold_reasons": [
+        "latest_decisive_review_not_approve",
+        "approval_not_human",
+        "required_reviewer_missing"
+      ]
+    },
+    {
+      "question_id": "far-q-000103",
+      "version_id": "far-q-000103.v001",
+      "content_sha256": "bb68ed75e4c9d08b52f91db482a623d45fe6516399f064385748431c8ad807a6",
+      "area_id": "far.area.2",
+      "skill_level": "application",
+      "challenge_tags": [
+        "convention",
+        "fact_selection",
+        "language_trap",
+        "classification"
+      ],
+      "checks": [
+        {
+          "check_id": "SCHEMA_CONTRACT",
+          "category": "SCHEMA",
+          "outcome": "pass",
+          "detail": "Closed record shapes and cross-record structural contracts pass.",
+          "evidence": [
+            "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+          ]
+        },
+        {
+          "check_id": "RECOMPUTE_INDEPENDENT",
+          "category": "RECOMPUTE",
+          "outcome": "pass",
+          "detail": "Independent generic linear-combination route recomputed 65000 USD.",
+          "evidence": [
+            "producer_component_id=p1-sample-content-author",
+            "verifier_component_id=independent-linear-combination-checker",
+            "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+          ]
+        },
+        {
+          "check_id": "RULE_TRACE_CURRENT",
+          "category": "RULE_TRACE",
+          "outcome": "pass",
+          "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+          "evidence": [
+            "rule_version_id=far-rule-cash-equivalent-original-maturity.v001",
+            "reference_version_id=far-ref-fasb-codification-live.v001",
+            "Fixture-world currency cannot be carried into a sample-candidate claim."
+          ]
+        },
+        {
+          "check_id": "DISTRACTOR_MODELS",
+          "category": "DISTRACTORS",
+          "outcome": "pass",
+          "detail": "All three named distractor error models reproduce their distinct option values.",
+          "evidence": [
+            "B=error-include-nearby-note",
+            "C=error-include-commercial-paper",
+            "D=error-exclude-all-investments"
+          ]
+        },
+        {
+          "check_id": "LANGUAGE_FAIRNESS",
+          "category": "LANGUAGE",
+          "outcome": "pass",
+          "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+          "evidence": [
+            "structured_numeric_fact_count=8",
+            "structured_assumption_count=1"
+          ]
+        },
+        {
+          "check_id": "ORIGINALITY_BOUNDARY",
+          "category": "ORIGINALITY",
+          "outcome": "pass",
+          "detail": "Originality language stays within the exact named comparison boundary.",
+          "evidence": [
+            "compared_corpus_ids=['far-p1-g2-sample.v001']",
+            "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+          ]
+        },
+        {
+          "check_id": "APPROVAL_INTEGRITY",
+          "category": "APPROVAL_INTEGRITY",
+          "outcome": "pass",
+          "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+          "evidence": [
+            "version_id=far-q-000103.v001",
+            "content_sha256=bb68ed75e4c9d08b52f91db482a623d45fe6516399f064385748431c8ad807a6",
+            "An absent review event is valid candidate state and grants no approval."
+          ]
+        },
+        {
+          "check_id": "VARIETY_EVIDENCE",
+          "category": "VARIETY",
+          "outcome": "pass",
+          "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+          "evidence": [
+            "arithmetic_operation_count=1",
+            "dependent_step_count=2",
+            "irrelevant_fact_count=5",
+            "plausible_error_model_count=3",
+            "rule_count=1",
+            "No variety distribution or difficulty rubric is treated as ratified."
+          ]
+        }
+      ],
+      "verification_event_matches_observed_results": true,
+      "learner_ready": false,
+      "readiness_hold_reasons": [
+        "latest_decisive_review_not_approve",
+        "approval_not_human",
+        "required_reviewer_missing"
+      ]
+    },
+    {
+      "question_id": "far-q-000104",
+      "version_id": "far-q-000104.v001",
+      "content_sha256": "cd25c31fb659432408501b65bc9e57f88cdeae042b342137b89bc5a0238b5614",
+      "area_id": "far.area.2",
+      "skill_level": "analysis",
+      "challenge_tags": [
+        "roll_forward",
+        "fact_selection",
+        "elimination_leverage",
+        "journal_effect"
+      ],
+      "checks": [
+        {
+          "check_id": "SCHEMA_CONTRACT",
+          "category": "SCHEMA",
+          "outcome": "pass",
+          "detail": "Closed record shapes and cross-record structural contracts pass.",
+          "evidence": [
+            "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+          ]
+        },
+        {
+          "check_id": "RECOMPUTE_INDEPENDENT",
+          "category": "RECOMPUTE",
+          "outcome": "pass",
+          "detail": "Independent generic linear-combination route recomputed -5000 USD.",
+          "evidence": [
+            "producer_component_id=p1-sample-content-author",
+            "verifier_component_id=independent-linear-combination-checker",
+            "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+          ]
+        },
+        {
+          "check_id": "RULE_TRACE_CURRENT",
+          "category": "RULE_TRACE",
+          "outcome": "pass",
+          "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+          "evidence": [
+            "rule_version_id=far-rule-inventory-rollforward-reconciliation.v001",
+            "reference_version_id=far-ref-fasb-codification-live.v001",
+            "Fixture-world currency cannot be carried into a sample-candidate claim."
+          ]
+        },
+        {
+          "check_id": "DISTRACTOR_MODELS",
+          "category": "DISTRACTORS",
+          "outcome": "pass",
+          "detail": "All three named distractor error models reproduce their distinct option values.",
+          "evidence": [
+            "B=error-reverse-adjustment",
+            "C=error-assume-agreement",
+            "D=error-omit-supplier-returns"
+          ]
+        },
+        {
+          "check_id": "LANGUAGE_FAIRNESS",
+          "category": "LANGUAGE",
+          "outcome": "pass",
+          "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+          "evidence": [
+            "structured_numeric_fact_count=6",
+            "structured_assumption_count=2"
+          ]
+        },
+        {
+          "check_id": "ORIGINALITY_BOUNDARY",
+          "category": "ORIGINALITY",
+          "outcome": "pass",
+          "detail": "Originality language stays within the exact named comparison boundary.",
+          "evidence": [
+            "compared_corpus_ids=['far-p1-g2-sample.v001']",
+            "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+          ]
+        },
+        {
+          "check_id": "APPROVAL_INTEGRITY",
+          "category": "APPROVAL_INTEGRITY",
+          "outcome": "pass",
+          "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+          "evidence": [
+            "version_id=far-q-000104.v001",
+            "content_sha256=cd25c31fb659432408501b65bc9e57f88cdeae042b342137b89bc5a0238b5614",
+            "An absent review event is valid candidate state and grants no approval."
+          ]
+        },
+        {
+          "check_id": "VARIETY_EVIDENCE",
+          "category": "VARIETY",
+          "outcome": "pass",
+          "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+          "evidence": [
+            "arithmetic_operation_count=4",
+            "dependent_step_count=3",
+            "irrelevant_fact_count=1",
+            "plausible_error_model_count=3",
+            "rule_count=1",
+            "No variety distribution or difficulty rubric is treated as ratified."
+          ]
+        }
+      ],
+      "verification_event_matches_observed_results": true,
+      "learner_ready": false,
+      "readiness_hold_reasons": [
+        "latest_decisive_review_not_approve",
+        "approval_not_human",
+        "required_reviewer_missing"
+      ]
+    },
+    {
+      "question_id": "far-q-000105",
+      "version_id": "far-q-000105.v001",
+      "content_sha256": "927cd265746bfb68773d846e5a675f461d8ce8dda92f37bc258f59afb9d1efb4",
+      "area_id": "far.area.3",
+      "skill_level": "application",
+      "challenge_tags": [
+        "convention",
+        "rule_selection",
+        "language_trap",
+        "elimination_leverage"
+      ],
+      "checks": [
+        {
+          "check_id": "SCHEMA_CONTRACT",
+          "category": "SCHEMA",
+          "outcome": "pass",
+          "detail": "Closed record shapes and cross-record structural contracts pass.",
+          "evidence": [
+            "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+          ]
+        },
+        {
+          "check_id": "RECOMPUTE_INDEPENDENT",
+          "category": "RECOMPUTE",
+          "outcome": "pass",
+          "detail": "Independent generic linear-combination route recomputed 300000 USD.",
+          "evidence": [
+            "producer_component_id=p1-sample-content-author",
+            "verifier_component_id=independent-linear-combination-checker",
+            "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+          ]
+        },
+        {
+          "check_id": "RULE_TRACE_CURRENT",
+          "category": "RULE_TRACE",
+          "outcome": "pass",
+          "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+          "evidence": [
+            "rule_version_id=far-rule-loss-contingency-range.v001",
+            "reference_version_id=far-ref-fasb-codification-live.v001",
+            "Fixture-world currency cannot be carried into a sample-candidate claim."
+          ]
+        },
+        {
+          "check_id": "DISTRACTOR_MODELS",
+          "category": "DISTRACTORS",
+          "outcome": "pass",
+          "detail": "All three named distractor error models reproduce their distinct option values.",
+          "evidence": [
+            "B=error-accrue-range-maximum",
+            "C=error-accrue-midpoint",
+            "D=error-accrue-possible-loss"
+          ]
+        },
+        {
+          "check_id": "LANGUAGE_FAIRNESS",
+          "category": "LANGUAGE",
+          "outcome": "pass",
+          "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+          "evidence": [
+            "structured_numeric_fact_count=3",
+            "structured_assumption_count=0"
+          ]
+        },
+        {
+          "check_id": "ORIGINALITY_BOUNDARY",
+          "category": "ORIGINALITY",
+          "outcome": "pass",
+          "detail": "Originality language stays within the exact named comparison boundary.",
+          "evidence": [
+            "compared_corpus_ids=['far-p1-g2-sample.v001']",
+            "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+          ]
+        },
+        {
+          "check_id": "APPROVAL_INTEGRITY",
+          "category": "APPROVAL_INTEGRITY",
+          "outcome": "pass",
+          "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+          "evidence": [
+            "version_id=far-q-000105.v001",
+            "content_sha256=927cd265746bfb68773d846e5a675f461d8ce8dda92f37bc258f59afb9d1efb4",
+            "An absent review event is valid candidate state and grants no approval."
+          ]
+        },
+        {
+          "check_id": "VARIETY_EVIDENCE",
+          "category": "VARIETY",
+          "outcome": "pass",
+          "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+          "evidence": [
+            "arithmetic_operation_count=0",
+            "dependent_step_count=2",
+            "irrelevant_fact_count=2",
+            "plausible_error_model_count=3",
+            "rule_count=1",
+            "No variety distribution or difficulty rubric is treated as ratified."
+          ]
+        }
+      ],
+      "verification_event_matches_observed_results": true,
+      "learner_ready": false,
+      "readiness_hold_reasons": [
+        "latest_decisive_review_not_approve",
+        "approval_not_human",
+        "required_reviewer_missing"
+      ]
+    },
+    {
+      "question_id": "far-q-000106",
+      "version_id": "far-q-000106.v001",
+      "content_sha256": "463365bce557de98f26a786fe653de09f98ca67a77bdd8a60eedd502a29e7211",
+      "area_id": "far.area.3",
+      "skill_level": "analysis",
+      "challenge_tags": [
+        "timing",
+        "fact_selection",
+        "financial_statement_view",
+        "end_ask_location",
+        "elimination_leverage"
+      ],
+      "checks": [
+        {
+          "check_id": "SCHEMA_CONTRACT",
+          "category": "SCHEMA",
+          "outcome": "pass",
+          "detail": "Closed record shapes and cross-record structural contracts pass.",
+          "evidence": [
+            "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+          ]
+        },
+        {
+          "check_id": "RECOMPUTE_INDEPENDENT",
+          "category": "RECOMPUTE",
+          "outcome": "pass",
+          "detail": "Independent generic linear-combination route recomputed 115000 USD.",
+          "evidence": [
+            "producer_component_id=p1-sample-content-author",
+            "verifier_component_id=independent-linear-combination-checker",
+            "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+          ]
+        },
+        {
+          "check_id": "RULE_TRACE_CURRENT",
+          "category": "RULE_TRACE",
+          "outcome": "pass",
+          "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+          "evidence": [
+            "rule_version_id=far-rule-subsequent-event-recognition.v001",
+            "reference_version_id=far-ref-fasb-codification-live.v001",
+            "Fixture-world currency cannot be carried into a sample-candidate claim."
+          ]
+        },
+        {
+          "check_id": "DISTRACTOR_MODELS",
+          "category": "DISTRACTORS",
+          "outcome": "pass",
+          "detail": "All three named distractor error models reproduce their distinct option values.",
+          "evidence": [
+            "B=error-recognize-fire-omit-lawsuit",
+            "C=error-recognize-all-events",
+            "D=error-ignore-prior-accrual"
+          ]
+        },
+        {
+          "check_id": "LANGUAGE_FAIRNESS",
+          "category": "LANGUAGE",
+          "outcome": "pass",
+          "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+          "evidence": [
+            "structured_numeric_fact_count=4",
+            "structured_assumption_count=1"
+          ]
+        },
+        {
+          "check_id": "ORIGINALITY_BOUNDARY",
+          "category": "ORIGINALITY",
+          "outcome": "pass",
+          "detail": "Originality language stays within the exact named comparison boundary.",
+          "evidence": [
+            "compared_corpus_ids=['far-p1-g2-sample.v001']",
+            "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+          ]
+        },
+        {
+          "check_id": "APPROVAL_INTEGRITY",
+          "category": "APPROVAL_INTEGRITY",
+          "outcome": "pass",
+          "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+          "evidence": [
+            "version_id=far-q-000106.v001",
+            "content_sha256=463365bce557de98f26a786fe653de09f98ca67a77bdd8a60eedd502a29e7211",
+            "An absent review event is valid candidate state and grants no approval."
+          ]
+        },
+        {
+          "check_id": "VARIETY_EVIDENCE",
+          "category": "VARIETY",
+          "outcome": "pass",
+          "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+          "evidence": [
+            "arithmetic_operation_count=2",
+            "dependent_step_count=3",
+            "irrelevant_fact_count=1",
+            "plausible_error_model_count=3",
+            "rule_count=1",
+            "No variety distribution or difficulty rubric is treated as ratified."
+          ]
+        }
+      ],
+      "verification_event_matches_observed_results": true,
+      "learner_ready": false,
+      "readiness_hold_reasons": [
+        "latest_decisive_review_not_approve",
+        "approval_not_human",
+        "required_reviewer_missing"
+      ]
+    }
+  ],
+  "within_bank_originality": [
+    {
+      "left_question_id": "far-q-000101",
+      "right_question_id": "far-q-000102",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.008696
+    },
+    {
+      "left_question_id": "far-q-000101",
+      "right_question_id": "far-q-000103",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000101",
+      "right_question_id": "far-q-000104",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000101",
+      "right_question_id": "far-q-000105",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000101",
+      "right_question_id": "far-q-000106",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000102",
+      "right_question_id": "far-q-000103",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.006944
+    },
+    {
+      "left_question_id": "far-q-000102",
+      "right_question_id": "far-q-000104",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000102",
+      "right_question_id": "far-q-000105",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000102",
+      "right_question_id": "far-q-000106",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000103",
+      "right_question_id": "far-q-000104",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000103",
+      "right_question_id": "far-q-000105",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000103",
+      "right_question_id": "far-q-000106",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000104",
+      "right_question_id": "far-q-000105",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000104",
+      "right_question_id": "far-q-000106",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    },
+    {
+      "left_question_id": "far-q-000105",
+      "right_question_id": "far-q-000106",
+      "normalized_exact_match": false,
+      "word_5gram_jaccard": 0.0
+    }
+  ]
+}

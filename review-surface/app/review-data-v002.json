@@ -1,0 +1,3925 @@
+{
+  "surface_version": "p1.6-g2-sample-review.v002",
+  "surface_scope": {
+    "record_purpose": "sample_candidate",
+    "claim": "Internal G2 exact-version review only. A current item becomes mechanically learner-ready only after James approves that exact version; no item is coverage-bearing until G2 ratification.",
+    "canonical_event_note": "Downloaded action events are proposals until validated and exclusively ingested into the canonical append-only event directory."
+  },
+  "source_manifest": [
+    {
+      "path": "data/events/review/far-review-far-q-000101-approve-20260813t1743203278866z.json",
+      "sha256": "5d69365c29191739d212d9f5a8024496e104569b5082a278e5cc497d4e6e3167"
+    },
+    {
+      "path": "data/events/review/far-review-far-q-000102-approve-20260813t1757462466055z.json",
+      "sha256": "698a16bafd9972ca9336dd84dd712c84927e8ebee4484878e2a0eefae0956ca5"
+    },
+    {
+      "path": "data/events/review/far-review-far-q-000103-approve-20260813t1759350701839z.json",
+      "sha256": "ee833b903ee0b947dad21da5e7a670cb7ec97ec3e7a85de10e6bb5f7ddbdf77e"
+    },
+    {
+      "path": "data/events/review/far-review-far-q-000104-approve-20260813t1800466452056z.json",
+      "sha256": "995252043e688ce53b478695caa90a75236d551220d2901841c06825a84729b1"
+    },
+    {
+      "path": "data/events/review/far-review-far-q-000105-approve-20260813t1802488764121z.json",
+      "sha256": "21148c31511ec090f3eacf01b394b567fb6651224e04f9c66dce5d602721ed4e"
+    },
+    {
+      "path": "data/events/review/far-review-far-q-000106-approve-20260813t1804492948352z.json",
+      "sha256": "0bfa8bd1bcab1634e761dadf20b92db73db05b4685974dac45548626979c425c"
+    },
+    {
+      "path": "data/events/verification/far-verification-000101-v001.json",
+      "sha256": "ffccf4a283d66bbbb539734e658a689c63525f3497044ad826cd4828e49b1dbd"
+    },
+    {
+      "path": "data/events/verification/far-verification-000102-v002.json",
+      "sha256": "5997697519c7aab755fad3e7434f667a52d74b635276e9f755d03ed315ee255e"
+    },
+    {
+      "path": "data/events/verification/far-verification-000103-v002.json",
+      "sha256": "e3eca0fc412ecd6c871bdb3ecd323506affc9570eae8acbad1a997dd8361e9df"
+    },
+    {
+      "path": "data/events/verification/far-verification-000104-v002.json",
+      "sha256": "b9d34810d2963642d5f23a18077159c5d90408baf999c020ea73189664159185"
+    },
+    {
+      "path": "data/events/verification/far-verification-000105-v002.json",
+      "sha256": "fee10a2cb9f2dbe3bb16a4ccc90903d31fd49aff6cb3ec150534c7775514e689"
+    },
+    {
+      "path": "data/events/verification/far-verification-000106-v002.json",
+      "sha256": "e5d83bfb460a1625e27638e3d1dba7fa76f0edcf396be51d698c9738b6a67036"
+    },
+    {
+      "path": "data/far-taxonomy.json",
+      "sha256": "2e164c9d0002d901ea7d0a9c24f5646a2fa277fe1f1a5bb84a5f06caa5336933"
+    },
+    {
+      "path": "data/questions/far-q-000101/identity.json",
+      "sha256": "2cdb6bc88dcf0248847ab9f3059b4f07d98d905a02983a9d659ddd985851d686"
+    },
+    {
+      "path": "data/questions/far-q-000101/versions/far-q-000101.v001.json",
+      "sha256": "b938a96b00418459a3a02bf7a91b836665ac54986e9c5d91d518e43ae8e6fe63"
+    },
+    {
+      "path": "data/questions/far-q-000102/identity.json",
+      "sha256": "801a465d9d1a92cc5b57f7cba0c7cdb46a4621ad043e0484a0694e64c4d9fed2"
+    },
+    {
+      "path": "data/questions/far-q-000102/versions/far-q-000102.v002.json",
+      "sha256": "40393ea867fb3a28418bd85cd54dc6b4d45a5793ae02b5253fa85b6597ecec7f"
+    },
+    {
+      "path": "data/questions/far-q-000103/identity.json",
+      "sha256": "f3f421fea43565048f90eac0bd1e7ada308f7d4f0695af006555c93a8d47b377"
+    },
+    {
+      "path": "data/questions/far-q-000103/versions/far-q-000103.v002.json",
+      "sha256": "010da420f838f1fa55e4d582da2c0e449f5c74ef11abd438061b2b3078df4289"
+    },
+    {
+      "path": "data/questions/far-q-000104/identity.json",
+      "sha256": "ebc11b43b42b9626e10e91e91d3e2a0ab78bf51987864dd611a886906fd44359"
+    },
+    {
+      "path": "data/questions/far-q-000104/versions/far-q-000104.v002.json",
+      "sha256": "dd563cabc0fb8ba09423724b6db4505af105ddc4e757771cf43f79509ea4458a"
+    },
+    {
+      "path": "data/questions/far-q-000105/identity.json",
+      "sha256": "8b1971d66606f1cf1f2d7a76fbe50ee6fd04657d4c42deed547defbaf3ee48f9"
+    },
+    {
+      "path": "data/questions/far-q-000105/versions/far-q-000105.v002.json",
+      "sha256": "44ca1f03d28323db9208309fbff9d7068035f7ed5e629d873d13db2e882d6908"
+    },
+    {
+      "path": "data/questions/far-q-000106/identity.json",
+      "sha256": "3cbe535ed6dc90a58676a052f2ecc009abe547c6e67a8aeb12abeae00da90b8f"
+    },
+    {
+      "path": "data/questions/far-q-000106/versions/far-q-000106.v002.json",
+      "sha256": "a4537586ea5a0f316db7c7c5ea4a034908a08d68b7dcadd4aa5285f50a073091"
+    },
+    {
+      "path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "sha256": "a6345e7e2db85e0b80005e85b271da4216c10a0bd1827c17b746fc5ca0e93bcf"
+    },
+    {
+      "path": "data/rules/far-rule-cash-equivalent-original-maturity/versions/far-rule-cash-equivalent-original-maturity.v001.json",
+      "sha256": "376bd08be860b837d5357ea0a634aad3ae13c48a8a01142eeaa6b99434ad1a3d"
+    },
+    {
+      "path": "data/rules/far-rule-indirect-operating-cash-flow/versions/far-rule-indirect-operating-cash-flow.v001.json",
+      "sha256": "911079a4a4b4dca8a88ee94ad60ab03dc02b1b1899e816eab66c76ec5d1fdd3c"
+    },
+    {
+      "path": "data/rules/far-rule-inventory-rollforward-reconciliation/versions/far-rule-inventory-rollforward-reconciliation.v001.json",
+      "sha256": "c7ff74353c02a336843c37d304213fe3e4d5384a8e1e93dc640123cf2686fefb"
+    },
+    {
+      "path": "data/rules/far-rule-loss-contingency-range/versions/far-rule-loss-contingency-range.v001.json",
+      "sha256": "6883b83699e4a3bbf9cfd8089711bb93271dd0eb1b43ae50f87faeebf4f34ffc"
+    },
+    {
+      "path": "data/rules/far-rule-oci-components/versions/far-rule-oci-components.v001.json",
+      "sha256": "832696bdfd29dd66a5fbb822fabfe15ee5ce484f5c69ba2bcf7f4faf3e52c91e"
+    },
+    {
+      "path": "data/rules/far-rule-subsequent-event-recognition/versions/far-rule-subsequent-event-recognition.v001.json",
+      "sha256": "d2f169d96be1a9dc474f868514bf12c626244d0caa0e8d6ea18cb6194e321a36"
+    },
+    {
+      "path": "data/sample/p1/manifest.json",
+      "sha256": "55983818321d309109e966a26261cb63730bf494ac2a0c97d27f799277b78670"
+    },
+    {
+      "path": "reports/p1-sample-verification.v002.json",
+      "sha256": "321b412244ae85dd12cbc5506b73b6576b0c2f91a1e220e35c289ea0fbb7abc3"
+    },
+    {
+      "path": "reports/p1-verifier-calibration.json",
+      "sha256": "d2c5127c0b654748dea86ad6d7c145b11d79ab4b3794901db4745d03853ffba0"
+    }
+  ],
+  "queue_summary": {
+    "sample_id": "far-p1-g2-sample.v002",
+    "item_count": 6,
+    "ready_count": 6,
+    "coverage_contribution": 0
+  },
+  "items": [
+    {
+      "identity": {
+        "question_id": "far-q-000101",
+        "version_id": "far-q-000101.v001",
+        "version_number": 1,
+        "content_sha256": "498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400"
+      },
+      "derived_readiness": {
+        "learner_ready": true,
+        "reasons": [],
+        "coverage_contribution": 0
+      },
+      "question": {
+        "stem": "A company reports a $14,000 unrealized gain on an available-for-sale debt security, a $6,000 unrealized gain on a trading security, a $5,000 realized loss on an equipment sale, and $2,000 of dividend income. What pretax amount should the company report in other comprehensive income?",
+        "options": [
+          {
+            "option_id": "A",
+            "text": "$14,000 of pretax OCI",
+            "structured_value": {
+              "value_type": "number",
+              "value": 14000,
+              "unit": "USD"
+            },
+            "is_keyed": true
+          },
+          {
+            "option_id": "B",
+            "text": "$20,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 20000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-include-trading",
+              "name": "Include trading gain",
+              "misconception": "Treats every unrealized security gain as OCI.",
+              "derivation": "$14,000 + $6,000 = $20,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-afs-gain",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-trading-gain",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "C",
+            "text": "$9,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 9000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-net-realized-loss",
+              "name": "Net realized loss",
+              "misconception": "Nets an earnings loss against OCI.",
+              "derivation": "$14,000 - $5,000 = $9,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-afs-gain",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-equipment-loss",
+                      "coefficient": -1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "D",
+            "text": "$16,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 16000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-include-dividend",
+              "name": "Include dividend income",
+              "misconception": "Treats ordinary dividend income as OCI.",
+              "derivation": "$14,000 + $2,000 = $16,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-afs-gain",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-dividend-income",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "fact-afs-gain",
+            "statement": "The unrealized gain on available-for-sale debt is $14,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 14000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Included in pretax OCI."
+          },
+          {
+            "fact_id": "fact-trading-gain",
+            "statement": "The unrealized trading-security gain is $6,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 6000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "Trading-security changes are reported in earnings."
+          },
+          {
+            "fact_id": "fact-equipment-loss",
+            "statement": "The realized equipment-sale loss is $5,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 5000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "A realized disposal loss is reported in earnings."
+          },
+          {
+            "fact_id": "fact-dividend-income",
+            "statement": "Dividend income is $2,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 2000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "Ordinary dividend income is reported in earnings."
+          }
+        ],
+        "assumptions": [],
+        "solution": {
+          "end_ask": "Identify and total the stated pretax OCI components.",
+          "representation": {
+            "kind": "classification",
+            "setup": "Pretax OCI = included OCI items; exclude items reported in net income."
+          },
+          "steps": [
+            {
+              "step_number": 1,
+              "instruction": "Classify each item as OCI or earnings.",
+              "fact_ids_used": [
+                "fact-afs-gain",
+                "fact-trading-gain",
+                "fact-equipment-loss",
+                "fact-dividend-income"
+              ],
+              "assertion_ids_used": [
+                "assertion-afs-debt-oci",
+                "assertion-earnings-items-excluded"
+              ],
+              "result": "Only the available-for-sale debt unrealized gain is OCI."
+            },
+            {
+              "step_number": 2,
+              "instruction": "Total the included OCI items.",
+              "fact_ids_used": [
+                "fact-afs-gain"
+              ],
+              "assertion_ids_used": [
+                "assertion-afs-debt-oci"
+              ],
+              "result": "$14,000."
+            }
+          ],
+          "keyed_answer_option_id": "A",
+          "keyed_answer_rationale": "Only the $14,000 unrealized gain on available-for-sale debt is a current-period OCI item.",
+          "faster_or_safer_route": "First eliminate the three items explicitly reported in earnings; the remaining amount is OCI."
+        },
+        "correctness_evidence": {
+          "evidence_id": "evidence-oci-classification",
+          "route": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-afs-gain",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          },
+          "producer_component_id": "p1-sample-content-author",
+          "verifier_component_id": "independent-linear-combination-checker",
+          "shared_deciding_function": false,
+          "authorship": {
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "created_at": "2026-08-13T20:00:00Z",
+            "model_id": "openai-codex-gpt-5"
+          },
+          "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+        },
+        "accounting_model_id": "far-model-oci-classification"
+      },
+      "blueprint": {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.1",
+        "group_id": "far.area.1.group.a",
+        "topic_id": "far.area.1.group.a.topic.3",
+        "representative_task_id": "far.area.1.group.a.topic.3.task.002",
+        "skill_level": "remembering_and_understanding",
+        "mapping_rationale": "The item requires identifying which stated item is classified in OCI.",
+        "mcq_scope_limit": "The MCQ tests classification of a bounded set and does not prepare a complete statement of comprehensive income.",
+        "labels": {
+          "area": "Financial Reporting",
+          "group": "General-Purpose Financial Reporting: For-Profit Business Entities",
+          "topic": "Statement of comprehensive income",
+          "task": "Identify items classified as other comprehensive income."
+        }
+      },
+      "rule": {
+        "schema_version": "1.0.0",
+        "rule_id": "far-rule-oci-components",
+        "rule_version_id": "far-rule-oci-components.v001",
+        "version_number": 1,
+        "content_sha256": "2b6444175a6d0b170181be75d11e77cdebc080500c55a328603f326124e952c7",
+        "content": {
+          "title": "Pretax other comprehensive income components",
+          "rule_statement": "Unrealized holding gains and losses on available-for-sale debt securities are excluded from earnings and reported in other comprehensive income, while trading-security changes, realized disposal results, and ordinary dividends are included in net income rather than OCI.",
+          "applicability": "For-profit entities applying U.S. GAAP to the stated pretax security and income items.",
+          "assertions": [
+            {
+              "assertion_id": "assertion-afs-debt-oci",
+              "claim": "An unrealized holding gain on an available-for-sale debt security is reported in OCI before tax."
+            },
+            {
+              "assertion_id": "assertion-earnings-items-excluded",
+              "claim": "Trading-security gains, realized disposal losses, and dividend income are earnings items, not current-period OCI components."
+            }
+          ],
+          "source_citations": [
+            {
+              "reference_version_id": "far-ref-fasb-codification-live.v001",
+              "locator": "FASB ASC 320-10-35-1(b) and 220-10-45-10A (live official Codification)",
+              "role": "controlling",
+              "supports_assertion_ids": [
+                "assertion-afs-debt-oci",
+                "assertion-earnings-items-excluded"
+              ]
+            }
+          ],
+          "currency": {
+            "assessed_at": "2026-08-13T20:00:00Z",
+            "assessment": "current",
+            "basis": "The live official Codification locators and FASB-hosted Update 2016-01 materials were cross-checked on 2026-08-13; no effective amendment affecting this treatment was identified."
+          },
+          "authorship_provenance": {
+            "purpose": "admitted_evidence",
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "model_id": "openai-codex-gpt-5",
+            "material_input_ids": [
+              "far-ref-fasb-codification-live.v001",
+              "FASB ASC 320-10-35-1(b) and 220-10-45-10A (live official Codification)"
+            ]
+          }
+        }
+      },
+      "reference": {
+        "schema_version": "1.0.0",
+        "reference_id": "far-ref-fasb-codification-live",
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "version_number": 1,
+        "record_purpose": "admitted_evidence",
+        "authority_class": "authoritative_accounting",
+        "identity": {
+          "issuer": "Financial Accounting Standards Board",
+          "title": "FASB Accounting Standards Codification - live official research system",
+          "document_id": "FASB-ASC-LIVE",
+          "publication_or_update_date": "2009-06-30",
+          "effective_from": "2009-09-15",
+          "effective_through": null
+        },
+        "retrieval": {
+          "retrieved_at": "2026-08-13T20:00:00Z",
+          "locator": "https://asc.fasb.org/",
+          "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+        },
+        "currency": {
+          "assessed_at": "2026-08-13T20:00:00Z",
+          "assessment": "current",
+          "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+        },
+        "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+      },
+      "challenge_mechanics": [
+        {
+          "tag": "classification",
+          "observable_evidence": [
+            "Four familiar income-related items cross the OCI-versus-earnings boundary."
+          ]
+        },
+        {
+          "tag": "elimination_leverage",
+          "observable_evidence": [
+            "Three options each embody one named over-inclusion or netting error."
+          ]
+        },
+        {
+          "tag": "financial_statement_view",
+          "observable_evidence": [
+            "The end ask is a pretax statement-of-comprehensive-income amount."
+          ]
+        }
+      ],
+      "difficulty_profile": [
+        {
+          "dimension_id": "accounting_complexity",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 1,
+          "observable_measurements": [
+            {
+              "measure_id": "rule_count",
+              "value": 1,
+              "unit": "rules",
+              "interpretation": "Exact rule traces applied to the item."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reasoning_steps",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 1,
+          "observable_measurements": [
+            {
+              "measure_id": "dependent_step_count",
+              "value": 2,
+              "unit": "steps",
+              "interpretation": "Ordered solution steps required by the authored route."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reading_fact_selection",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "irrelevant_fact_count",
+              "value": 3,
+              "unit": "facts",
+              "interpretation": "Structured facts excluded from the numerical end ask."
+            }
+          ]
+        },
+        {
+          "dimension_id": "rule_convention_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "classification_boundary_count",
+              "value": 2,
+              "unit": "boundaries",
+              "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+            }
+          ]
+        },
+        {
+          "dimension_id": "distractor_elimination_burden",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "plausible_error_model_count",
+              "value": 3,
+              "unit": "models",
+              "interpretation": "Each nonkey has a distinct executable error model."
+            }
+          ]
+        },
+        {
+          "dimension_id": "realistic_time_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 1,
+          "observable_measurements": [
+            {
+              "measure_id": "arithmetic_operation_count",
+              "value": 0,
+              "unit": "operations",
+              "interpretation": "Arithmetic operations in the independent keyed route."
+            }
+          ]
+        }
+      ],
+      "originality_boundary": {
+        "compared_corpus_ids": [
+          "far-p1-g2-sample.v001"
+        ],
+        "methods": [
+          "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+        ],
+        "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      },
+      "verification": {
+        "checker_id": "far-p1-question-verifier",
+        "checker_version": "1.0.0",
+        "checks": [
+          {
+            "check_id": "SCHEMA_CONTRACT",
+            "category": "SCHEMA",
+            "outcome": "pass",
+            "detail": "Closed record shapes and cross-record structural contracts pass.",
+            "evidence": [
+              "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+            ]
+          },
+          {
+            "check_id": "RECOMPUTE_INDEPENDENT",
+            "category": "RECOMPUTE",
+            "outcome": "pass",
+            "detail": "Independent generic linear-combination route recomputed 14000 USD.",
+            "evidence": [
+              "producer_component_id=p1-sample-content-author",
+              "verifier_component_id=independent-linear-combination-checker",
+              "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+            ]
+          },
+          {
+            "check_id": "RULE_TRACE_CURRENT",
+            "category": "RULE_TRACE",
+            "outcome": "pass",
+            "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+            "evidence": [
+              "rule_version_id=far-rule-oci-components.v001",
+              "reference_version_id=far-ref-fasb-codification-live.v001",
+              "Fixture-world currency cannot be carried into a sample-candidate claim."
+            ]
+          },
+          {
+            "check_id": "DISTRACTOR_MODELS",
+            "category": "DISTRACTORS",
+            "outcome": "pass",
+            "detail": "All three named distractor error models reproduce their distinct option values.",
+            "evidence": [
+              "B=error-include-trading",
+              "C=error-net-realized-loss",
+              "D=error-include-dividend"
+            ]
+          },
+          {
+            "check_id": "LANGUAGE_FAIRNESS",
+            "category": "LANGUAGE",
+            "outcome": "pass",
+            "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+            "evidence": [
+              "structured_numeric_fact_count=4",
+              "structured_assumption_count=0"
+            ]
+          },
+          {
+            "check_id": "ORIGINALITY_BOUNDARY",
+            "category": "ORIGINALITY",
+            "outcome": "pass",
+            "detail": "Originality language stays within the exact named comparison boundary.",
+            "evidence": [
+              "compared_corpus_ids=['far-p1-g2-sample.v001']",
+              "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+            ]
+          },
+          {
+            "check_id": "APPROVAL_INTEGRITY",
+            "category": "APPROVAL_INTEGRITY",
+            "outcome": "pass",
+            "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+            "evidence": [
+              "version_id=far-q-000101.v001",
+              "content_sha256=498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400",
+              "An absent review event is valid candidate state and grants no approval."
+            ]
+          },
+          {
+            "check_id": "VARIETY_EVIDENCE",
+            "category": "VARIETY",
+            "outcome": "pass",
+            "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+            "evidence": [
+              "arithmetic_operation_count=0",
+              "dependent_step_count=2",
+              "irrelevant_fact_count=3",
+              "plausible_error_model_count=3",
+              "rule_count=1",
+              "No variety distribution or difficulty rubric is treated as ratified."
+            ]
+          }
+        ]
+      },
+      "review_history": [
+        {
+          "schema_version": "1.0.0",
+          "event_id": "far-review-far-q-000101-approve-20260813t1743203278866z",
+          "recorded_at": "2026-08-13T17:43:20.3278866Z",
+          "action": "approve",
+          "actor": {
+            "actor_type": "human",
+            "actor_id": "james",
+            "display_name": "James"
+          },
+          "subject": {
+            "question_id": "far-q-000101",
+            "version_id": "far-q-000101.v001",
+            "content_sha256": "498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400"
+          },
+          "comment": "Approved by James during Gate G2 exact-version review."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "question_id": "far-q-000102",
+        "version_id": "far-q-000102.v002",
+        "version_number": 2,
+        "content_sha256": "6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3"
+      },
+      "derived_readiness": {
+        "learner_ready": true,
+        "reasons": [],
+        "coverage_contribution": 0
+      },
+      "question": {
+        "stem": "A company using the indirect method reports net income of $120,000, depreciation expense of $25,000, a gain on sale of equipment of $8,000, an $18,000 increase in accounts receivable, a $7,000 decrease in inventory, a $6,000 increase in accounts payable, and $10,000 of cash dividends paid. All stated working-capital changes relate to operations. What amount should the company report as net cash provided by operating activities?",
+        "options": [
+          {
+            "option_id": "A",
+            "text": "$150,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 150000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-omit-receivable-change",
+              "name": "Omit receivable increase",
+              "misconception": "Fails to subtract the operating-asset increase.",
+              "derivation": "$120,000 + $25,000 - $8,000 + $7,000 + $6,000 = $150,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-net-income",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-depreciation",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-sale-gain",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-inventory-decrease",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-ap-increase",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "B",
+            "text": "$132,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 132000,
+              "unit": "USD"
+            },
+            "is_keyed": true
+          },
+          {
+            "option_id": "C",
+            "text": "$148,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 148000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-add-sale-gain",
+              "name": "Add sale gain",
+              "misconception": "Adds rather than subtracts a gain already included in net income.",
+              "derivation": "$120,000 + $25,000 + $8,000 - $18,000 + $7,000 + $6,000 = $148,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-net-income",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-depreciation",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-sale-gain",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-ar-increase",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-inventory-decrease",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-ap-increase",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "D",
+            "text": "$122,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 122000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-subtract-dividends",
+              "name": "Subtract financing dividend",
+              "misconception": "Treats dividends paid as an operating adjustment.",
+              "derivation": "$132,000 - $10,000 = $122,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-net-income",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-depreciation",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-sale-gain",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-ar-increase",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-inventory-decrease",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-ap-increase",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-dividends-paid",
+                      "coefficient": -1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "fact-net-income",
+            "statement": "Net income is $120,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 120000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Starting point for the indirect reconciliation."
+          },
+          {
+            "fact_id": "fact-depreciation",
+            "statement": "Depreciation expense is $25,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 25000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Added back as a noncash expense."
+          },
+          {
+            "fact_id": "fact-sale-gain",
+            "statement": "The equipment-sale gain is $8,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 8000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Subtracted because the gain is included in net income."
+          },
+          {
+            "fact_id": "fact-ar-increase",
+            "statement": "Accounts receivable increased $18,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 18000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Subtracted as an operating-asset increase."
+          },
+          {
+            "fact_id": "fact-inventory-decrease",
+            "statement": "Inventory decreased $7,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 7000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Added as an operating-asset decrease."
+          },
+          {
+            "fact_id": "fact-ap-increase",
+            "statement": "Accounts payable increased $6,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 6000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Added as an operating-liability increase."
+          },
+          {
+            "fact_id": "fact-dividends-paid",
+            "statement": "Cash dividends paid are $10,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 10000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "Dividends paid are a financing cash flow."
+          }
+        ],
+        "assumptions": [
+          {
+            "assumption_id": "assumption-working-capital-operating",
+            "statement": "All stated working-capital changes relate to operating activities.",
+            "basis": "explicit_in_stem"
+          }
+        ],
+        "solution": {
+          "end_ask": "Reconcile net income to net cash provided by operating activities.",
+          "representation": {
+            "kind": "formula",
+            "setup": "CFO = net income + noncash expenses - disposal gains - operating-asset increases + operating-asset decreases + operating-liability increases."
+          },
+          "steps": [
+            {
+              "step_number": 1,
+              "instruction": "Separate operating reconciliation items from the financing dividend.",
+              "fact_ids_used": [
+                "fact-dividends-paid"
+              ],
+              "assertion_ids_used": [
+                "assertion-dividends-financing"
+              ],
+              "result": "Exclude the $10,000 dividend from CFO."
+            },
+            {
+              "step_number": 2,
+              "instruction": "Assign each operating adjustment its indirect-method sign.",
+              "fact_ids_used": [
+                "fact-depreciation",
+                "fact-sale-gain",
+                "fact-ar-increase",
+                "fact-inventory-decrease",
+                "fact-ap-increase"
+              ],
+              "assertion_ids_used": [
+                "assertion-indirect-reconciliation"
+              ],
+              "result": "Add depreciation, inventory decrease, and payables increase; subtract the gain and receivables increase."
+            },
+            {
+              "step_number": 3,
+              "instruction": "Apply the signed adjustments to net income.",
+              "fact_ids_used": [
+                "fact-net-income",
+                "fact-depreciation",
+                "fact-sale-gain",
+                "fact-ar-increase",
+                "fact-inventory-decrease",
+                "fact-ap-increase"
+              ],
+              "assertion_ids_used": [
+                "assertion-indirect-reconciliation"
+              ],
+              "result": "$120,000 + $25,000 - $8,000 - $18,000 + $7,000 + $6,000 = $132,000."
+            }
+          ],
+          "keyed_answer_option_id": "B",
+          "keyed_answer_rationale": "The correctly signed operating adjustments reconcile net income to $132,000; dividends paid stay in financing.",
+          "faster_or_safer_route": "Mark each change with a plus or minus before doing arithmetic, and cross out the financing dividend."
+        },
+        "correctness_evidence": {
+          "evidence_id": "evidence-indirect-cfo",
+          "route": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-net-income",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-depreciation",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-sale-gain",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-ar-increase",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-inventory-decrease",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-ap-increase",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          },
+          "producer_component_id": "p1-sample-content-author",
+          "verifier_component_id": "independent-linear-combination-checker",
+          "shared_deciding_function": false,
+          "authorship": {
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "created_at": "2026-08-13T20:15:00Z",
+            "model_id": "openai-codex-gpt-5"
+          },
+          "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+        },
+        "accounting_model_id": "far-model-indirect-cash-flow"
+      },
+      "blueprint": {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.1",
+        "group_id": "far.area.1.group.a",
+        "topic_id": "far.area.1.group.a.topic.5",
+        "representative_task_id": "far.area.1.group.a.topic.5.task.001",
+        "skill_level": "application",
+        "mapping_rationale": "The item applies the indirect reconciliation to supporting balances and transactions.",
+        "mcq_scope_limit": "The MCQ computes one operating subtotal and does not prepare the complete statement or disclosures.",
+        "labels": {
+          "area": "Financial Reporting",
+          "group": "General-Purpose Financial Reporting: For-Profit Business Entities",
+          "topic": "Statement of cash flows",
+          "task": "Prepare a statement of cash flow using the indirect method and required disclosures from supporting documentation."
+        }
+      },
+      "rule": {
+        "schema_version": "1.0.0",
+        "rule_id": "far-rule-indirect-operating-cash-flow",
+        "rule_version_id": "far-rule-indirect-operating-cash-flow.v001",
+        "version_number": 1,
+        "content_sha256": "ebdb5369e2ac204c90c3a5b112774afa154cd10063c02a3b5522cc47a986418d",
+        "content": {
+          "title": "Indirect-method operating cash flow reconciliation",
+          "rule_statement": "Under the indirect method, net income is adjusted for noncash items, gains or losses whose cash effects belong outside operating activities, and changes in operating assets and liabilities; dividends paid are financing cash flows.",
+          "applicability": "For-profit entity statement of cash flows using the indirect method.",
+          "assertions": [
+            {
+              "assertion_id": "assertion-indirect-reconciliation",
+              "claim": "Add depreciation and operating-liability increases, subtract disposal gains and operating-asset increases, and add operating-asset decreases in reconciling net income to operating cash flow."
+            },
+            {
+              "assertion_id": "assertion-dividends-financing",
+              "claim": "Cash dividends paid are financing cash outflows and do not adjust operating cash flow."
+            }
+          ],
+          "source_citations": [
+            {
+              "reference_version_id": "far-ref-fasb-codification-live.v001",
+              "locator": "FASB ASC 230-10-45-28 through 45-29 and 230-10-45-15 (live official Codification)",
+              "role": "controlling",
+              "supports_assertion_ids": [
+                "assertion-indirect-reconciliation",
+                "assertion-dividends-financing"
+              ]
+            }
+          ],
+          "currency": {
+            "assessed_at": "2026-08-13T20:00:00Z",
+            "assessment": "current",
+            "basis": "The live official Codification locators and FASB-hosted Statement 95 materials were cross-checked on 2026-08-13; no effective amendment affecting the stated classifications was identified."
+          },
+          "authorship_provenance": {
+            "purpose": "admitted_evidence",
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "model_id": "openai-codex-gpt-5",
+            "material_input_ids": [
+              "far-ref-fasb-codification-live.v001",
+              "FASB ASC 230-10-45-28 through 45-29 and 230-10-45-15 (live official Codification)"
+            ]
+          }
+        }
+      },
+      "reference": {
+        "schema_version": "1.0.0",
+        "reference_id": "far-ref-fasb-codification-live",
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "version_number": 1,
+        "record_purpose": "admitted_evidence",
+        "authority_class": "authoritative_accounting",
+        "identity": {
+          "issuer": "Financial Accounting Standards Board",
+          "title": "FASB Accounting Standards Codification - live official research system",
+          "document_id": "FASB-ASC-LIVE",
+          "publication_or_update_date": "2009-06-30",
+          "effective_from": "2009-09-15",
+          "effective_through": null
+        },
+        "retrieval": {
+          "retrieved_at": "2026-08-13T20:00:00Z",
+          "locator": "https://asc.fasb.org/",
+          "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+        },
+        "currency": {
+          "assessed_at": "2026-08-13T20:00:00Z",
+          "assessment": "current",
+          "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+        },
+        "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+      },
+      "challenge_mechanics": [
+        {
+          "tag": "formula_translation",
+          "observable_evidence": [
+            "Six operating facts must be translated into a signed reconciliation."
+          ]
+        },
+        {
+          "tag": "fact_selection",
+          "observable_evidence": [
+            "The financing dividend is stated with otherwise operating-reconciliation data."
+          ]
+        },
+        {
+          "tag": "time_pressure",
+          "observable_evidence": [
+            "Five signed arithmetic operations follow the classification pass."
+          ]
+        },
+        {
+          "tag": "journal_effect",
+          "observable_evidence": [
+            "Working-capital account direction determines the cash-flow adjustment sign."
+          ]
+        }
+      ],
+      "difficulty_profile": [
+        {
+          "dimension_id": "accounting_complexity",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "rule_count",
+              "value": 1,
+              "unit": "rules",
+              "interpretation": "Exact rule traces applied to the item."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reasoning_steps",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "dependent_step_count",
+              "value": 3,
+              "unit": "steps",
+              "interpretation": "Ordered solution steps required by the authored route."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reading_fact_selection",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "irrelevant_fact_count",
+              "value": 1,
+              "unit": "facts",
+              "interpretation": "Structured facts excluded from the numerical end ask."
+            }
+          ]
+        },
+        {
+          "dimension_id": "rule_convention_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "classification_boundary_count",
+              "value": 4,
+              "unit": "boundaries",
+              "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+            }
+          ]
+        },
+        {
+          "dimension_id": "distractor_elimination_burden",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "plausible_error_model_count",
+              "value": 3,
+              "unit": "models",
+              "interpretation": "Each nonkey has a distinct executable error model."
+            }
+          ]
+        },
+        {
+          "dimension_id": "realistic_time_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "arithmetic_operation_count",
+              "value": 5,
+              "unit": "operations",
+              "interpretation": "Arithmetic operations in the independent keyed route."
+            }
+          ]
+        }
+      ],
+      "originality_boundary": {
+        "compared_corpus_ids": [
+          "far-p1-g2-sample.v002"
+        ],
+        "methods": [
+          "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+        ],
+        "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      },
+      "verification": {
+        "checker_id": "far-p1-question-verifier",
+        "checker_version": "1.0.0",
+        "checks": [
+          {
+            "check_id": "SCHEMA_CONTRACT",
+            "category": "SCHEMA",
+            "outcome": "pass",
+            "detail": "Closed record shapes and cross-record structural contracts pass.",
+            "evidence": [
+              "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+            ]
+          },
+          {
+            "check_id": "RECOMPUTE_INDEPENDENT",
+            "category": "RECOMPUTE",
+            "outcome": "pass",
+            "detail": "Independent generic linear-combination route recomputed 132000 USD.",
+            "evidence": [
+              "producer_component_id=p1-sample-content-author",
+              "verifier_component_id=independent-linear-combination-checker",
+              "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+            ]
+          },
+          {
+            "check_id": "RULE_TRACE_CURRENT",
+            "category": "RULE_TRACE",
+            "outcome": "pass",
+            "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+            "evidence": [
+              "rule_version_id=far-rule-indirect-operating-cash-flow.v001",
+              "reference_version_id=far-ref-fasb-codification-live.v001",
+              "Fixture-world currency cannot be carried into a sample-candidate claim."
+            ]
+          },
+          {
+            "check_id": "DISTRACTOR_MODELS",
+            "category": "DISTRACTORS",
+            "outcome": "pass",
+            "detail": "All three named distractor error models reproduce their distinct option values.",
+            "evidence": [
+              "A=error-omit-receivable-change",
+              "C=error-add-sale-gain",
+              "D=error-subtract-dividends"
+            ]
+          },
+          {
+            "check_id": "LANGUAGE_FAIRNESS",
+            "category": "LANGUAGE",
+            "outcome": "pass",
+            "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+            "evidence": [
+              "structured_numeric_fact_count=7",
+              "structured_assumption_count=1"
+            ]
+          },
+          {
+            "check_id": "ORIGINALITY_BOUNDARY",
+            "category": "ORIGINALITY",
+            "outcome": "pass",
+            "detail": "Originality language stays within the exact named comparison boundary.",
+            "evidence": [
+              "compared_corpus_ids=['far-p1-g2-sample.v002']",
+              "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+            ]
+          },
+          {
+            "check_id": "APPROVAL_INTEGRITY",
+            "category": "APPROVAL_INTEGRITY",
+            "outcome": "pass",
+            "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+            "evidence": [
+              "version_id=far-q-000102.v002",
+              "content_sha256=6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3",
+              "An absent review event is valid candidate state and grants no approval."
+            ]
+          },
+          {
+            "check_id": "VARIETY_EVIDENCE",
+            "category": "VARIETY",
+            "outcome": "pass",
+            "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+            "evidence": [
+              "arithmetic_operation_count=5",
+              "dependent_step_count=3",
+              "irrelevant_fact_count=1",
+              "plausible_error_model_count=3",
+              "rule_count=1",
+              "No variety distribution or difficulty rubric is treated as ratified."
+            ]
+          }
+        ]
+      },
+      "review_history": [
+        {
+          "schema_version": "1.0.0",
+          "event_id": "far-review-far-q-000102-approve-20260813t1757462466055z",
+          "recorded_at": "2026-08-13T17:57:46.2466055Z",
+          "action": "approve",
+          "actor": {
+            "actor_type": "human",
+            "actor_id": "james",
+            "display_name": "James"
+          },
+          "subject": {
+            "question_id": "far-q-000102",
+            "version_id": "far-q-000102.v002",
+            "content_sha256": "6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3"
+          },
+          "comment": "Approved by James during Gate G2 exact-version review."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "question_id": "far-q-000103",
+        "version_id": "far-q-000103.v002",
+        "version_number": 2,
+        "content_sha256": "516c241e69ef58bf823bd9d8cc83591fbefecfa0aaeaa9c26e048f54dd5f717e"
+      },
+      "derived_readiness": {
+        "learner_ready": true,
+        "reasons": [],
+        "coverage_contribution": 0
+      },
+      "question": {
+        "stem": "At year-end, a company has $40,000 in an unrestricted checking account. It also holds a $25,000 Treasury bill acquired with 76 days to maturity, a $30,000 Treasury note acquired with 106 days to maturity, and $15,000 of commercial paper acquired with 95 days to maturity. All three investments are highly liquid and readily convertible to known cash; the Treasury note pays 5% interest. What total should the company report as cash and cash equivalents?",
+        "options": [
+          {
+            "option_id": "A",
+            "text": "$95,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 95000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-include-nearby-note",
+              "name": "Include Treasury note",
+              "misconception": "Uses short remaining maturity at year-end instead of original maturity to the holder.",
+              "derivation": "$40,000 + $25,000 + $30,000 = $95,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-checking",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-tbill",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-tnote",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "B",
+            "text": "$80,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 80000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-include-commercial-paper",
+              "name": "Include commercial paper",
+              "misconception": "Treats a 95-day original maturity as within three months.",
+              "derivation": "$40,000 + $25,000 + $15,000 = $80,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-checking",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-tbill",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-paper",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "C",
+            "text": "$65,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 65000,
+              "unit": "USD"
+            },
+            "is_keyed": true
+          },
+          {
+            "option_id": "D",
+            "text": "$40,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 40000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-exclude-all-investments",
+              "name": "Exclude all investments",
+              "misconception": "Treats cash equivalents as cash deposits only.",
+              "derivation": "Include only the $40,000 checking balance.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-checking",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "fact-checking",
+            "statement": "The unrestricted checking balance is $40,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 40000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Included as cash."
+          },
+          {
+            "fact_id": "fact-tbill",
+            "statement": "The Treasury bill amount is $25,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 25000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Included because its original maturity to the holder is within three months."
+          },
+          {
+            "fact_id": "fact-tbill-days",
+            "statement": "The Treasury bill had 76 days to maturity when acquired.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 76,
+              "unit": "days"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Establishes that the bill meets the original-maturity convention."
+          },
+          {
+            "fact_id": "fact-tnote",
+            "statement": "The Treasury note amount is $30,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 30000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "Its original maturity to the holder exceeds three months."
+          },
+          {
+            "fact_id": "fact-tnote-days",
+            "statement": "The Treasury note had 106 days to maturity when acquired.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 106,
+              "unit": "days"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "This exceeds the generally three-month original-maturity convention."
+          },
+          {
+            "fact_id": "fact-paper",
+            "statement": "The commercial paper amount is $15,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 15000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "Its original maturity to the holder exceeds three months."
+          },
+          {
+            "fact_id": "fact-paper-days",
+            "statement": "The commercial paper had 95 days to maturity when acquired.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 95,
+              "unit": "days"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "This exceeds the generally three-month original-maturity convention."
+          },
+          {
+            "fact_id": "fact-note-rate",
+            "statement": "The Treasury note interest rate is 5%.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 5,
+              "unit": "percent"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "The coupon rate does not replace the stated original-maturity test."
+          }
+        ],
+        "assumptions": [
+          {
+            "assumption_id": "assumption-liquid-known-cash",
+            "statement": "All three investments are highly liquid and readily convertible to known amounts of cash.",
+            "basis": "explicit_in_stem"
+          }
+        ],
+        "solution": {
+          "end_ask": "Calculate the cash and cash equivalents total using original maturity to the holder.",
+          "representation": {
+            "kind": "classification",
+            "setup": "Cash and cash equivalents = unrestricted cash + qualifying investments acquired with three months or less to maturity."
+          },
+          "steps": [
+            {
+              "step_number": 1,
+              "instruction": "Classify each investment using maturity at acquisition.",
+              "fact_ids_used": [
+                "fact-tbill",
+                "fact-tbill-days",
+                "fact-tnote",
+                "fact-tnote-days",
+                "fact-paper",
+                "fact-paper-days",
+                "fact-note-rate"
+              ],
+              "assertion_ids_used": [
+                "assertion-three-month-original-maturity"
+              ],
+              "result": "Only the 76-day Treasury bill qualifies; 106 days and 95 days exceed the convention, and the coupon rate is not decisive."
+            },
+            {
+              "step_number": 2,
+              "instruction": "Add qualifying cash and investments.",
+              "fact_ids_used": [
+                "fact-checking",
+                "fact-tbill"
+              ],
+              "assertion_ids_used": [
+                "assertion-cash-included",
+                "assertion-three-month-original-maturity"
+              ],
+              "result": "$40,000 + $25,000 = $65,000."
+            }
+          ],
+          "keyed_answer_option_id": "C",
+          "keyed_answer_rationale": "The checking deposit and 76-day Treasury bill qualify; the other investments exceed three months at acquisition.",
+          "faster_or_safer_route": "Circle the acquisition-to-maturity days first; ignore the coupon rate and eliminate investments over three months."
+        },
+        "correctness_evidence": {
+          "evidence_id": "evidence-cash-equivalents",
+          "route": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-checking",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-tbill",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          },
+          "producer_component_id": "p1-sample-content-author",
+          "verifier_component_id": "independent-linear-combination-checker",
+          "shared_deciding_function": false,
+          "authorship": {
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "created_at": "2026-08-13T20:15:00Z",
+            "model_id": "openai-codex-gpt-5"
+          },
+          "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+        },
+        "accounting_model_id": "far-model-cash-equivalents"
+      },
+      "blueprint": {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.2",
+        "group_id": "far.area.2.group.a",
+        "topic_id": null,
+        "representative_task_id": "far.area.2.group.a.task.001",
+        "skill_level": "application",
+        "mapping_rationale": "The item applies the cash-equivalent definition to calculate the reported balance.",
+        "mcq_scope_limit": "The MCQ tests a bounded maturity classification and not all restrictions, overdrafts, or presentation issues.",
+        "labels": {
+          "area": "Select Balance Sheet Accounts",
+          "group": "Cash and cash equivalents",
+          "topic": null,
+          "task": "Calculate cash and cash equivalents balances to be reported in the financial statements."
+        }
+      },
+      "rule": {
+        "schema_version": "1.0.0",
+        "rule_id": "far-rule-cash-equivalent-original-maturity",
+        "rule_version_id": "far-rule-cash-equivalent-original-maturity.v001",
+        "version_number": 1,
+        "content_sha256": "056e207e99191b08d11f2c1ad4ff55d60feb9646bac517cfc8d9e692e36c5fb9",
+        "content": {
+          "title": "Cash-equivalent original-maturity convention",
+          "rule_statement": "Cash equivalents are short-term, highly liquid investments readily convertible to known cash and so near maturity that interest-rate risk is insignificant; generally only investments with an original maturity to the holder of three months or less qualify.",
+          "applicability": "For-profit entity classifying highly liquid investments as cash equivalents under U.S. GAAP.",
+          "assertions": [
+            {
+              "assertion_id": "assertion-three-month-original-maturity",
+              "claim": "Apply the generally three-month-or-less test from the acquisition date to maturity, not from the reporting date."
+            },
+            {
+              "assertion_id": "assertion-cash-included",
+              "claim": "Unrestricted checking deposits are cash and are included with qualifying cash equivalents."
+            }
+          ],
+          "source_citations": [
+            {
+              "reference_version_id": "far-ref-fasb-codification-live.v001",
+              "locator": "FASB ASC Master Glossary definitions of Cash and Cash Equivalents (also reflected in ASC 230-10-20)",
+              "role": "controlling",
+              "supports_assertion_ids": [
+                "assertion-three-month-original-maturity",
+                "assertion-cash-included"
+              ]
+            }
+          ],
+          "currency": {
+            "assessed_at": "2026-08-13T20:00:00Z",
+            "assessment": "current",
+            "basis": "The live official Codification glossary and FASB-hosted EITF Issue 16-A materials reproducing the definition were cross-checked on 2026-08-13; no effective amendment affecting the convention was identified."
+          },
+          "authorship_provenance": {
+            "purpose": "admitted_evidence",
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "model_id": "openai-codex-gpt-5",
+            "material_input_ids": [
+              "far-ref-fasb-codification-live.v001",
+              "FASB ASC Master Glossary definitions of Cash and Cash Equivalents (also reflected in ASC 230-10-20)"
+            ]
+          }
+        }
+      },
+      "reference": {
+        "schema_version": "1.0.0",
+        "reference_id": "far-ref-fasb-codification-live",
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "version_number": 1,
+        "record_purpose": "admitted_evidence",
+        "authority_class": "authoritative_accounting",
+        "identity": {
+          "issuer": "Financial Accounting Standards Board",
+          "title": "FASB Accounting Standards Codification - live official research system",
+          "document_id": "FASB-ASC-LIVE",
+          "publication_or_update_date": "2009-06-30",
+          "effective_from": "2009-09-15",
+          "effective_through": null
+        },
+        "retrieval": {
+          "retrieved_at": "2026-08-13T20:00:00Z",
+          "locator": "https://asc.fasb.org/",
+          "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+        },
+        "currency": {
+          "assessed_at": "2026-08-13T20:00:00Z",
+          "assessment": "current",
+          "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+        },
+        "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+      },
+      "challenge_mechanics": [
+        {
+          "tag": "convention",
+          "observable_evidence": [
+            "The three-month test is measured from acquisition, not from year-end."
+          ]
+        },
+        {
+          "tag": "fact_selection",
+          "observable_evidence": [
+            "The coupon rate and nonqualifying investment amounts are numerical noise for the end ask."
+          ]
+        },
+        {
+          "tag": "language_trap",
+          "observable_evidence": [
+            "A Treasury note can be near maturity at year-end yet fail based on original maturity to the holder."
+          ]
+        },
+        {
+          "tag": "classification",
+          "observable_evidence": [
+            "Cash, qualifying equivalents, and nonqualifying short-term investments must be separated."
+          ]
+        }
+      ],
+      "difficulty_profile": [
+        {
+          "dimension_id": "accounting_complexity",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "rule_count",
+              "value": 1,
+              "unit": "rules",
+              "interpretation": "Exact rule traces applied to the item."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reasoning_steps",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "dependent_step_count",
+              "value": 2,
+              "unit": "steps",
+              "interpretation": "Ordered solution steps required by the authored route."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reading_fact_selection",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "irrelevant_fact_count",
+              "value": 5,
+              "unit": "facts",
+              "interpretation": "Structured facts excluded from the numerical end ask."
+            }
+          ]
+        },
+        {
+          "dimension_id": "rule_convention_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "classification_boundary_count",
+              "value": 3,
+              "unit": "boundaries",
+              "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+            }
+          ]
+        },
+        {
+          "dimension_id": "distractor_elimination_burden",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "plausible_error_model_count",
+              "value": 3,
+              "unit": "models",
+              "interpretation": "Each nonkey has a distinct executable error model."
+            }
+          ]
+        },
+        {
+          "dimension_id": "realistic_time_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "arithmetic_operation_count",
+              "value": 1,
+              "unit": "operations",
+              "interpretation": "Arithmetic operations in the independent keyed route."
+            }
+          ]
+        }
+      ],
+      "originality_boundary": {
+        "compared_corpus_ids": [
+          "far-p1-g2-sample.v002"
+        ],
+        "methods": [
+          "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+        ],
+        "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      },
+      "verification": {
+        "checker_id": "far-p1-question-verifier",
+        "checker_version": "1.0.0",
+        "checks": [
+          {
+            "check_id": "SCHEMA_CONTRACT",
+            "category": "SCHEMA",
+            "outcome": "pass",
+            "detail": "Closed record shapes and cross-record structural contracts pass.",
+            "evidence": [
+              "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+            ]
+          },
+          {
+            "check_id": "RECOMPUTE_INDEPENDENT",
+            "category": "RECOMPUTE",
+            "outcome": "pass",
+            "detail": "Independent generic linear-combination route recomputed 65000 USD.",
+            "evidence": [
+              "producer_component_id=p1-sample-content-author",
+              "verifier_component_id=independent-linear-combination-checker",
+              "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+            ]
+          },
+          {
+            "check_id": "RULE_TRACE_CURRENT",
+            "category": "RULE_TRACE",
+            "outcome": "pass",
+            "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+            "evidence": [
+              "rule_version_id=far-rule-cash-equivalent-original-maturity.v001",
+              "reference_version_id=far-ref-fasb-codification-live.v001",
+              "Fixture-world currency cannot be carried into a sample-candidate claim."
+            ]
+          },
+          {
+            "check_id": "DISTRACTOR_MODELS",
+            "category": "DISTRACTORS",
+            "outcome": "pass",
+            "detail": "All three named distractor error models reproduce their distinct option values.",
+            "evidence": [
+              "A=error-include-nearby-note",
+              "B=error-include-commercial-paper",
+              "D=error-exclude-all-investments"
+            ]
+          },
+          {
+            "check_id": "LANGUAGE_FAIRNESS",
+            "category": "LANGUAGE",
+            "outcome": "pass",
+            "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+            "evidence": [
+              "structured_numeric_fact_count=8",
+              "structured_assumption_count=1"
+            ]
+          },
+          {
+            "check_id": "ORIGINALITY_BOUNDARY",
+            "category": "ORIGINALITY",
+            "outcome": "pass",
+            "detail": "Originality language stays within the exact named comparison boundary.",
+            "evidence": [
+              "compared_corpus_ids=['far-p1-g2-sample.v002']",
+              "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+            ]
+          },
+          {
+            "check_id": "APPROVAL_INTEGRITY",
+            "category": "APPROVAL_INTEGRITY",
+            "outcome": "pass",
+            "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+            "evidence": [
+              "version_id=far-q-000103.v002",
+              "content_sha256=516c241e69ef58bf823bd9d8cc83591fbefecfa0aaeaa9c26e048f54dd5f717e",
+              "An absent review event is valid candidate state and grants no approval."
+            ]
+          },
+          {
+            "check_id": "VARIETY_EVIDENCE",
+            "category": "VARIETY",
+            "outcome": "pass",
+            "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+            "evidence": [
+              "arithmetic_operation_count=1",
+              "dependent_step_count=2",
+              "irrelevant_fact_count=5",
+              "plausible_error_model_count=3",
+              "rule_count=1",
+              "No variety distribution or difficulty rubric is treated as ratified."
+            ]
+          }
+        ]
+      },
+      "review_history": [
+        {
+          "schema_version": "1.0.0",
+          "event_id": "far-review-far-q-000103-approve-20260813t1759350701839z",
+          "recorded_at": "2026-08-13T17:59:35.0701839Z",
+          "action": "approve",
+          "actor": {
+            "actor_type": "human",
+            "actor_id": "james",
+            "display_name": "James"
+          },
+          "subject": {
+            "question_id": "far-q-000103",
+            "version_id": "far-q-000103.v002",
+            "content_sha256": "516c241e69ef58bf823bd9d8cc83591fbefecfa0aaeaa9c26e048f54dd5f717e"
+          },
+          "comment": "Approved by James during Gate G2 exact-version review."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "question_id": "far-q-000104",
+        "version_id": "far-q-000104.v002",
+        "version_number": 2,
+        "content_sha256": "9bf70057d1044c2c5efd14ea83d8b899d9f9a5674e75f207f6ce6a7f1fea85e9"
+      },
+      "derived_readiness": {
+        "learner_ready": true,
+        "reasons": [],
+        "coverage_contribution": 0
+      },
+      "question": {
+        "stem": "An inventory analyst is reconciling records that show beginning inventory of $180,000, purchases received of $520,000, cost of goods sold of $470,000, returns to suppliers of $20,000, and a supported physical count of $205,000. Sales revenue was $700,000. All inventory amounts are at cost, no write-down is indicated, and the source records are complete. What adjustment should be made to the inventory general ledger?",
+        "options": [
+          {
+            "option_id": "A",
+            "text": "$5,000 increase",
+            "structured_value": {
+              "value_type": "number",
+              "value": 5000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-reverse-adjustment",
+              "name": "Reverse adjustment direction",
+              "misconception": "Computes book minus physical instead of the adjustment needed to move book to physical.",
+              "derivation": "$210,000 book - $205,000 physical = a mistaken $5,000 increase.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-beginning-inventory",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-purchases",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-cogs",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-supplier-returns",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-physical-inventory",
+                      "coefficient": -1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "B",
+            "text": "No adjustment",
+            "structured_value": {
+              "value_type": "number",
+              "value": 0,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-assume-agreement",
+              "name": "Assume records agree",
+              "misconception": "Stops after accepting the physical count without comparing it to the rollforward.",
+              "derivation": "Records a zero adjustment.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-beginning-inventory",
+                      "coefficient": 0
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "C",
+            "text": "$25,000 decrease",
+            "structured_value": {
+              "value_type": "number",
+              "value": -25000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-omit-supplier-returns",
+              "name": "Omit supplier returns",
+              "misconception": "Leaves returned goods in the book rollforward.",
+              "derivation": "$205,000 - ($180,000 + $520,000 - $470,000) = a $25,000 decrease.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-physical-inventory",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-beginning-inventory",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-purchases",
+                      "coefficient": -1
+                    },
+                    {
+                      "fact_id": "fact-cogs",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "D",
+            "text": "$5,000 decrease",
+            "structured_value": {
+              "value_type": "number",
+              "value": -5000,
+              "unit": "USD"
+            },
+            "is_keyed": true
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "fact-beginning-inventory",
+            "statement": "Beginning inventory is $180,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 180000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Opening balance in the rollforward."
+          },
+          {
+            "fact_id": "fact-purchases",
+            "statement": "Purchases received are $520,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 520000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Added to the rollforward."
+          },
+          {
+            "fact_id": "fact-cogs",
+            "statement": "Cost of goods sold is $470,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 470000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Subtracted from the rollforward."
+          },
+          {
+            "fact_id": "fact-supplier-returns",
+            "statement": "Returns to suppliers are $20,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 20000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Subtracted from purchases in the rollforward."
+          },
+          {
+            "fact_id": "fact-physical-inventory",
+            "statement": "Supported physical inventory is $205,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 205000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Target supported ending balance."
+          },
+          {
+            "fact_id": "fact-sales-revenue",
+            "statement": "Sales revenue is $700,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 700000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "Revenue does not enter this cost-basis inventory rollforward."
+          }
+        ],
+        "assumptions": [
+          {
+            "assumption_id": "assumption-records-complete",
+            "statement": "The stated source records are complete and the physical count is supported.",
+            "basis": "explicit_in_stem"
+          },
+          {
+            "assumption_id": "assumption-inventory-at-cost",
+            "statement": "All inventory amounts are measured at cost and no lower-measurement adjustment is indicated.",
+            "basis": "explicit_in_stem"
+          }
+        ],
+        "solution": {
+          "end_ask": "Determine the signed adjustment that moves book inventory to the supported physical amount.",
+          "representation": {
+            "kind": "roll_forward",
+            "setup": "Book ending inventory = beginning + purchases - COGS - supplier returns; adjustment = physical - book."
+          },
+          "steps": [
+            {
+              "step_number": 1,
+              "instruction": "Build the book inventory rollforward.",
+              "fact_ids_used": [
+                "fact-beginning-inventory",
+                "fact-purchases",
+                "fact-cogs",
+                "fact-supplier-returns"
+              ],
+              "assertion_ids_used": [
+                "assertion-inventory-cost-balance"
+              ],
+              "result": "$180,000 + $520,000 - $470,000 - $20,000 = $210,000."
+            },
+            {
+              "step_number": 2,
+              "instruction": "Compare supported physical inventory with the book balance.",
+              "fact_ids_used": [
+                "fact-physical-inventory"
+              ],
+              "assertion_ids_used": [
+                "assertion-reconcile-physical"
+              ],
+              "result": "$205,000 - $210,000 = $(5,000)."
+            },
+            {
+              "step_number": 3,
+              "instruction": "Translate the signed difference into the ledger action.",
+              "fact_ids_used": [
+                "fact-physical-inventory"
+              ],
+              "assertion_ids_used": [
+                "assertion-reconcile-physical"
+              ],
+              "result": "Decrease inventory by $5,000."
+            }
+          ],
+          "keyed_answer_option_id": "D",
+          "keyed_answer_rationale": "Book inventory is $210,000 and supported physical inventory is $205,000, so the ledger must decrease $5,000.",
+          "faster_or_safer_route": "Write the rollforward signs before calculating, then use target minus book to preserve adjustment direction."
+        },
+        "correctness_evidence": {
+          "evidence_id": "evidence-inventory-adjustment",
+          "route": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-physical-inventory",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-beginning-inventory",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-purchases",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-cogs",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-supplier-returns",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          },
+          "producer_component_id": "p1-sample-content-author",
+          "verifier_component_id": "independent-linear-combination-checker",
+          "shared_deciding_function": false,
+          "authorship": {
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "created_at": "2026-08-13T20:15:00Z",
+            "model_id": "openai-codex-gpt-5"
+          },
+          "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+        },
+        "accounting_model_id": "far-model-inventory-rollforward"
+      },
+      "blueprint": {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.2",
+        "group_id": "far.area.2.group.c",
+        "topic_id": null,
+        "representative_task_id": "far.area.2.group.c.task.004",
+        "skill_level": "analysis",
+        "mapping_rationale": "The item reconciles inventory source data to the general-ledger amount and determines the adjustment.",
+        "mcq_scope_limit": "The MCQ supplies resolved source data and does not fully exercise investigation across documents or correction entries.",
+        "labels": {
+          "area": "Select Balance Sheet Accounts",
+          "group": "Inventory",
+          "topic": null,
+          "task": "Reconcile and investigate differences between the subledger and general ledger for inventory to determine whether an adjustment is necessary."
+        }
+      },
+      "rule": {
+        "schema_version": "1.0.0",
+        "rule_id": "far-rule-inventory-rollforward-reconciliation",
+        "rule_version_id": "far-rule-inventory-rollforward-reconciliation.v001",
+        "version_number": 1,
+        "content_sha256": "a1424bf3e6536edd9213b54def44dc4a8a75ef1357245679822e44889de92bd5",
+        "content": {
+          "title": "Inventory cost rollforward and physical reconciliation",
+          "rule_statement": "Inventory is measured on a cost basis subject to applicable subsequent-measurement rules; a cost rollforward adds inventory purchases and subtracts cost assigned to goods sold and supplier returns, and the resulting book balance is reconciled to inventory on hand.",
+          "applicability": "For-profit entity inventory carried at cost where no lower-measurement adjustment is stated.",
+          "assertions": [
+            {
+              "assertion_id": "assertion-inventory-cost-balance",
+              "claim": "Ending book inventory equals beginning inventory plus purchases minus cost of goods sold minus returns to suppliers for the stated fact pattern."
+            },
+            {
+              "assertion_id": "assertion-reconcile-physical",
+              "claim": "The general-ledger balance is adjusted to the supported physical inventory amount when the difference is valid and no other reconciling item remains."
+            }
+          ],
+          "source_citations": [
+            {
+              "reference_version_id": "far-ref-fasb-codification-live.v001",
+              "locator": "FASB ASC 330-10-30-1 and 330-10-35-1A through 35-1B (live official Codification)",
+              "role": "controlling",
+              "supports_assertion_ids": [
+                "assertion-inventory-cost-balance",
+                "assertion-reconcile-physical"
+              ]
+            }
+          ],
+          "currency": {
+            "assessed_at": "2026-08-13T20:00:00Z",
+            "assessment": "current",
+            "basis": "The live official Codification locators and FASB-hosted Update 2015-11 materials were cross-checked on 2026-08-13; no effective amendment affecting cost measurement for these facts was identified."
+          },
+          "authorship_provenance": {
+            "purpose": "admitted_evidence",
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "model_id": "openai-codex-gpt-5",
+            "material_input_ids": [
+              "far-ref-fasb-codification-live.v001",
+              "FASB ASC 330-10-30-1 and 330-10-35-1A through 35-1B (live official Codification)"
+            ]
+          }
+        }
+      },
+      "reference": {
+        "schema_version": "1.0.0",
+        "reference_id": "far-ref-fasb-codification-live",
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "version_number": 1,
+        "record_purpose": "admitted_evidence",
+        "authority_class": "authoritative_accounting",
+        "identity": {
+          "issuer": "Financial Accounting Standards Board",
+          "title": "FASB Accounting Standards Codification - live official research system",
+          "document_id": "FASB-ASC-LIVE",
+          "publication_or_update_date": "2009-06-30",
+          "effective_from": "2009-09-15",
+          "effective_through": null
+        },
+        "retrieval": {
+          "retrieved_at": "2026-08-13T20:00:00Z",
+          "locator": "https://asc.fasb.org/",
+          "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+        },
+        "currency": {
+          "assessed_at": "2026-08-13T20:00:00Z",
+          "assessment": "current",
+          "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+        },
+        "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+      },
+      "challenge_mechanics": [
+        {
+          "tag": "roll_forward",
+          "observable_evidence": [
+            "Five cost-basis facts form a source-data reconciliation."
+          ]
+        },
+        {
+          "tag": "fact_selection",
+          "observable_evidence": [
+            "Sales revenue is plausible business data but irrelevant to the inventory cost rollforward."
+          ]
+        },
+        {
+          "tag": "elimination_leverage",
+          "observable_evidence": [
+            "Adjustment direction and omitted supplier returns diagnose two distractors."
+          ]
+        },
+        {
+          "tag": "journal_effect",
+          "observable_evidence": [
+            "A negative target-minus-book difference requires a credit to inventory."
+          ]
+        }
+      ],
+      "difficulty_profile": [
+        {
+          "dimension_id": "accounting_complexity",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "rule_count",
+              "value": 1,
+              "unit": "rules",
+              "interpretation": "Exact rule traces applied to the item."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reasoning_steps",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "dependent_step_count",
+              "value": 3,
+              "unit": "steps",
+              "interpretation": "Ordered solution steps required by the authored route."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reading_fact_selection",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "irrelevant_fact_count",
+              "value": 1,
+              "unit": "facts",
+              "interpretation": "Structured facts excluded from the numerical end ask."
+            }
+          ]
+        },
+        {
+          "dimension_id": "rule_convention_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "classification_boundary_count",
+              "value": 3,
+              "unit": "boundaries",
+              "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+            }
+          ]
+        },
+        {
+          "dimension_id": "distractor_elimination_burden",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "plausible_error_model_count",
+              "value": 3,
+              "unit": "models",
+              "interpretation": "Each nonkey has a distinct executable error model."
+            }
+          ]
+        },
+        {
+          "dimension_id": "realistic_time_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "arithmetic_operation_count",
+              "value": 4,
+              "unit": "operations",
+              "interpretation": "Arithmetic operations in the independent keyed route."
+            }
+          ]
+        }
+      ],
+      "originality_boundary": {
+        "compared_corpus_ids": [
+          "far-p1-g2-sample.v002"
+        ],
+        "methods": [
+          "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+        ],
+        "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      },
+      "verification": {
+        "checker_id": "far-p1-question-verifier",
+        "checker_version": "1.0.0",
+        "checks": [
+          {
+            "check_id": "SCHEMA_CONTRACT",
+            "category": "SCHEMA",
+            "outcome": "pass",
+            "detail": "Closed record shapes and cross-record structural contracts pass.",
+            "evidence": [
+              "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+            ]
+          },
+          {
+            "check_id": "RECOMPUTE_INDEPENDENT",
+            "category": "RECOMPUTE",
+            "outcome": "pass",
+            "detail": "Independent generic linear-combination route recomputed -5000 USD.",
+            "evidence": [
+              "producer_component_id=p1-sample-content-author",
+              "verifier_component_id=independent-linear-combination-checker",
+              "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+            ]
+          },
+          {
+            "check_id": "RULE_TRACE_CURRENT",
+            "category": "RULE_TRACE",
+            "outcome": "pass",
+            "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+            "evidence": [
+              "rule_version_id=far-rule-inventory-rollforward-reconciliation.v001",
+              "reference_version_id=far-ref-fasb-codification-live.v001",
+              "Fixture-world currency cannot be carried into a sample-candidate claim."
+            ]
+          },
+          {
+            "check_id": "DISTRACTOR_MODELS",
+            "category": "DISTRACTORS",
+            "outcome": "pass",
+            "detail": "All three named distractor error models reproduce their distinct option values.",
+            "evidence": [
+              "A=error-reverse-adjustment",
+              "B=error-assume-agreement",
+              "C=error-omit-supplier-returns"
+            ]
+          },
+          {
+            "check_id": "LANGUAGE_FAIRNESS",
+            "category": "LANGUAGE",
+            "outcome": "pass",
+            "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+            "evidence": [
+              "structured_numeric_fact_count=6",
+              "structured_assumption_count=2"
+            ]
+          },
+          {
+            "check_id": "ORIGINALITY_BOUNDARY",
+            "category": "ORIGINALITY",
+            "outcome": "pass",
+            "detail": "Originality language stays within the exact named comparison boundary.",
+            "evidence": [
+              "compared_corpus_ids=['far-p1-g2-sample.v002']",
+              "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+            ]
+          },
+          {
+            "check_id": "APPROVAL_INTEGRITY",
+            "category": "APPROVAL_INTEGRITY",
+            "outcome": "pass",
+            "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+            "evidence": [
+              "version_id=far-q-000104.v002",
+              "content_sha256=9bf70057d1044c2c5efd14ea83d8b899d9f9a5674e75f207f6ce6a7f1fea85e9",
+              "An absent review event is valid candidate state and grants no approval."
+            ]
+          },
+          {
+            "check_id": "VARIETY_EVIDENCE",
+            "category": "VARIETY",
+            "outcome": "pass",
+            "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+            "evidence": [
+              "arithmetic_operation_count=4",
+              "dependent_step_count=3",
+              "irrelevant_fact_count=1",
+              "plausible_error_model_count=3",
+              "rule_count=1",
+              "No variety distribution or difficulty rubric is treated as ratified."
+            ]
+          }
+        ]
+      },
+      "review_history": [
+        {
+          "schema_version": "1.0.0",
+          "event_id": "far-review-far-q-000104-approve-20260813t1800466452056z",
+          "recorded_at": "2026-08-13T18:00:46.6452056Z",
+          "action": "approve",
+          "actor": {
+            "actor_type": "human",
+            "actor_id": "james",
+            "display_name": "James"
+          },
+          "subject": {
+            "question_id": "far-q-000104",
+            "version_id": "far-q-000104.v002",
+            "content_sha256": "9bf70057d1044c2c5efd14ea83d8b899d9f9a5674e75f207f6ce6a7f1fea85e9"
+          },
+          "comment": "Approved by James during Gate G2 exact-version review."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "question_id": "far-q-000105",
+        "version_id": "far-q-000105.v002",
+        "version_number": 2,
+        "content_sha256": "347b2387873b626926adec98d1b5e17130c573285cfd40b7b889a637f5437be1"
+      },
+      "derived_readiness": {
+        "learner_ready": true,
+        "reasons": [],
+        "coverage_contribution": 0
+      },
+      "question": {
+        "stem": "A company concludes that a litigation loss is probable and estimates the loss between $300,000 and $500,000, with no amount in the range a better estimate than another. A separate claim has a reasonably possible loss of $200,000. What total loss should the company accrue?",
+        "options": [
+          {
+            "option_id": "A",
+            "text": "$500,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 500000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-accrue-range-maximum",
+              "name": "Accrue maximum",
+              "misconception": "Uses conservatism to select the high end despite no better estimate.",
+              "derivation": "Accrue the $500,000 maximum.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-range-maximum",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "B",
+            "text": "$300,000 accrued",
+            "structured_value": {
+              "value_type": "number",
+              "value": 300000,
+              "unit": "USD"
+            },
+            "is_keyed": true
+          },
+          {
+            "option_id": "C",
+            "text": "$400,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 400000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-accrue-midpoint",
+              "name": "Accrue midpoint",
+              "misconception": "Averages the endpoints without evidence that the midpoint is a better estimate.",
+              "derivation": "($300,000 + $500,000) / 2 = $400,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-range-minimum",
+                      "coefficient": 0.5
+                    },
+                    {
+                      "fact_id": "fact-range-maximum",
+                      "coefficient": 0.5
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "D",
+            "text": "$700,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 700000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-accrue-possible-loss",
+              "name": "Accrue possible claim",
+              "misconception": "Adds a merely reasonably possible claim to the probable range maximum.",
+              "derivation": "$500,000 + $200,000 = $700,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-range-maximum",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-possible-loss",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "fact-range-minimum",
+            "statement": "The probable loss range minimum is $300,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 300000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Accrued because no point is a better estimate."
+          },
+          {
+            "fact_id": "fact-range-maximum",
+            "statement": "The probable loss range maximum is $500,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 500000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "The maximum is not accrued when no point is a better estimate."
+          },
+          {
+            "fact_id": "fact-possible-loss",
+            "statement": "The separate reasonably possible loss is $200,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 200000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "A reasonably possible loss is not accrued under the stated facts."
+          }
+        ],
+        "assumptions": [],
+        "solution": {
+          "end_ask": "Calculate the amount accrued for the stated loss contingencies.",
+          "representation": {
+            "kind": "rule_selection",
+            "setup": "Accrual = minimum of probable estimable range when no point is better; exclude reasonably possible claim."
+          },
+          "steps": [
+            {
+              "step_number": 1,
+              "instruction": "Select the measurement rule for the probable range.",
+              "fact_ids_used": [
+                "fact-range-minimum",
+                "fact-range-maximum"
+              ],
+              "assertion_ids_used": [
+                "assertion-range-minimum"
+              ],
+              "result": "Use the $300,000 minimum because no amount is a better estimate."
+            },
+            {
+              "step_number": 2,
+              "instruction": "Apply the likelihood threshold to the separate claim.",
+              "fact_ids_used": [
+                "fact-possible-loss"
+              ],
+              "assertion_ids_used": [
+                "assertion-possible-not-accrued"
+              ],
+              "result": "Exclude the $200,000 reasonably possible loss from accrual."
+            }
+          ],
+          "keyed_answer_option_id": "B",
+          "keyed_answer_rationale": "The minimum of the probable range is accrued, and the separate reasonably possible claim is not accrued.",
+          "faster_or_safer_route": "Underline 'no amount is a better estimate' and 'reasonably possible'; those phrases determine the minimum and exclusion without averaging."
+        },
+        "correctness_evidence": {
+          "evidence_id": "evidence-contingency-range",
+          "route": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-range-minimum",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          },
+          "producer_component_id": "p1-sample-content-author",
+          "verifier_component_id": "independent-linear-combination-checker",
+          "shared_deciding_function": false,
+          "authorship": {
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "created_at": "2026-08-13T20:15:00Z",
+            "model_id": "openai-codex-gpt-5"
+          },
+          "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+        },
+        "accounting_model_id": "far-model-loss-contingency-range"
+      },
+      "blueprint": {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.3",
+        "group_id": "far.area.3.group.b",
+        "topic_id": null,
+        "representative_task_id": "far.area.3.group.b.task.002",
+        "skill_level": "application",
+        "mapping_rationale": "The item applies recognition and range-measurement rules to calculate the accrued contingency.",
+        "mcq_scope_limit": "The MCQ calculates one accrual and does not draft the full journal entry or disclosures.",
+        "labels": {
+          "area": "Select Transactions",
+          "group": "Contingencies and commitments",
+          "topic": null,
+          "task": "Calculate amounts of contingencies and prepare journal entries."
+        }
+      },
+      "rule": {
+        "schema_version": "1.0.0",
+        "rule_id": "far-rule-loss-contingency-range",
+        "rule_version_id": "far-rule-loss-contingency-range.v001",
+        "version_number": 1,
+        "content_sha256": "77853e6376505c520b9fb60be9d3c764ce8a0c9c778afc91c85cc582741a09f1",
+        "content": {
+          "title": "Loss contingency range measurement",
+          "rule_statement": "When a probable loss is reasonably estimable as a range and no amount within the range is a better estimate than another, the minimum amount in the range is accrued; a merely reasonably possible separate loss is not accrued.",
+          "applicability": "For-profit entity loss contingencies under U.S. GAAP with the stated likelihood and estimability conclusions.",
+          "assertions": [
+            {
+              "assertion_id": "assertion-range-minimum",
+              "claim": "Accrue the minimum of a probable loss range when no point in the range is a better estimate."
+            },
+            {
+              "assertion_id": "assertion-possible-not-accrued",
+              "claim": "Do not accrue a separate loss assessed as reasonably possible rather than probable."
+            }
+          ],
+          "source_citations": [
+            {
+              "reference_version_id": "far-ref-fasb-codification-live.v001",
+              "locator": "FASB ASC 450-20-25-2 and 450-20-30-1 (live official Codification)",
+              "role": "controlling",
+              "supports_assertion_ids": [
+                "assertion-range-minimum",
+                "assertion-possible-not-accrued"
+              ]
+            }
+          ],
+          "currency": {
+            "assessed_at": "2026-08-13T20:00:00Z",
+            "assessment": "current",
+            "basis": "The live official Codification locators and FASB-hosted 2023 Financial Reporting Issues Conference materials reproducing paragraph 450-20-30-1 were cross-checked on 2026-08-13; no effective amendment affecting this measurement rule was identified."
+          },
+          "authorship_provenance": {
+            "purpose": "admitted_evidence",
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "model_id": "openai-codex-gpt-5",
+            "material_input_ids": [
+              "far-ref-fasb-codification-live.v001",
+              "FASB ASC 450-20-25-2 and 450-20-30-1 (live official Codification)"
+            ]
+          }
+        }
+      },
+      "reference": {
+        "schema_version": "1.0.0",
+        "reference_id": "far-ref-fasb-codification-live",
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "version_number": 1,
+        "record_purpose": "admitted_evidence",
+        "authority_class": "authoritative_accounting",
+        "identity": {
+          "issuer": "Financial Accounting Standards Board",
+          "title": "FASB Accounting Standards Codification - live official research system",
+          "document_id": "FASB-ASC-LIVE",
+          "publication_or_update_date": "2009-06-30",
+          "effective_from": "2009-09-15",
+          "effective_through": null
+        },
+        "retrieval": {
+          "retrieved_at": "2026-08-13T20:00:00Z",
+          "locator": "https://asc.fasb.org/",
+          "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+        },
+        "currency": {
+          "assessed_at": "2026-08-13T20:00:00Z",
+          "assessment": "current",
+          "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+        },
+        "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+      },
+      "challenge_mechanics": [
+        {
+          "tag": "convention",
+          "observable_evidence": [
+            "The minimum-of-range rule applies only because no point is a better estimate."
+          ]
+        },
+        {
+          "tag": "rule_selection",
+          "observable_evidence": [
+            "The probable range and reasonably possible claim require different recognition outcomes."
+          ]
+        },
+        {
+          "tag": "language_trap",
+          "observable_evidence": [
+            "The midpoint and maximum appear prudent but are unsupported by the stated estimation conclusion."
+          ]
+        },
+        {
+          "tag": "elimination_leverage",
+          "observable_evidence": [
+            "Likelihood wording eliminates the option that accrues both matters."
+          ]
+        }
+      ],
+      "difficulty_profile": [
+        {
+          "dimension_id": "accounting_complexity",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "rule_count",
+              "value": 1,
+              "unit": "rules",
+              "interpretation": "Exact rule traces applied to the item."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reasoning_steps",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "dependent_step_count",
+              "value": 2,
+              "unit": "steps",
+              "interpretation": "Ordered solution steps required by the authored route."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reading_fact_selection",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "irrelevant_fact_count",
+              "value": 2,
+              "unit": "facts",
+              "interpretation": "Structured facts excluded from the numerical end ask."
+            }
+          ]
+        },
+        {
+          "dimension_id": "rule_convention_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "classification_boundary_count",
+              "value": 3,
+              "unit": "boundaries",
+              "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+            }
+          ]
+        },
+        {
+          "dimension_id": "distractor_elimination_burden",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "plausible_error_model_count",
+              "value": 3,
+              "unit": "models",
+              "interpretation": "Each nonkey has a distinct executable error model."
+            }
+          ]
+        },
+        {
+          "dimension_id": "realistic_time_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 2,
+          "observable_measurements": [
+            {
+              "measure_id": "arithmetic_operation_count",
+              "value": 0,
+              "unit": "operations",
+              "interpretation": "Arithmetic operations in the independent keyed route."
+            }
+          ]
+        }
+      ],
+      "originality_boundary": {
+        "compared_corpus_ids": [
+          "far-p1-g2-sample.v002"
+        ],
+        "methods": [
+          "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+        ],
+        "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      },
+      "verification": {
+        "checker_id": "far-p1-question-verifier",
+        "checker_version": "1.0.0",
+        "checks": [
+          {
+            "check_id": "SCHEMA_CONTRACT",
+            "category": "SCHEMA",
+            "outcome": "pass",
+            "detail": "Closed record shapes and cross-record structural contracts pass.",
+            "evidence": [
+              "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+            ]
+          },
+          {
+            "check_id": "RECOMPUTE_INDEPENDENT",
+            "category": "RECOMPUTE",
+            "outcome": "pass",
+            "detail": "Independent generic linear-combination route recomputed 300000 USD.",
+            "evidence": [
+              "producer_component_id=p1-sample-content-author",
+              "verifier_component_id=independent-linear-combination-checker",
+              "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+            ]
+          },
+          {
+            "check_id": "RULE_TRACE_CURRENT",
+            "category": "RULE_TRACE",
+            "outcome": "pass",
+            "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+            "evidence": [
+              "rule_version_id=far-rule-loss-contingency-range.v001",
+              "reference_version_id=far-ref-fasb-codification-live.v001",
+              "Fixture-world currency cannot be carried into a sample-candidate claim."
+            ]
+          },
+          {
+            "check_id": "DISTRACTOR_MODELS",
+            "category": "DISTRACTORS",
+            "outcome": "pass",
+            "detail": "All three named distractor error models reproduce their distinct option values.",
+            "evidence": [
+              "A=error-accrue-range-maximum",
+              "C=error-accrue-midpoint",
+              "D=error-accrue-possible-loss"
+            ]
+          },
+          {
+            "check_id": "LANGUAGE_FAIRNESS",
+            "category": "LANGUAGE",
+            "outcome": "pass",
+            "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+            "evidence": [
+              "structured_numeric_fact_count=3",
+              "structured_assumption_count=0"
+            ]
+          },
+          {
+            "check_id": "ORIGINALITY_BOUNDARY",
+            "category": "ORIGINALITY",
+            "outcome": "pass",
+            "detail": "Originality language stays within the exact named comparison boundary.",
+            "evidence": [
+              "compared_corpus_ids=['far-p1-g2-sample.v002']",
+              "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+            ]
+          },
+          {
+            "check_id": "APPROVAL_INTEGRITY",
+            "category": "APPROVAL_INTEGRITY",
+            "outcome": "pass",
+            "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+            "evidence": [
+              "version_id=far-q-000105.v002",
+              "content_sha256=347b2387873b626926adec98d1b5e17130c573285cfd40b7b889a637f5437be1",
+              "An absent review event is valid candidate state and grants no approval."
+            ]
+          },
+          {
+            "check_id": "VARIETY_EVIDENCE",
+            "category": "VARIETY",
+            "outcome": "pass",
+            "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+            "evidence": [
+              "arithmetic_operation_count=0",
+              "dependent_step_count=2",
+              "irrelevant_fact_count=2",
+              "plausible_error_model_count=3",
+              "rule_count=1",
+              "No variety distribution or difficulty rubric is treated as ratified."
+            ]
+          }
+        ]
+      },
+      "review_history": [
+        {
+          "schema_version": "1.0.0",
+          "event_id": "far-review-far-q-000105-approve-20260813t1802488764121z",
+          "recorded_at": "2026-08-13T18:02:48.8764121Z",
+          "action": "approve",
+          "actor": {
+            "actor_type": "human",
+            "actor_id": "james",
+            "display_name": "James"
+          },
+          "subject": {
+            "question_id": "far-q-000105",
+            "version_id": "far-q-000105.v002",
+            "content_sha256": "347b2387873b626926adec98d1b5e17130c573285cfd40b7b889a637f5437be1"
+          },
+          "comment": "Approved by James during Gate G2 exact-version review."
+        }
+      ]
+    },
+    {
+      "identity": {
+        "question_id": "far-q-000106",
+        "version_id": "far-q-000106.v002",
+        "version_number": 2,
+        "content_sha256": "5cce1108d25cc564ba5b7df23544c55c78155105a7e4e116daa981a0bb9fb639"
+      },
+      "derived_readiness": {
+        "learner_ready": true,
+        "reasons": [],
+        "coverage_contribution": 0
+      },
+      "question": {
+        "stem": "Before issuing its year-end financial statements, a company learns that a customer owing $90,000 entered bankruptcy because of severe financial difficulty already present at year-end; no credit loss has yet been recorded for that receivable. A warehouse with a carrying amount of $400,000 was destroyed by a fire that began after year-end. The company also settles a year-end lawsuit for $60,000 after having accrued $35,000. After distinguishing adjustment from disclosure, what total additional loss should the company recognize in its year-end financial statements?",
+        "options": [
+          {
+            "option_id": "A",
+            "text": "$490,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 490000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-recognize-fire-omit-lawsuit",
+              "name": "Recognize fire and omit lawsuit update",
+              "misconception": "Adjusts for the post-year-end fire but overlooks the lawsuit increment.",
+              "derivation": "$90,000 + $400,000 = $490,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-bankrupt-receivable",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-fire-loss",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "B",
+            "text": "$515,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 515000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-recognize-all-events",
+              "name": "Recognize all events",
+              "misconception": "Includes the nonrecognized fire along with both recognized adjustments.",
+              "derivation": "$90,000 + $400,000 + ($60,000 - $35,000) = $515,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-bankrupt-receivable",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-fire-loss",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-lawsuit-settlement",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-lawsuit-accrual",
+                      "coefficient": -1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          },
+          {
+            "option_id": "C",
+            "text": "$115,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 115000,
+              "unit": "USD"
+            },
+            "is_keyed": true
+          },
+          {
+            "option_id": "D",
+            "text": "$150,000",
+            "structured_value": {
+              "value_type": "number",
+              "value": 150000,
+              "unit": "USD"
+            },
+            "is_keyed": false,
+            "error_model": {
+              "error_model_id": "error-ignore-prior-accrual",
+              "name": "Ignore prior lawsuit accrual",
+              "misconception": "Adds the full settlement rather than only the increment over the existing accrual.",
+              "derivation": "$90,000 + $60,000 = $150,000.",
+              "reproduction": {
+                "route_type": "linear_combination",
+                "linear_combination": {
+                  "terms": [
+                    {
+                      "fact_id": "fact-bankrupt-receivable",
+                      "coefficient": 1
+                    },
+                    {
+                      "fact_id": "fact-lawsuit-settlement",
+                      "coefficient": 1
+                    }
+                  ],
+                  "constant": 0,
+                  "output_unit": "USD",
+                  "rounding": {
+                    "mode": "none",
+                    "decimal_places": 0
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "facts": [
+          {
+            "fact_id": "fact-bankrupt-receivable",
+            "statement": "The receivable supported as impaired at year-end is $90,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 90000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Recognized because the bankruptcy confirms a year-end condition."
+          },
+          {
+            "fact_id": "fact-fire-loss",
+            "statement": "The post-year-end warehouse carrying amount is $400,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 400000,
+              "unit": "USD"
+            },
+            "relevance": "irrelevant",
+            "irrelevance_reason": "The fire condition arose after year-end and is not recognized in the year-end statements."
+          },
+          {
+            "fact_id": "fact-lawsuit-settlement",
+            "statement": "The lawsuit settled for $60,000.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 60000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Provides the final amount for a year-end condition."
+          },
+          {
+            "fact_id": "fact-lawsuit-accrual",
+            "statement": "The company already accrued $35,000 for the lawsuit.",
+            "structured_value": {
+              "value_type": "number",
+              "value": 35000,
+              "unit": "USD"
+            },
+            "relevance": "relevant",
+            "use_in_solution": "Subtracted to obtain the additional lawsuit loss."
+          }
+        ],
+        "assumptions": [
+          {
+            "assumption_id": "assumption-no-prior-credit-loss",
+            "statement": "No credit loss has yet been recorded for the bankrupt customer's receivable.",
+            "basis": "explicit_in_stem"
+          }
+        ],
+        "solution": {
+          "end_ask": "Total only the additional year-end losses supported by recognized subsequent events.",
+          "representation": {
+            "kind": "financial_statement_view",
+            "setup": "Additional loss = confirmed year-end receivable loss + (lawsuit settlement - existing accrual); exclude post-year-end fire from recognition."
+          },
+          "steps": [
+            {
+              "step_number": 1,
+              "instruction": "Classify each event by when its underlying condition arose.",
+              "fact_ids_used": [
+                "fact-bankrupt-receivable",
+                "fact-fire-loss",
+                "fact-lawsuit-settlement",
+                "fact-lawsuit-accrual"
+              ],
+              "assertion_ids_used": [
+                "assertion-recognized-subsequent-event",
+                "assertion-nonrecognized-subsequent-event"
+              ],
+              "result": "Recognize the bankruptcy evidence and lawsuit update; do not recognize the later-arising fire in the year-end amounts."
+            },
+            {
+              "step_number": 2,
+              "instruction": "Calculate the additional lawsuit loss.",
+              "fact_ids_used": [
+                "fact-lawsuit-settlement",
+                "fact-lawsuit-accrual"
+              ],
+              "assertion_ids_used": [
+                "assertion-recognized-subsequent-event"
+              ],
+              "result": "$60,000 - $35,000 = $25,000."
+            },
+            {
+              "step_number": 3,
+              "instruction": "Total the recognized additional losses.",
+              "fact_ids_used": [
+                "fact-bankrupt-receivable",
+                "fact-lawsuit-settlement",
+                "fact-lawsuit-accrual"
+              ],
+              "assertion_ids_used": [
+                "assertion-recognized-subsequent-event"
+              ],
+              "result": "$90,000 + $25,000 = $115,000."
+            }
+          ],
+          "keyed_answer_option_id": "C",
+          "keyed_answer_rationale": "The bankruptcy confirms a year-end loss of $90,000 and the lawsuit needs another $25,000; the later-arising fire is not recognized.",
+          "faster_or_safer_route": "Draw a year-end line: put pre-existing conditions on the adjustment side, later-arising conditions on the disclosure-only side, then subtract any amount already accrued."
+        },
+        "correctness_evidence": {
+          "evidence_id": "evidence-subsequent-events",
+          "route": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-bankrupt-receivable",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-lawsuit-settlement",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-lawsuit-accrual",
+                  "coefficient": -1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          },
+          "producer_component_id": "p1-sample-content-author",
+          "verifier_component_id": "independent-linear-combination-checker",
+          "shared_deciding_function": false,
+          "authorship": {
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "created_at": "2026-08-13T20:15:00Z",
+            "model_id": "openai-codex-gpt-5"
+          },
+          "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+        },
+        "accounting_model_id": "far-model-subsequent-events"
+      },
+      "blueprint": {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.3",
+        "group_id": "far.area.3.group.g",
+        "topic_id": null,
+        "representative_task_id": "far.area.3.group.g.task.003",
+        "skill_level": "analysis",
+        "mapping_rationale": "The item requires analyzing three event narratives to derive adjustment and disclosure consequences.",
+        "mcq_scope_limit": "The MCQ derives a numerical adjustment but does not draft complete note disclosures or investigate source documents.",
+        "labels": {
+          "area": "Select Transactions",
+          "group": "Subsequent events",
+          "topic": null,
+          "task": "Derive the impact to the financial statements and required note disclosures due to identified subsequent events."
+        }
+      },
+      "rule": {
+        "schema_version": "1.0.0",
+        "rule_id": "far-rule-subsequent-event-recognition",
+        "rule_version_id": "far-rule-subsequent-event-recognition.v001",
+        "version_number": 1,
+        "content_sha256": "d05989802c766c85b8b7a2a30e62a9ba5168e3a832b768e33f82807d46529b14",
+        "content": {
+          "title": "Recognized and nonrecognized subsequent events",
+          "rule_statement": "A subsequent event is recognized when it provides additional evidence about conditions existing at the balance-sheet date; an event evidencing conditions arising after that date is not recognized in those statements, although material nonrecognized events may require disclosure.",
+          "applicability": "For-profit entity evaluating events after year-end but before financial statements are issued.",
+          "assertions": [
+            {
+              "assertion_id": "assertion-recognized-subsequent-event",
+              "claim": "Recognize the effects of subsequent evidence about a condition that existed at the balance-sheet date."
+            },
+            {
+              "assertion_id": "assertion-nonrecognized-subsequent-event",
+              "claim": "Do not adjust for a condition arising after the balance-sheet date; disclose it if material under the applicable requirements."
+            }
+          ],
+          "source_citations": [
+            {
+              "reference_version_id": "far-ref-fasb-codification-live.v001",
+              "locator": "FASB ASC 855-10-25-1, 855-10-25-3, and 855-10-50-2 (live official Codification)",
+              "role": "controlling",
+              "supports_assertion_ids": [
+                "assertion-recognized-subsequent-event",
+                "assertion-nonrecognized-subsequent-event"
+              ]
+            }
+          ],
+          "currency": {
+            "assessed_at": "2026-08-13T20:00:00Z",
+            "assessment": "current",
+            "basis": "The live official Codification locators and FASB-hosted 2025 agenda-consultation materials quoting the recognition principle were cross-checked on 2026-08-13; no effective amendment affecting these facts was identified."
+          },
+          "authorship_provenance": {
+            "purpose": "admitted_evidence",
+            "mechanism": "ai_assisted",
+            "created_by": "Codex",
+            "model_id": "openai-codex-gpt-5",
+            "material_input_ids": [
+              "far-ref-fasb-codification-live.v001",
+              "FASB ASC 855-10-25-1, 855-10-25-3, and 855-10-50-2 (live official Codification)"
+            ]
+          }
+        }
+      },
+      "reference": {
+        "schema_version": "1.0.0",
+        "reference_id": "far-ref-fasb-codification-live",
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "version_number": 1,
+        "record_purpose": "admitted_evidence",
+        "authority_class": "authoritative_accounting",
+        "identity": {
+          "issuer": "Financial Accounting Standards Board",
+          "title": "FASB Accounting Standards Codification - live official research system",
+          "document_id": "FASB-ASC-LIVE",
+          "publication_or_update_date": "2009-06-30",
+          "effective_from": "2009-09-15",
+          "effective_through": null
+        },
+        "retrieval": {
+          "retrieved_at": "2026-08-13T20:00:00Z",
+          "locator": "https://asc.fasb.org/",
+          "content_identity": "Live official FASB Codification research system; exact Topic-Subtopic-Section-Paragraph locators are recorded in each rule version."
+        },
+        "currency": {
+          "assessed_at": "2026-08-13T20:00:00Z",
+          "assessment": "current",
+          "basis": "FASB identifies the Codification as the single official source of authoritative nongovernmental U.S. GAAP. Exact sample locators were cross-checked against the live system and official FASB-hosted materials on 2026-08-13; mutable live content must be rechecked on source change."
+        },
+        "admission_basis": "The ratified source hierarchy and the 2026 FAR Blueprint expressly name the FASB Accounting Standards Codification as eligible controlling authority. This record admits only the exact locators used by the six-item P1 sample."
+      },
+      "challenge_mechanics": [
+        {
+          "tag": "timing",
+          "observable_evidence": [
+            "Three events must be placed on the correct side of the year-end condition boundary."
+          ]
+        },
+        {
+          "tag": "fact_selection",
+          "observable_evidence": [
+            "The largest amount belongs to a nonrecognized event and is excluded from the numerical adjustment."
+          ]
+        },
+        {
+          "tag": "financial_statement_view",
+          "observable_evidence": [
+            "The solver must distinguish additional recognized loss from disclosure-only information."
+          ]
+        },
+        {
+          "tag": "end_ask_location",
+          "observable_evidence": [
+            "The numerical end ask follows a dense three-event narrative."
+          ]
+        },
+        {
+          "tag": "elimination_leverage",
+          "observable_evidence": [
+            "Options reveal fire recognition and failure to net the prior accrual."
+          ]
+        }
+      ],
+      "difficulty_profile": [
+        {
+          "dimension_id": "accounting_complexity",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "rule_count",
+              "value": 1,
+              "unit": "rules",
+              "interpretation": "Exact rule traces applied to the item."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reasoning_steps",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 3,
+          "observable_measurements": [
+            {
+              "measure_id": "dependent_step_count",
+              "value": 3,
+              "unit": "steps",
+              "interpretation": "Ordered solution steps required by the authored route."
+            }
+          ]
+        },
+        {
+          "dimension_id": "reading_fact_selection",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "irrelevant_fact_count",
+              "value": 1,
+              "unit": "facts",
+              "interpretation": "Structured facts excluded from the numerical end ask."
+            }
+          ]
+        },
+        {
+          "dimension_id": "rule_convention_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "classification_boundary_count",
+              "value": 3,
+              "unit": "boundaries",
+              "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+            }
+          ]
+        },
+        {
+          "dimension_id": "distractor_elimination_burden",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "plausible_error_model_count",
+              "value": 3,
+              "unit": "models",
+              "interpretation": "Each nonkey has a distinct executable error model."
+            }
+          ]
+        },
+        {
+          "dimension_id": "realistic_time_pressure",
+          "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+          "rubric_status": "proposed_for_g2",
+          "provisional_level": 4,
+          "observable_measurements": [
+            {
+              "measure_id": "arithmetic_operation_count",
+              "value": 2,
+              "unit": "operations",
+              "interpretation": "Arithmetic operations in the independent keyed route."
+            }
+          ]
+        }
+      ],
+      "originality_boundary": {
+        "compared_corpus_ids": [
+          "far-p1-g2-sample.v002"
+        ],
+        "methods": [
+          "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+        ],
+        "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      },
+      "verification": {
+        "checker_id": "far-p1-question-verifier",
+        "checker_version": "1.0.0",
+        "checks": [
+          {
+            "check_id": "SCHEMA_CONTRACT",
+            "category": "SCHEMA",
+            "outcome": "pass",
+            "detail": "Closed record shapes and cross-record structural contracts pass.",
+            "evidence": [
+              "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+            ]
+          },
+          {
+            "check_id": "RECOMPUTE_INDEPENDENT",
+            "category": "RECOMPUTE",
+            "outcome": "pass",
+            "detail": "Independent generic linear-combination route recomputed 115000 USD.",
+            "evidence": [
+              "producer_component_id=p1-sample-content-author",
+              "verifier_component_id=independent-linear-combination-checker",
+              "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+            ]
+          },
+          {
+            "check_id": "RULE_TRACE_CURRENT",
+            "category": "RULE_TRACE",
+            "outcome": "pass",
+            "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+            "evidence": [
+              "rule_version_id=far-rule-subsequent-event-recognition.v001",
+              "reference_version_id=far-ref-fasb-codification-live.v001",
+              "Fixture-world currency cannot be carried into a sample-candidate claim."
+            ]
+          },
+          {
+            "check_id": "DISTRACTOR_MODELS",
+            "category": "DISTRACTORS",
+            "outcome": "pass",
+            "detail": "All three named distractor error models reproduce their distinct option values.",
+            "evidence": [
+              "A=error-recognize-fire-omit-lawsuit",
+              "B=error-recognize-all-events",
+              "D=error-ignore-prior-accrual"
+            ]
+          },
+          {
+            "check_id": "LANGUAGE_FAIRNESS",
+            "category": "LANGUAGE",
+            "outcome": "pass",
+            "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+            "evidence": [
+              "structured_numeric_fact_count=4",
+              "structured_assumption_count=1"
+            ]
+          },
+          {
+            "check_id": "ORIGINALITY_BOUNDARY",
+            "category": "ORIGINALITY",
+            "outcome": "pass",
+            "detail": "Originality language stays within the exact named comparison boundary.",
+            "evidence": [
+              "compared_corpus_ids=['far-p1-g2-sample.v002']",
+              "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+            ]
+          },
+          {
+            "check_id": "APPROVAL_INTEGRITY",
+            "category": "APPROVAL_INTEGRITY",
+            "outcome": "pass",
+            "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+            "evidence": [
+              "version_id=far-q-000106.v002",
+              "content_sha256=5cce1108d25cc564ba5b7df23544c55c78155105a7e4e116daa981a0bb9fb639",
+              "An absent review event is valid candidate state and grants no approval."
+            ]
+          },
+          {
+            "check_id": "VARIETY_EVIDENCE",
+            "category": "VARIETY",
+            "outcome": "pass",
+            "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+            "evidence": [
+              "arithmetic_operation_count=2",
+              "dependent_step_count=3",
+              "irrelevant_fact_count=1",
+              "plausible_error_model_count=3",
+              "rule_count=1",
+              "No variety distribution or difficulty rubric is treated as ratified."
+            ]
+          }
+        ]
+      },
+      "review_history": [
+        {
+          "schema_version": "1.0.0",
+          "event_id": "far-review-far-q-000106-approve-20260813t1804492948352z",
+          "recorded_at": "2026-08-13T18:04:49.2948352Z",
+          "action": "approve",
+          "actor": {
+            "actor_type": "human",
+            "actor_id": "james",
+            "display_name": "James"
+          },
+          "subject": {
+            "question_id": "far-q-000106",
+            "version_id": "far-q-000106.v002",
+            "content_sha256": "5cce1108d25cc564ba5b7df23544c55c78155105a7e4e116daa981a0bb9fb639"
+          },
+          "comment": "Approved by James during Gate G2 exact-version review."
+        }
+      ]
+    }
+  ],
+  "review_actions": {
+    "allowed": [
+      "approve",
+      "reject",
+      "revise",
+      "comment"
+    ],
+    "reviewer": {
+      "actor_type": "human",
+      "actor_id": "james",
+      "display_name": "James"
+    },
+    "event_schema": "schema/review-event.schema.json",
+    "ingest_command": "python scripts/ingest_review_event.py <downloaded-event.json>"
+  }
+}

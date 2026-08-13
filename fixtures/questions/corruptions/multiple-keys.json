@@ -1,0 +1,9 @@
+{
+  "fixture_id": "multiple-keys",
+  "base": "valid-question-version.json",
+  "expected_contract": "QUESTION_SCHEMA",
+  "mutations": [
+    {"operation": "replace", "path": "/content/options/1/is_keyed", "value": true},
+    {"operation": "remove", "path": "/content/options/1/error_model"}
+  ]
+}

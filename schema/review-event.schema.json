@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/review-event.schema.json",
+  "title": "Append-only exact-version review event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "recorded_at", "action", "actor", "subject", "comment"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "event_id": {"type": "string", "pattern": "^far-review-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "action": {"enum": ["approve", "reject", "revise", "comment", "auto_invalidate"]},
+    "actor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["actor_type", "actor_id", "display_name"],
+      "properties": {
+        "actor_type": {"enum": ["human", "system"]},
+        "actor_id": {"type": "string", "minLength": 1},
+        "display_name": {"type": "string", "minLength": 1}
+      }
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question_id", "version_id", "content_sha256"],
+      "properties": {
+        "question_id": {"type": "string", "pattern": "^far-q-[0-9]{6}$"},
+        "version_id": {"type": "string", "pattern": "^far-q-[0-9]{6}\\.v[0-9]{3}$"},
+        "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "comment": {"type": "string", "minLength": 1},
+    "reason_code": {"type": "string", "pattern": "^[a-z][a-z0-9_]+$"},
+    "superseding_version_id": {"type": "string", "pattern": "^far-q-[0-9]{6}\\.v[0-9]{3}$"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"action": {"enum": ["approve", "reject", "revise", "comment"]}}, "required": ["action"]},
+      "then": {"properties": {"actor": {"properties": {"actor_type": {"const": "human"}}}}}
+    },
+    {
+      "if": {"properties": {"action": {"const": "auto_invalidate"}}, "required": ["action"]},
+      "then": {
+        "required": ["reason_code"],
+        "properties": {"actor": {"properties": {"actor_type": {"const": "system"}}}}
+      }
+    },
+    {
+      "if": {"properties": {"action": {"const": "revise"}}, "required": ["action"]},
+      "then": {"required": ["reason_code"]}
+    }
+  ]
+}

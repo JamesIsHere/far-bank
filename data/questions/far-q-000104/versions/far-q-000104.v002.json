@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000104",
+  "version_id": "far-q-000104.v002",
+  "version_number": 2,
+  "content_sha256": "9bf70057d1044c2c5efd14ea83d8b899d9f9a5674e75f207f6ce6a7f1fea85e9",
+  "content": {
+    "authorship": {
+      "purpose": "sample_candidate",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T20:15:00Z",
+      "model_id": "openai-codex-gpt-5",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Bind the exact FAR task and skill."
+        },
+        {
+          "input_id": "far-rule-inventory-rollforward-reconciliation.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Control the accounting treatment and answer."
+        },
+        {
+          "input_id": "far-ref-fasb-codification-live.v001",
+          "input_kind": "source",
+          "version_or_date": "retrieved-2026-08-13",
+          "use": "Provide authoritative U.S. GAAP provenance."
+        },
+        {
+          "input_id": "far-p1-g2-sample.v001",
+          "input_kind": "human_brief",
+          "version_or_date": "v001",
+          "use": "Bounded G2 sample design under the ratified goal."
+        },
+        {
+          "input_id": "far-g2-answer-position-comment-20260813",
+          "input_kind": "human_brief",
+          "version_or_date": "2026-08-13",
+          "use": "Rebalance keyed answer positions across the six-item G2 sample following James's exact-version comment."
+        }
+      ]
+    },
+    "stem": "An inventory analyst is reconciling records that show beginning inventory of $180,000, purchases received of $520,000, cost of goods sold of $470,000, returns to suppliers of $20,000, and a supported physical count of $205,000. Sales revenue was $700,000. All inventory amounts are at cost, no write-down is indicated, and the source records are complete. What adjustment should be made to the inventory general ledger?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$5,000 increase",
+        "structured_value": {
+          "value_type": "number",
+          "value": 5000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-reverse-adjustment",
+          "name": "Reverse adjustment direction",
+          "misconception": "Computes book minus physical instead of the adjustment needed to move book to physical.",
+          "derivation": "$210,000 book - $205,000 physical = a mistaken $5,000 increase.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-beginning-inventory",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-purchases",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-cogs",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-supplier-returns",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-physical-inventory",
+                  "coefficient": -1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "B",
+        "text": "No adjustment",
+        "structured_value": {
+          "value_type": "number",
+          "value": 0,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-assume-agreement",
+          "name": "Assume records agree",
+          "misconception": "Stops after accepting the physical count without comparing it to the rollforward.",
+          "derivation": "Records a zero adjustment.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-beginning-inventory",
+                  "coefficient": 0
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "C",
+        "text": "$25,000 decrease",
+        "structured_value": {
+          "value_type": "number",
+          "value": -25000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-omit-supplier-returns",
+          "name": "Omit supplier returns",
+          "misconception": "Leaves returned goods in the book rollforward.",
+          "derivation": "$205,000 - ($180,000 + $520,000 - $470,000) = a $25,000 decrease.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-physical-inventory",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-beginning-inventory",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-purchases",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-cogs",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "D",
+        "text": "$5,000 decrease",
+        "structured_value": {
+          "value_type": "number",
+          "value": -5000,
+          "unit": "USD"
+        },
+        "is_keyed": true
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.2",
+        "group_id": "far.area.2.group.c",
+        "topic_id": null,
+        "representative_task_id": "far.area.2.group.c.task.004",
+        "skill_level": "analysis",
+        "mapping_rationale": "The item reconciles inventory source data to the general-ledger amount and determines the adjustment.",
+        "mcq_scope_limit": "The MCQ supplies resolved source data and does not fully exercise investigation across documents or correction entries."
+      }
+    ],
+    "accounting_model_id": "far-model-inventory-rollforward",
+    "facts": [
+      {
+        "fact_id": "fact-beginning-inventory",
+        "statement": "Beginning inventory is $180,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 180000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Opening balance in the rollforward."
+      },
+      {
+        "fact_id": "fact-purchases",
+        "statement": "Purchases received are $520,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 520000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Added to the rollforward."
+      },
+      {
+        "fact_id": "fact-cogs",
+        "statement": "Cost of goods sold is $470,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 470000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Subtracted from the rollforward."
+      },
+      {
+        "fact_id": "fact-supplier-returns",
+        "statement": "Returns to suppliers are $20,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 20000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Subtracted from purchases in the rollforward."
+      },
+      {
+        "fact_id": "fact-physical-inventory",
+        "statement": "Supported physical inventory is $205,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 205000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Target supported ending balance."
+      },
+      {
+        "fact_id": "fact-sales-revenue",
+        "statement": "Sales revenue is $700,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 700000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "Revenue does not enter this cost-basis inventory rollforward."
+      }
+    ],
+    "assumptions": [
+      {
+        "assumption_id": "assumption-records-complete",
+        "statement": "The stated source records are complete and the physical count is supported.",
+        "basis": "explicit_in_stem"
+      },
+      {
+        "assumption_id": "assumption-inventory-at-cost",
+        "statement": "All inventory amounts are measured at cost and no lower-measurement adjustment is indicated.",
+        "basis": "explicit_in_stem"
+      }
+    ],
+    "solution": {
+      "end_ask": "Determine the signed adjustment that moves book inventory to the supported physical amount.",
+      "representation": {
+        "kind": "roll_forward",
+        "setup": "Book ending inventory = beginning + purchases - COGS - supplier returns; adjustment = physical - book."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Build the book inventory rollforward.",
+          "fact_ids_used": [
+            "fact-beginning-inventory",
+            "fact-purchases",
+            "fact-cogs",
+            "fact-supplier-returns"
+          ],
+          "assertion_ids_used": [
+            "assertion-inventory-cost-balance"
+          ],
+          "result": "$180,000 + $520,000 - $470,000 - $20,000 = $210,000."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Compare supported physical inventory with the book balance.",
+          "fact_ids_used": [
+            "fact-physical-inventory"
+          ],
+          "assertion_ids_used": [
+            "assertion-reconcile-physical"
+          ],
+          "result": "$205,000 - $210,000 = $(5,000)."
+        },
+        {
+          "step_number": 3,
+          "instruction": "Translate the signed difference into the ledger action.",
+          "fact_ids_used": [
+            "fact-physical-inventory"
+          ],
+          "assertion_ids_used": [
+            "assertion-reconcile-physical"
+          ],
+          "result": "Decrease inventory by $5,000."
+        }
+      ],
+      "keyed_answer_option_id": "D",
+      "keyed_answer_rationale": "Book inventory is $210,000 and supported physical inventory is $205,000, so the ledger must decrease $5,000.",
+      "faster_or_safer_route": "Write the rollforward signs before calculating, then use target minus book to preserve adjustment direction."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-inventory-adjustment",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {
+              "fact_id": "fact-physical-inventory",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-beginning-inventory",
+              "coefficient": -1
+            },
+            {
+              "fact_id": "fact-purchases",
+              "coefficient": -1
+            },
+            {
+              "fact_id": "fact-cogs",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-supplier-returns",
+              "coefficient": 1
+            }
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {
+            "mode": "none",
+            "decimal_places": 0
+          }
+        }
+      },
+      "producer_component_id": "p1-sample-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T20:15:00Z",
+        "model_id": "openai-codex-gpt-5"
+      },
+      "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-inventory-rollforward-reconciliation.v001",
+        "assertion_ids": [
+          "assertion-inventory-cost-balance",
+          "assertion-reconcile-physical"
+        ],
+        "applied_to_fact_ids": [
+          "fact-beginning-inventory",
+          "fact-purchases",
+          "fact-cogs",
+          "fact-supplier-returns",
+          "fact-physical-inventory",
+          "fact-sales-revenue"
+        ],
+        "application": "The cost rollforward yields the book balance, which is compared with the supported physical amount to derive the signed adjustment."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "roll_forward",
+        "observable_evidence": [
+          "Five cost-basis facts form a source-data reconciliation."
+        ]
+      },
+      {
+        "tag": "fact_selection",
+        "observable_evidence": [
+          "Sales revenue is plausible business data but irrelevant to the inventory cost rollforward."
+        ]
+      },
+      {
+        "tag": "elimination_leverage",
+        "observable_evidence": [
+          "Adjustment direction and omitted supplier returns diagnose two distractors."
+        ]
+      },
+      {
+        "tag": "journal_effect",
+        "observable_evidence": [
+          "A negative target-minus-book difference requires a credit to inventory."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "rule_count",
+            "value": 1,
+            "unit": "rules",
+            "interpretation": "Exact rule traces applied to the item."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "dependent_step_count",
+            "value": 3,
+            "unit": "steps",
+            "interpretation": "Ordered solution steps required by the authored route."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "irrelevant_fact_count",
+            "value": 1,
+            "unit": "facts",
+            "interpretation": "Structured facts excluded from the numerical end ask."
+          }
+        ]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "classification_boundary_count",
+            "value": 3,
+            "unit": "boundaries",
+            "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+          }
+        ]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "plausible_error_model_count",
+            "value": 3,
+            "unit": "models",
+            "interpretation": "Each nonkey has a distinct executable error model."
+          }
+        ]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "arithmetic_operation_count",
+            "value": 4,
+            "unit": "operations",
+            "interpretation": "Arithmetic operations in the independent keyed route."
+          }
+        ]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [
+        "far-p1-g2-sample.v002"
+      ],
+      "methods": [
+        "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+      ],
+      "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+    }
+  }
+}

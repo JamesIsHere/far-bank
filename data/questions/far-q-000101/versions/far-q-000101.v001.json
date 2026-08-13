@@ -1,0 +1,425 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000101",
+  "version_id": "far-q-000101.v001",
+  "version_number": 1,
+  "content_sha256": "498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400",
+  "content": {
+    "authorship": {
+      "purpose": "sample_candidate",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T20:00:00Z",
+      "model_id": "openai-codex-gpt-5",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Bind the exact FAR task and skill."
+        },
+        {
+          "input_id": "far-rule-oci-components.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Control the accounting treatment and answer."
+        },
+        {
+          "input_id": "far-ref-fasb-codification-live.v001",
+          "input_kind": "source",
+          "version_or_date": "retrieved-2026-08-13",
+          "use": "Provide authoritative U.S. GAAP provenance."
+        },
+        {
+          "input_id": "far-p1-g2-sample.v001",
+          "input_kind": "human_brief",
+          "version_or_date": "v001",
+          "use": "Bounded G2 sample design under the ratified goal."
+        }
+      ]
+    },
+    "stem": "A company reports a $14,000 unrealized gain on an available-for-sale debt security, a $6,000 unrealized gain on a trading security, a $5,000 realized loss on an equipment sale, and $2,000 of dividend income. What pretax amount should the company report in other comprehensive income?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$14,000 of pretax OCI",
+        "structured_value": {
+          "value_type": "number",
+          "value": 14000,
+          "unit": "USD"
+        },
+        "is_keyed": true
+      },
+      {
+        "option_id": "B",
+        "text": "$20,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 20000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-include-trading",
+          "name": "Include trading gain",
+          "misconception": "Treats every unrealized security gain as OCI.",
+          "derivation": "$14,000 + $6,000 = $20,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-afs-gain",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-trading-gain",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "C",
+        "text": "$9,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 9000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-net-realized-loss",
+          "name": "Net realized loss",
+          "misconception": "Nets an earnings loss against OCI.",
+          "derivation": "$14,000 - $5,000 = $9,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-afs-gain",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-equipment-loss",
+                  "coefficient": -1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "D",
+        "text": "$16,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 16000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-include-dividend",
+          "name": "Include dividend income",
+          "misconception": "Treats ordinary dividend income as OCI.",
+          "derivation": "$14,000 + $2,000 = $16,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-afs-gain",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-dividend-income",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.1",
+        "group_id": "far.area.1.group.a",
+        "topic_id": "far.area.1.group.a.topic.3",
+        "representative_task_id": "far.area.1.group.a.topic.3.task.002",
+        "skill_level": "remembering_and_understanding",
+        "mapping_rationale": "The item requires identifying which stated item is classified in OCI.",
+        "mcq_scope_limit": "The MCQ tests classification of a bounded set and does not prepare a complete statement of comprehensive income."
+      }
+    ],
+    "accounting_model_id": "far-model-oci-classification",
+    "facts": [
+      {
+        "fact_id": "fact-afs-gain",
+        "statement": "The unrealized gain on available-for-sale debt is $14,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 14000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Included in pretax OCI."
+      },
+      {
+        "fact_id": "fact-trading-gain",
+        "statement": "The unrealized trading-security gain is $6,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 6000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "Trading-security changes are reported in earnings."
+      },
+      {
+        "fact_id": "fact-equipment-loss",
+        "statement": "The realized equipment-sale loss is $5,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 5000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "A realized disposal loss is reported in earnings."
+      },
+      {
+        "fact_id": "fact-dividend-income",
+        "statement": "Dividend income is $2,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 2000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "Ordinary dividend income is reported in earnings."
+      }
+    ],
+    "assumptions": [],
+    "solution": {
+      "end_ask": "Identify and total the stated pretax OCI components.",
+      "representation": {
+        "kind": "classification",
+        "setup": "Pretax OCI = included OCI items; exclude items reported in net income."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Classify each item as OCI or earnings.",
+          "fact_ids_used": [
+            "fact-afs-gain",
+            "fact-trading-gain",
+            "fact-equipment-loss",
+            "fact-dividend-income"
+          ],
+          "assertion_ids_used": [
+            "assertion-afs-debt-oci",
+            "assertion-earnings-items-excluded"
+          ],
+          "result": "Only the available-for-sale debt unrealized gain is OCI."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Total the included OCI items.",
+          "fact_ids_used": [
+            "fact-afs-gain"
+          ],
+          "assertion_ids_used": [
+            "assertion-afs-debt-oci"
+          ],
+          "result": "$14,000."
+        }
+      ],
+      "keyed_answer_option_id": "A",
+      "keyed_answer_rationale": "Only the $14,000 unrealized gain on available-for-sale debt is a current-period OCI item.",
+      "faster_or_safer_route": "First eliminate the three items explicitly reported in earnings; the remaining amount is OCI."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-oci-classification",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {
+              "fact_id": "fact-afs-gain",
+              "coefficient": 1
+            }
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {
+            "mode": "none",
+            "decimal_places": 0
+          }
+        }
+      },
+      "producer_component_id": "p1-sample-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T20:00:00Z",
+        "model_id": "openai-codex-gpt-5"
+      },
+      "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-oci-components.v001",
+        "assertion_ids": [
+          "assertion-afs-debt-oci",
+          "assertion-earnings-items-excluded"
+        ],
+        "applied_to_fact_ids": [
+          "fact-afs-gain",
+          "fact-trading-gain",
+          "fact-equipment-loss",
+          "fact-dividend-income"
+        ],
+        "application": "The rule includes the available-for-sale debt gain and excludes the three earnings items."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "classification",
+        "observable_evidence": [
+          "Four familiar income-related items cross the OCI-versus-earnings boundary."
+        ]
+      },
+      {
+        "tag": "elimination_leverage",
+        "observable_evidence": [
+          "Three options each embody one named over-inclusion or netting error."
+        ]
+      },
+      {
+        "tag": "financial_statement_view",
+        "observable_evidence": [
+          "The end ask is a pretax statement-of-comprehensive-income amount."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [
+          {
+            "measure_id": "rule_count",
+            "value": 1,
+            "unit": "rules",
+            "interpretation": "Exact rule traces applied to the item."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [
+          {
+            "measure_id": "dependent_step_count",
+            "value": 2,
+            "unit": "steps",
+            "interpretation": "Ordered solution steps required by the authored route."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "irrelevant_fact_count",
+            "value": 3,
+            "unit": "facts",
+            "interpretation": "Structured facts excluded from the numerical end ask."
+          }
+        ]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "classification_boundary_count",
+            "value": 2,
+            "unit": "boundaries",
+            "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+          }
+        ]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "plausible_error_model_count",
+            "value": 3,
+            "unit": "models",
+            "interpretation": "Each nonkey has a distinct executable error model."
+          }
+        ]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 1,
+        "observable_measurements": [
+          {
+            "measure_id": "arithmetic_operation_count",
+            "value": 0,
+            "unit": "operations",
+            "interpretation": "Arithmetic operations in the independent keyed route."
+          }
+        ]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [
+        "far-p1-g2-sample.v001"
+      ],
+      "methods": [
+        "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+      ],
+      "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+    }
+  }
+}

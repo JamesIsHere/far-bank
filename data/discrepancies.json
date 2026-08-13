@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomy_id": "far-2026-01",
+  "summary": {
+    "open_taxonomy_discrepancies": 0,
+    "documented_source_anomalies": 2
+  },
+  "entries": [
+    {
+      "id": "SOURCE-001",
+      "category": "source_metadata",
+      "status": "documented_nonblocking",
+      "affects_taxonomy": false,
+      "description": "The embedded PDF Title metadata says 'CPA Exam Blueprint 2022' even though the cover and official AICPA landing page identify the effective January 2026 Blueprint.",
+      "evidence": [
+        "source-manifest.json recorded_anomalies[0]",
+        "PDF physical page 1",
+        "Official AICPA Blueprint landing page"
+      ],
+      "disposition": "Preserve the stale metadata exactly; control identity from the official landing page, cover, file hash, and effective date."
+    },
+    {
+      "id": "SOURCE-002",
+      "category": "text_extraction",
+      "status": "documented_nonblocking",
+      "affects_taxonomy": false,
+      "description": "Poppler reports Invalid Font Weight warnings and emits control glyphs inside a small number of headings.",
+      "evidence": [
+        "source-manifest.json verification.text_extraction",
+        "Coordinate-based extraction and independent PyMuPDF verification both reconcile 3 areas, 22 groups, 18 topics, and 113 task rows."
+      ],
+      "disposition": "Normalize only control-character extraction artifacts; retain official visible wording and verify every task against the drawn source row and skill checkmark."
+    }
+  ]
+}

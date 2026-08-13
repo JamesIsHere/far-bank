@@ -1,0 +1,497 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000103",
+  "version_id": "far-q-000103.v001",
+  "version_number": 1,
+  "content_sha256": "bb68ed75e4c9d08b52f91db482a623d45fe6516399f064385748431c8ad807a6",
+  "content": {
+    "authorship": {
+      "purpose": "sample_candidate",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T20:00:00Z",
+      "model_id": "openai-codex-gpt-5",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Bind the exact FAR task and skill."
+        },
+        {
+          "input_id": "far-rule-cash-equivalent-original-maturity.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Control the accounting treatment and answer."
+        },
+        {
+          "input_id": "far-ref-fasb-codification-live.v001",
+          "input_kind": "source",
+          "version_or_date": "retrieved-2026-08-13",
+          "use": "Provide authoritative U.S. GAAP provenance."
+        },
+        {
+          "input_id": "far-p1-g2-sample.v001",
+          "input_kind": "human_brief",
+          "version_or_date": "v001",
+          "use": "Bounded G2 sample design under the ratified goal."
+        }
+      ]
+    },
+    "stem": "At year-end, a company has $40,000 in an unrestricted checking account. It also holds a $25,000 Treasury bill acquired with 76 days to maturity, a $30,000 Treasury note acquired with 106 days to maturity, and $15,000 of commercial paper acquired with 95 days to maturity. All three investments are highly liquid and readily convertible to known cash; the Treasury note pays 5% interest. What total should the company report as cash and cash equivalents?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$65,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 65000,
+          "unit": "USD"
+        },
+        "is_keyed": true
+      },
+      {
+        "option_id": "B",
+        "text": "$95,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 95000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-include-nearby-note",
+          "name": "Include Treasury note",
+          "misconception": "Uses short remaining maturity at year-end instead of original maturity to the holder.",
+          "derivation": "$40,000 + $25,000 + $30,000 = $95,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-checking",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-tbill",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-tnote",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "C",
+        "text": "$80,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 80000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-include-commercial-paper",
+          "name": "Include commercial paper",
+          "misconception": "Treats a 95-day original maturity as within three months.",
+          "derivation": "$40,000 + $25,000 + $15,000 = $80,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-checking",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-tbill",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-paper",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "D",
+        "text": "$40,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 40000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-exclude-all-investments",
+          "name": "Exclude all investments",
+          "misconception": "Treats cash equivalents as cash deposits only.",
+          "derivation": "Include only the $40,000 checking balance.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-checking",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.2",
+        "group_id": "far.area.2.group.a",
+        "topic_id": null,
+        "representative_task_id": "far.area.2.group.a.task.001",
+        "skill_level": "application",
+        "mapping_rationale": "The item applies the cash-equivalent definition to calculate the reported balance.",
+        "mcq_scope_limit": "The MCQ tests a bounded maturity classification and not all restrictions, overdrafts, or presentation issues."
+      }
+    ],
+    "accounting_model_id": "far-model-cash-equivalents",
+    "facts": [
+      {
+        "fact_id": "fact-checking",
+        "statement": "The unrestricted checking balance is $40,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 40000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Included as cash."
+      },
+      {
+        "fact_id": "fact-tbill",
+        "statement": "The Treasury bill amount is $25,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 25000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Included because its original maturity to the holder is within three months."
+      },
+      {
+        "fact_id": "fact-tbill-days",
+        "statement": "The Treasury bill had 76 days to maturity when acquired.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 76,
+          "unit": "days"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Establishes that the bill meets the original-maturity convention."
+      },
+      {
+        "fact_id": "fact-tnote",
+        "statement": "The Treasury note amount is $30,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 30000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "Its original maturity to the holder exceeds three months."
+      },
+      {
+        "fact_id": "fact-tnote-days",
+        "statement": "The Treasury note had 106 days to maturity when acquired.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 106,
+          "unit": "days"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "This exceeds the generally three-month original-maturity convention."
+      },
+      {
+        "fact_id": "fact-paper",
+        "statement": "The commercial paper amount is $15,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 15000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "Its original maturity to the holder exceeds three months."
+      },
+      {
+        "fact_id": "fact-paper-days",
+        "statement": "The commercial paper had 95 days to maturity when acquired.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 95,
+          "unit": "days"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "This exceeds the generally three-month original-maturity convention."
+      },
+      {
+        "fact_id": "fact-note-rate",
+        "statement": "The Treasury note interest rate is 5%.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 5,
+          "unit": "percent"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "The coupon rate does not replace the stated original-maturity test."
+      }
+    ],
+    "assumptions": [
+      {
+        "assumption_id": "assumption-liquid-known-cash",
+        "statement": "All three investments are highly liquid and readily convertible to known amounts of cash.",
+        "basis": "explicit_in_stem"
+      }
+    ],
+    "solution": {
+      "end_ask": "Calculate the cash and cash equivalents total using original maturity to the holder.",
+      "representation": {
+        "kind": "classification",
+        "setup": "Cash and cash equivalents = unrestricted cash + qualifying investments acquired with three months or less to maturity."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Classify each investment using maturity at acquisition.",
+          "fact_ids_used": [
+            "fact-tbill",
+            "fact-tbill-days",
+            "fact-tnote",
+            "fact-tnote-days",
+            "fact-paper",
+            "fact-paper-days",
+            "fact-note-rate"
+          ],
+          "assertion_ids_used": [
+            "assertion-three-month-original-maturity"
+          ],
+          "result": "Only the 76-day Treasury bill qualifies; 106 days and 95 days exceed the convention, and the coupon rate is not decisive."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Add qualifying cash and investments.",
+          "fact_ids_used": [
+            "fact-checking",
+            "fact-tbill"
+          ],
+          "assertion_ids_used": [
+            "assertion-cash-included",
+            "assertion-three-month-original-maturity"
+          ],
+          "result": "$40,000 + $25,000 = $65,000."
+        }
+      ],
+      "keyed_answer_option_id": "A",
+      "keyed_answer_rationale": "The checking deposit and 76-day Treasury bill qualify; the other investments exceed three months at acquisition.",
+      "faster_or_safer_route": "Circle the acquisition-to-maturity days first; ignore the coupon rate and eliminate investments over three months."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-cash-equivalents",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {
+              "fact_id": "fact-checking",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-tbill",
+              "coefficient": 1
+            }
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {
+            "mode": "none",
+            "decimal_places": 0
+          }
+        }
+      },
+      "producer_component_id": "p1-sample-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T20:00:00Z",
+        "model_id": "openai-codex-gpt-5"
+      },
+      "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-cash-equivalent-original-maturity.v001",
+        "assertion_ids": [
+          "assertion-three-month-original-maturity",
+          "assertion-cash-included"
+        ],
+        "applied_to_fact_ids": [
+          "fact-checking",
+          "fact-tbill",
+          "fact-tbill-days",
+          "fact-tnote",
+          "fact-tnote-days",
+          "fact-paper",
+          "fact-paper-days",
+          "fact-note-rate"
+        ],
+        "application": "The acquisition-date maturity convention includes the Treasury bill and excludes the longer-original-maturity instruments."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "convention",
+        "observable_evidence": [
+          "The three-month test is measured from acquisition, not from year-end."
+        ]
+      },
+      {
+        "tag": "fact_selection",
+        "observable_evidence": [
+          "The coupon rate and nonqualifying investment amounts are numerical noise for the end ask."
+        ]
+      },
+      {
+        "tag": "language_trap",
+        "observable_evidence": [
+          "A Treasury note can be near maturity at year-end yet fail based on original maturity to the holder."
+        ]
+      },
+      {
+        "tag": "classification",
+        "observable_evidence": [
+          "Cash, qualifying equivalents, and nonqualifying short-term investments must be separated."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "rule_count",
+            "value": 1,
+            "unit": "rules",
+            "interpretation": "Exact rule traces applied to the item."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "dependent_step_count",
+            "value": 2,
+            "unit": "steps",
+            "interpretation": "Ordered solution steps required by the authored route."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "irrelevant_fact_count",
+            "value": 5,
+            "unit": "facts",
+            "interpretation": "Structured facts excluded from the numerical end ask."
+          }
+        ]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 4,
+        "observable_measurements": [
+          {
+            "measure_id": "classification_boundary_count",
+            "value": 3,
+            "unit": "boundaries",
+            "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+          }
+        ]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "plausible_error_model_count",
+            "value": 3,
+            "unit": "models",
+            "interpretation": "Each nonkey has a distinct executable error model."
+          }
+        ]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 2,
+        "observable_measurements": [
+          {
+            "measure_id": "arithmetic_operation_count",
+            "value": 1,
+            "unit": "operations",
+            "interpretation": "Arithmetic operations in the independent keyed route."
+          }
+        ]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [
+        "far-p1-g2-sample.v001"
+      ],
+      "methods": [
+        "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+      ],
+      "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+    }
+  }
+}

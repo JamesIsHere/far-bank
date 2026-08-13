@@ -1,0 +1,8 @@
+{
+  "fixture_id": "invalid-blueprint-mapping",
+  "base": "valid-question-version.json",
+  "expected_contract": "BLUEPRINT_MAPPING",
+  "mutations": [
+    {"operation": "replace", "path": "/content/blueprint_mappings/0/representative_task_id", "value": "far.area.2.group.a.topic.1.task.001"}
+  ]
+}

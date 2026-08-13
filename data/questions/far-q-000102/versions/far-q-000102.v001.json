@@ -1,0 +1,557 @@
+{
+  "schema_version": "1.1.0",
+  "question_id": "far-q-000102",
+  "version_id": "far-q-000102.v001",
+  "version_number": 1,
+  "content_sha256": "0a53576a16fd6ceb945d250ebe41b079e403e2a3480ba2dfbaaa24a2670b31a4",
+  "content": {
+    "authorship": {
+      "purpose": "sample_candidate",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "created_at": "2026-08-13T20:00:00Z",
+      "model_id": "openai-codex-gpt-5",
+      "material_inputs": [
+        {
+          "input_id": "far-2026-01",
+          "input_kind": "taxonomy",
+          "version_or_date": "2026-01",
+          "use": "Bind the exact FAR task and skill."
+        },
+        {
+          "input_id": "far-rule-indirect-operating-cash-flow.v001",
+          "input_kind": "rule",
+          "version_or_date": "v001",
+          "use": "Control the accounting treatment and answer."
+        },
+        {
+          "input_id": "far-ref-fasb-codification-live.v001",
+          "input_kind": "source",
+          "version_or_date": "retrieved-2026-08-13",
+          "use": "Provide authoritative U.S. GAAP provenance."
+        },
+        {
+          "input_id": "far-p1-g2-sample.v001",
+          "input_kind": "human_brief",
+          "version_or_date": "v001",
+          "use": "Bounded G2 sample design under the ratified goal."
+        }
+      ]
+    },
+    "stem": "A company using the indirect method reports net income of $120,000, depreciation expense of $25,000, a gain on sale of equipment of $8,000, an $18,000 increase in accounts receivable, a $7,000 decrease in inventory, a $6,000 increase in accounts payable, and $10,000 of cash dividends paid. All stated working-capital changes relate to operations. What amount should the company report as net cash provided by operating activities?",
+    "options": [
+      {
+        "option_id": "A",
+        "text": "$132,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 132000,
+          "unit": "USD"
+        },
+        "is_keyed": true
+      },
+      {
+        "option_id": "B",
+        "text": "$150,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 150000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-omit-receivable-change",
+          "name": "Omit receivable increase",
+          "misconception": "Fails to subtract the operating-asset increase.",
+          "derivation": "$120,000 + $25,000 - $8,000 + $7,000 + $6,000 = $150,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-net-income",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-depreciation",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-sale-gain",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-inventory-decrease",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-ap-increase",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "C",
+        "text": "$148,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 148000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-add-sale-gain",
+          "name": "Add sale gain",
+          "misconception": "Adds rather than subtracts a gain already included in net income.",
+          "derivation": "$120,000 + $25,000 + $8,000 - $18,000 + $7,000 + $6,000 = $148,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-net-income",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-depreciation",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-sale-gain",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-ar-increase",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-inventory-decrease",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-ap-increase",
+                  "coefficient": 1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      },
+      {
+        "option_id": "D",
+        "text": "$122,000",
+        "structured_value": {
+          "value_type": "number",
+          "value": 122000,
+          "unit": "USD"
+        },
+        "is_keyed": false,
+        "error_model": {
+          "error_model_id": "error-subtract-dividends",
+          "name": "Subtract financing dividend",
+          "misconception": "Treats dividends paid as an operating adjustment.",
+          "derivation": "$132,000 - $10,000 = $122,000.",
+          "reproduction": {
+            "route_type": "linear_combination",
+            "linear_combination": {
+              "terms": [
+                {
+                  "fact_id": "fact-net-income",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-depreciation",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-sale-gain",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-ar-increase",
+                  "coefficient": -1
+                },
+                {
+                  "fact_id": "fact-inventory-decrease",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-ap-increase",
+                  "coefficient": 1
+                },
+                {
+                  "fact_id": "fact-dividends-paid",
+                  "coefficient": -1
+                }
+              ],
+              "constant": 0,
+              "output_unit": "USD",
+              "rounding": {
+                "mode": "none",
+                "decimal_places": 0
+              }
+            }
+          }
+        }
+      }
+    ],
+    "blueprint_mappings": [
+      {
+        "taxonomy_id": "far-2026-01",
+        "area_id": "far.area.1",
+        "group_id": "far.area.1.group.a",
+        "topic_id": "far.area.1.group.a.topic.5",
+        "representative_task_id": "far.area.1.group.a.topic.5.task.001",
+        "skill_level": "application",
+        "mapping_rationale": "The item applies the indirect reconciliation to supporting balances and transactions.",
+        "mcq_scope_limit": "The MCQ computes one operating subtotal and does not prepare the complete statement or disclosures."
+      }
+    ],
+    "accounting_model_id": "far-model-indirect-cash-flow",
+    "facts": [
+      {
+        "fact_id": "fact-net-income",
+        "statement": "Net income is $120,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 120000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Starting point for the indirect reconciliation."
+      },
+      {
+        "fact_id": "fact-depreciation",
+        "statement": "Depreciation expense is $25,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 25000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Added back as a noncash expense."
+      },
+      {
+        "fact_id": "fact-sale-gain",
+        "statement": "The equipment-sale gain is $8,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 8000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Subtracted because the gain is included in net income."
+      },
+      {
+        "fact_id": "fact-ar-increase",
+        "statement": "Accounts receivable increased $18,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 18000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Subtracted as an operating-asset increase."
+      },
+      {
+        "fact_id": "fact-inventory-decrease",
+        "statement": "Inventory decreased $7,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 7000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Added as an operating-asset decrease."
+      },
+      {
+        "fact_id": "fact-ap-increase",
+        "statement": "Accounts payable increased $6,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 6000,
+          "unit": "USD"
+        },
+        "relevance": "relevant",
+        "use_in_solution": "Added as an operating-liability increase."
+      },
+      {
+        "fact_id": "fact-dividends-paid",
+        "statement": "Cash dividends paid are $10,000.",
+        "structured_value": {
+          "value_type": "number",
+          "value": 10000,
+          "unit": "USD"
+        },
+        "relevance": "irrelevant",
+        "irrelevance_reason": "Dividends paid are a financing cash flow."
+      }
+    ],
+    "assumptions": [
+      {
+        "assumption_id": "assumption-working-capital-operating",
+        "statement": "All stated working-capital changes relate to operating activities.",
+        "basis": "explicit_in_stem"
+      }
+    ],
+    "solution": {
+      "end_ask": "Reconcile net income to net cash provided by operating activities.",
+      "representation": {
+        "kind": "formula",
+        "setup": "CFO = net income + noncash expenses - disposal gains - operating-asset increases + operating-asset decreases + operating-liability increases."
+      },
+      "steps": [
+        {
+          "step_number": 1,
+          "instruction": "Separate operating reconciliation items from the financing dividend.",
+          "fact_ids_used": [
+            "fact-dividends-paid"
+          ],
+          "assertion_ids_used": [
+            "assertion-dividends-financing"
+          ],
+          "result": "Exclude the $10,000 dividend from CFO."
+        },
+        {
+          "step_number": 2,
+          "instruction": "Assign each operating adjustment its indirect-method sign.",
+          "fact_ids_used": [
+            "fact-depreciation",
+            "fact-sale-gain",
+            "fact-ar-increase",
+            "fact-inventory-decrease",
+            "fact-ap-increase"
+          ],
+          "assertion_ids_used": [
+            "assertion-indirect-reconciliation"
+          ],
+          "result": "Add depreciation, inventory decrease, and payables increase; subtract the gain and receivables increase."
+        },
+        {
+          "step_number": 3,
+          "instruction": "Apply the signed adjustments to net income.",
+          "fact_ids_used": [
+            "fact-net-income",
+            "fact-depreciation",
+            "fact-sale-gain",
+            "fact-ar-increase",
+            "fact-inventory-decrease",
+            "fact-ap-increase"
+          ],
+          "assertion_ids_used": [
+            "assertion-indirect-reconciliation"
+          ],
+          "result": "$120,000 + $25,000 - $8,000 - $18,000 + $7,000 + $6,000 = $132,000."
+        }
+      ],
+      "keyed_answer_option_id": "A",
+      "keyed_answer_rationale": "The correctly signed operating adjustments reconcile net income to $132,000; dividends paid stay in financing.",
+      "faster_or_safer_route": "Mark each change with a plus or minus before doing arithmetic, and cross out the financing dividend."
+    },
+    "correctness_evidence": {
+      "evidence_id": "evidence-indirect-cfo",
+      "route": {
+        "route_type": "linear_combination",
+        "linear_combination": {
+          "terms": [
+            {
+              "fact_id": "fact-net-income",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-depreciation",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-sale-gain",
+              "coefficient": -1
+            },
+            {
+              "fact_id": "fact-ar-increase",
+              "coefficient": -1
+            },
+            {
+              "fact_id": "fact-inventory-decrease",
+              "coefficient": 1
+            },
+            {
+              "fact_id": "fact-ap-increase",
+              "coefficient": 1
+            }
+          ],
+          "constant": 0,
+          "output_unit": "USD",
+          "rounding": {
+            "mode": "none",
+            "decimal_places": 0
+          }
+        }
+      },
+      "producer_component_id": "p1-sample-content-author",
+      "verifier_component_id": "independent-linear-combination-checker",
+      "shared_deciding_function": false,
+      "authorship": {
+        "mechanism": "ai_assisted",
+        "created_by": "Codex",
+        "created_at": "2026-08-13T20:00:00Z",
+        "model_id": "openai-codex-gpt-5"
+      },
+      "independence_limit": "The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+    },
+    "rule_trace": [
+      {
+        "rule_version_id": "far-rule-indirect-operating-cash-flow.v001",
+        "assertion_ids": [
+          "assertion-indirect-reconciliation",
+          "assertion-dividends-financing"
+        ],
+        "applied_to_fact_ids": [
+          "fact-net-income",
+          "fact-depreciation",
+          "fact-sale-gain",
+          "fact-ar-increase",
+          "fact-inventory-decrease",
+          "fact-ap-increase",
+          "fact-dividends-paid"
+        ],
+        "application": "The indirect-method signs are applied to each operating fact; the financing dividend is excluded."
+      }
+    ],
+    "challenge_mechanics": [
+      {
+        "tag": "formula_translation",
+        "observable_evidence": [
+          "Six operating facts must be translated into a signed reconciliation."
+        ]
+      },
+      {
+        "tag": "fact_selection",
+        "observable_evidence": [
+          "The financing dividend is stated with otherwise operating-reconciliation data."
+        ]
+      },
+      {
+        "tag": "time_pressure",
+        "observable_evidence": [
+          "Five signed arithmetic operations follow the classification pass."
+        ]
+      },
+      {
+        "tag": "journal_effect",
+        "observable_evidence": [
+          "Working-capital account direction determines the cash-flow adjustment sign."
+        ]
+      }
+    ],
+    "difficulty_profile": [
+      {
+        "dimension_id": "accounting_complexity",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "rule_count",
+            "value": 1,
+            "unit": "rules",
+            "interpretation": "Exact rule traces applied to the item."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reasoning_steps",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "dependent_step_count",
+            "value": 3,
+            "unit": "steps",
+            "interpretation": "Ordered solution steps required by the authored route."
+          }
+        ]
+      },
+      {
+        "dimension_id": "reading_fact_selection",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "irrelevant_fact_count",
+            "value": 1,
+            "unit": "facts",
+            "interpretation": "Structured facts excluded from the numerical end ask."
+          }
+        ]
+      },
+      {
+        "dimension_id": "rule_convention_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "classification_boundary_count",
+            "value": 4,
+            "unit": "boundaries",
+            "interpretation": "Rule, timing, or classification boundaries the solver must distinguish."
+          }
+        ]
+      },
+      {
+        "dimension_id": "distractor_elimination_burden",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "plausible_error_model_count",
+            "value": 3,
+            "unit": "models",
+            "interpretation": "Each nonkey has a distinct executable error model."
+          }
+        ]
+      },
+      {
+        "dimension_id": "realistic_time_pressure",
+        "rubric_version_id": "far-p1-proposed-difficulty-rubric.v001",
+        "rubric_status": "proposed_for_g2",
+        "provisional_level": 3,
+        "observable_measurements": [
+          {
+            "measure_id": "arithmetic_operation_count",
+            "value": 5,
+            "unit": "operations",
+            "interpretation": "Arithmetic operations in the independent keyed route."
+          }
+        ]
+      }
+    ],
+    "originality_boundary": {
+      "compared_corpus_ids": [
+        "far-p1-g2-sample.v001"
+      ],
+      "methods": [
+        "Within-bank normalized exact-stem and word 5-gram pairwise comparison across the six-item P1 sample."
+      ],
+      "claim_limit": "This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+    }
+  }
+}

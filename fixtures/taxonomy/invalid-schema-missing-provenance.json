@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomy_id": "far-2026-01-fixture",
+  "source_id": "aicpa-cpa-exam-blueprints-2026",
+  "source_manifest": "sources/aicpa/2026-01/source-manifest.json",
+  "exam_section": {
+    "code": "FAR",
+    "official_title": "Financial Accounting and Reporting"
+  },
+  "areas": [
+    {
+      "id": "far.area.1",
+      "code": "I",
+      "official_title": "Financial Reporting",
+      "official_heading": "Area I – Financial Reporting (30–40%)",
+      "allocation_percent": {"minimum": 30, "maximum": 40},
+      "groups": []
+    }
+  ]
+}

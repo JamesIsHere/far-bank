@@ -1,0 +1,14 @@
+{
+  "fixture_id": "language-double-negative",
+  "check_id": "LANGUAGE_FAIRNESS",
+  "mutations": [
+    {
+      "record": "question",
+      "operation": "replace",
+      "path": "/content/stem",
+      "value": "A schema-only fixture lists cash of $40,000, accounts receivable of $60,000, inventory of $80,000, equipment of $150,000, and accounts payable of $55,000. Which current-assets subtotal is not an amount that is not correct?"
+    }
+  ],
+  "rehash": ["question"],
+  "rebind_events": true
+}

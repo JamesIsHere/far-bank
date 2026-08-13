@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "rule_id": "far-rule-indirect-operating-cash-flow",
+  "rule_version_id": "far-rule-indirect-operating-cash-flow.v001",
+  "version_number": 1,
+  "content_sha256": "ebdb5369e2ac204c90c3a5b112774afa154cd10063c02a3b5522cc47a986418d",
+  "content": {
+    "title": "Indirect-method operating cash flow reconciliation",
+    "rule_statement": "Under the indirect method, net income is adjusted for noncash items, gains or losses whose cash effects belong outside operating activities, and changes in operating assets and liabilities; dividends paid are financing cash flows.",
+    "applicability": "For-profit entity statement of cash flows using the indirect method.",
+    "assertions": [
+      {
+        "assertion_id": "assertion-indirect-reconciliation",
+        "claim": "Add depreciation and operating-liability increases, subtract disposal gains and operating-asset increases, and add operating-asset decreases in reconciling net income to operating cash flow."
+      },
+      {
+        "assertion_id": "assertion-dividends-financing",
+        "claim": "Cash dividends paid are financing cash outflows and do not adjust operating cash flow."
+      }
+    ],
+    "source_citations": [
+      {
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "locator": "FASB ASC 230-10-45-28 through 45-29 and 230-10-45-15 (live official Codification)",
+        "role": "controlling",
+        "supports_assertion_ids": [
+          "assertion-indirect-reconciliation",
+          "assertion-dividends-financing"
+        ]
+      }
+    ],
+    "currency": {
+      "assessed_at": "2026-08-13T20:00:00Z",
+      "assessment": "current",
+      "basis": "The live official Codification locators and FASB-hosted Statement 95 materials were cross-checked on 2026-08-13; no effective amendment affecting the stated classifications was identified."
+    },
+    "authorship_provenance": {
+      "purpose": "admitted_evidence",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "model_id": "openai-codex-gpt-5",
+      "material_input_ids": [
+        "far-ref-fasb-codification-live.v001",
+        "FASB ASC 230-10-45-28 through 45-29 and 230-10-45-15 (live official Codification)"
+      ]
+    }
+  }
+}

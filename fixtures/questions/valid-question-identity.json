@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "question_id": "far-q-000001",
+  "created_at": "2026-08-13T18:00:00Z",
+  "creation_provenance": {
+    "purpose": "schema_fixture",
+    "mechanism": "ai_assisted",
+    "created_by": "Codex",
+    "model_id": "openai-codex-fixture-author",
+    "material_inputs": [
+      {
+        "input_id": "goal-question-contract",
+        "input_kind": "human_brief",
+        "version_or_date": "ratified-2026-08-13",
+        "use": "Exercise the required candidate record shape; not sample or accounting evidence."
+      }
+    ]
+  }
+}

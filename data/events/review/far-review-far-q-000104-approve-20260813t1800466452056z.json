@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "far-review-far-q-000104-approve-20260813t1800466452056z",
+  "recorded_at": "2026-08-13T18:00:46.6452056Z",
+  "action": "approve",
+  "actor": {
+    "actor_type": "human",
+    "actor_id": "james",
+    "display_name": "James"
+  },
+  "subject": {
+    "question_id": "far-q-000104",
+    "version_id": "far-q-000104.v002",
+    "content_sha256": "9bf70057d1044c2c5efd14ea83d8b899d9f9a5674e75f207f6ce6a7f1fea85e9"
+  },
+  "comment": "Approved by James during Gate G2 exact-version review."
+}

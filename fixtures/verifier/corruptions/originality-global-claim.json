@@ -1,0 +1,14 @@
+{
+  "fixture_id": "originality-global-claim",
+  "check_id": "ORIGINALITY_BOUNDARY",
+  "mutations": [
+    {
+      "record": "question",
+      "operation": "replace",
+      "path": "/content/originality_boundary/claim_limit",
+      "value": "This question is globally unique and has legal clearance."
+    }
+  ],
+  "rehash": ["question"],
+  "rebind_events": true
+}

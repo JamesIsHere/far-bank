@@ -1,0 +1,8 @@
+{
+  "fixture_id": "non-four-options",
+  "base": "valid-question-version.json",
+  "expected_contract": "QUESTION_SCHEMA",
+  "mutations": [
+    {"operation": "remove", "path": "/content/options/3"}
+  ]
+}

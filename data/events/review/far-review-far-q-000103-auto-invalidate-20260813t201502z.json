@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "far-review-far-q-000103-auto-invalidate-20260813t201502z",
+  "recorded_at": "2026-08-13T20:15:02Z",
+  "action": "auto_invalidate",
+  "actor": {
+    "actor_type": "system",
+    "actor_id": "far-bank-review-integrity",
+    "display_name": "FAR Bank Review Integrity"
+  },
+  "subject": {
+    "question_id": "far-q-000103",
+    "version_id": "far-q-000103.v001",
+    "content_sha256": "bb68ed75e4c9d08b52f91db482a623d45fe6516399f064385748431c8ad807a6"
+  },
+  "comment": "The approved v001 option order was superseded to rebalance keyed answer positions; approval does not carry to v002.",
+  "reason_code": "content_superseded",
+  "superseding_version_id": "far-q-000103.v002"
+}

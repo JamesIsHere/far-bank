@@ -1,0 +1,31 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local configuration and credentials
+.env
+.env.*
+*.pem
+
+# Disposable local projections
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Local review exports and temporary renders
+review-surface/downloads/
+tmp/
+
+# Tool and editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

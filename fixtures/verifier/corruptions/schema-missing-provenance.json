@@ -1,0 +1,9 @@
+{
+  "fixture_id": "schema-missing-provenance",
+  "check_id": "SCHEMA_CONTRACT",
+  "mutations": [
+    {"record": "question", "operation": "remove", "path": "/content/authorship"}
+  ],
+  "rehash": [],
+  "rebind_events": false
+}

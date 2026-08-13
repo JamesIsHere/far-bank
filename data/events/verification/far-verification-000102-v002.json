@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "event_id": "far-verification-000102-v002",
+  "recorded_at": "2026-08-13T20:15:00Z",
+  "subject": {
+    "question_id": "far-q-000102",
+    "version_id": "far-q-000102.v002",
+    "content_sha256": "6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3"
+  },
+  "checker": {
+    "checker_id": "far-p1-question-verifier",
+    "checker_version": "1.0.0"
+  },
+  "required_check_set_id": "far-p1-sample-candidate-checks.v001",
+  "input_evidence": [
+    {
+      "path_or_id": "data/questions/far-q-000102/versions/far-q-000102.v002.json",
+      "sha256": "6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3"
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "SCHEMA_CONTRACT",
+      "category": "SCHEMA",
+      "outcome": "pass",
+      "detail": "Closed record shapes and cross-record structural contracts pass.",
+      "evidence": [
+        "Question content hash, version identity, Blueprint path, option identities, and rule/fact references resolve."
+      ],
+      "calibration_fixture_ids": [
+        "schema-missing-provenance"
+      ]
+    },
+    {
+      "check_id": "RECOMPUTE_INDEPENDENT",
+      "category": "RECOMPUTE",
+      "outcome": "pass",
+      "detail": "Independent generic linear-combination route recomputed 132000 USD.",
+      "evidence": [
+        "producer_component_id=p1-sample-content-author",
+        "verifier_component_id=independent-linear-combination-checker",
+        "independence_limit=The generic checker recomputes the keyed amount solely from structured facts and coefficients; human review still owns accounting correctness, fairness, and learner readiness."
+      ],
+      "calibration_fixture_ids": [
+        "recompute-wrong-coefficient"
+      ]
+    },
+    {
+      "check_id": "RULE_TRACE_CURRENT",
+      "category": "RULE_TRACE",
+      "outcome": "pass",
+      "detail": "Every applied assertion resolves through a current exact rule and controlling reference version.",
+      "evidence": [
+        "rule_version_id=far-rule-indirect-operating-cash-flow.v001",
+        "reference_version_id=far-ref-fasb-codification-live.v001",
+        "Fixture-world currency cannot be carried into a sample-candidate claim."
+      ],
+      "calibration_fixture_ids": [
+        "rule-trace-superseded"
+      ]
+    },
+    {
+      "check_id": "DISTRACTOR_MODELS",
+      "category": "DISTRACTORS",
+      "outcome": "pass",
+      "detail": "All three named distractor error models reproduce their distinct option values.",
+      "evidence": [
+        "A=error-omit-receivable-change",
+        "C=error-add-sale-gain",
+        "D=error-subtract-dividends"
+      ],
+      "calibration_fixture_ids": [
+        "distractor-model-wrong-result"
+      ]
+    },
+    {
+      "check_id": "LANGUAGE_FAIRNESS",
+      "category": "LANGUAGE",
+      "outcome": "pass",
+      "detail": "No targeted ambiguity, leakage, orphan-number, unsupported-assumption, or end-ask defect was found.",
+      "evidence": [
+        "structured_numeric_fact_count=7",
+        "structured_assumption_count=1"
+      ],
+      "calibration_fixture_ids": [
+        "language-double-negative"
+      ]
+    },
+    {
+      "check_id": "ORIGINALITY_BOUNDARY",
+      "category": "ORIGINALITY",
+      "outcome": "pass",
+      "detail": "Originality language stays within the exact named comparison boundary.",
+      "evidence": [
+        "compared_corpus_ids=['far-p1-g2-sample.v002']",
+        "claim_limit=This supports only a bounded comparison within the named six-item sample; it is not an exhaustive external-corpus, non-infringement, or legal conclusion."
+      ],
+      "calibration_fixture_ids": [
+        "originality-global-claim"
+      ]
+    },
+    {
+      "check_id": "APPROVAL_INTEGRITY",
+      "category": "APPROVAL_INTEGRITY",
+      "outcome": "pass",
+      "detail": "Existing review evidence, if any, and verification evidence bind the exact immutable content hash.",
+      "evidence": [
+        "version_id=far-q-000102.v002",
+        "content_sha256=6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3",
+        "An absent review event is valid candidate state and grants no approval."
+      ],
+      "calibration_fixture_ids": [
+        "approval-stale-after-content-edit"
+      ]
+    },
+    {
+      "check_id": "VARIETY_EVIDENCE",
+      "category": "VARIETY",
+      "outcome": "pass",
+      "detail": "Challenge and provisional difficulty records carry checkable observable evidence.",
+      "evidence": [
+        "arithmetic_operation_count=5",
+        "dependent_step_count=3",
+        "irrelevant_fact_count=1",
+        "plausible_error_model_count=3",
+        "rule_count=1",
+        "No variety distribution or difficulty rubric is treated as ratified."
+      ],
+      "calibration_fixture_ids": [
+        "variety-observation-mismatch"
+      ]
+    }
+  ]
+}

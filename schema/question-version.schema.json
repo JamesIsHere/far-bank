@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/question-version.schema.json",
+  "title": "Immutable FAR four-option MCQ content version",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "question_id", "version_id", "version_number", "content_sha256", "content"],
+  "properties": {
+    "schema_version": {"const": "1.1.0"},
+    "question_id": {"type": "string", "pattern": "^far-q-[0-9]{6}$"},
+    "version_id": {"type": "string", "pattern": "^far-q-[0-9]{6}\\.v[0-9]{3}$"},
+    "version_number": {"type": "integer", "minimum": 1},
+    "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "content": {"$ref": "#/$defs/content"}
+  },
+  "$defs": {
+    "factValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value_type", "value"],
+      "properties": {
+        "value_type": {"enum": ["number", "text", "date", "boolean", "null"]},
+        "value": {"type": ["number", "string", "boolean", "null"]},
+        "unit": {"type": "string", "minLength": 1}
+      }
+    },
+    "materialInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["input_id", "input_kind", "version_or_date", "use"],
+      "properties": {
+        "input_id": {"type": "string", "minLength": 1},
+        "input_kind": {"enum": ["taxonomy", "rule", "source", "rubric", "generator", "human_brief", "fixture"]},
+        "version_or_date": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "use": {"type": "string", "minLength": 1}
+      }
+    },
+    "authorship": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["purpose", "mechanism", "created_by", "created_at", "material_inputs"],
+      "properties": {
+        "purpose": {"enum": ["schema_fixture", "sample_candidate"]},
+        "mechanism": {"enum": ["human", "ai_assisted", "deterministic_generator"]},
+        "created_by": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "model_id": {"type": "string", "minLength": 1},
+        "generator_version": {"type": "string", "minLength": 1},
+        "generation_run_id": {"type": "string", "minLength": 1},
+        "material_inputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/materialInput"}}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"mechanism": {"const": "ai_assisted"}}, "required": ["mechanism"]},
+          "then": {"required": ["model_id"]}
+        },
+        {
+          "if": {"properties": {"mechanism": {"const": "deterministic_generator"}}, "required": ["mechanism"]},
+          "then": {"required": ["generator_version", "generation_run_id"]}
+        }
+      ]
+    },
+    "blueprintMapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["taxonomy_id", "area_id", "group_id", "topic_id", "representative_task_id", "skill_level", "mapping_rationale", "mcq_scope_limit"],
+      "properties": {
+        "taxonomy_id": {"type": "string", "pattern": "^far-[0-9]{4}-[0-9]{2}(?:-[a-z0-9-]+)?$"},
+        "area_id": {"type": "string", "pattern": "^far\\.area\\.[1-9][0-9]*$"},
+        "group_id": {"type": "string", "pattern": "^far\\.area\\.[1-9][0-9]*\\.group\\.[a-z]+$"},
+        "topic_id": {"type": ["string", "null"], "pattern": "^far\\.area\\.[1-9][0-9]*\\.group\\.[a-z]+\\.topic\\.[1-9][0-9]*$"},
+        "representative_task_id": {"type": "string", "pattern": "^far\\.area\\.[1-9][0-9]*\\.group\\.[a-z]+(?:\\.topic\\.[1-9][0-9]*)?\\.task\\.[0-9]{3}$"},
+        "skill_level": {"enum": ["remembering_and_understanding", "application", "analysis"]},
+        "mapping_rationale": {"type": "string", "minLength": 1},
+        "mcq_scope_limit": {"type": "string", "minLength": 1}
+      }
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fact_id", "statement", "structured_value", "relevance"],
+      "properties": {
+        "fact_id": {"type": "string", "pattern": "^fact-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "statement": {"type": "string", "minLength": 1},
+        "structured_value": {"$ref": "#/$defs/factValue"},
+        "relevance": {"enum": ["relevant", "irrelevant"]},
+        "use_in_solution": {"type": "string", "minLength": 1},
+        "irrelevance_reason": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"relevance": {"const": "relevant"}}, "required": ["relevance"]},
+          "then": {"required": ["use_in_solution"], "not": {"required": ["irrelevance_reason"]}}
+        },
+        {
+          "if": {"properties": {"relevance": {"const": "irrelevant"}}, "required": ["relevance"]},
+          "then": {"required": ["irrelevance_reason"], "not": {"required": ["use_in_solution"]}}
+        }
+      ]
+    },
+    "errorModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["error_model_id", "name", "misconception", "derivation", "reproduction"],
+      "properties": {
+        "error_model_id": {"type": "string", "pattern": "^error-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "name": {"type": "string", "minLength": 1},
+        "misconception": {"type": "string", "minLength": 1},
+        "derivation": {"type": "string", "minLength": 1},
+        "reproduction": {"$ref": "#/$defs/evidenceRoute"}
+      }
+    },
+    "option": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["option_id", "text", "structured_value", "is_keyed"],
+      "properties": {
+        "option_id": {"enum": ["A", "B", "C", "D"]},
+        "text": {"type": "string", "minLength": 1},
+        "structured_value": {"$ref": "#/$defs/factValue"},
+        "is_keyed": {"type": "boolean"},
+        "error_model": {"$ref": "#/$defs/errorModel"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"is_keyed": {"const": true}}, "required": ["is_keyed"]},
+          "then": {"not": {"required": ["error_model"]}}
+        },
+        {
+          "if": {"properties": {"is_keyed": {"const": false}}, "required": ["is_keyed"]},
+          "then": {"required": ["error_model"]}
+        }
+      ]
+    },
+    "solutionStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["step_number", "instruction", "fact_ids_used", "assertion_ids_used", "result"],
+      "properties": {
+        "step_number": {"type": "integer", "minimum": 1},
+        "instruction": {"type": "string", "minLength": 1},
+        "fact_ids_used": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^fact-[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "assertion_ids_used": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^assertion-[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "result": {"type": "string", "minLength": 1}
+      }
+    },
+    "challengeMechanic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "observable_evidence"],
+      "properties": {
+        "tag": {"enum": ["end_ask_location", "fact_selection", "rule_selection", "basis", "timing", "classification", "measurement", "presentation", "convention", "formula_translation", "roll_forward", "journal_effect", "financial_statement_view", "elimination_leverage", "language_trap", "time_pressure"]},
+        "observable_evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "observableMeasurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["measure_id", "value", "unit", "interpretation"],
+      "properties": {
+        "measure_id": {"type": "string", "pattern": "^[a-z][a-z0-9_]+$"},
+        "value": {"type": ["number", "integer", "string", "boolean"]},
+        "unit": {"type": "string", "minLength": 1},
+        "interpretation": {"type": "string", "minLength": 1}
+      }
+    },
+    "linearCombination": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["terms", "constant", "output_unit", "rounding"],
+      "properties": {
+        "terms": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["fact_id", "coefficient"],
+            "properties": {
+              "fact_id": {"type": "string", "pattern": "^fact-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+              "coefficient": {"type": "number"}
+            }
+          }
+        },
+        "constant": {"type": "number"},
+        "output_unit": {"type": "string", "minLength": 1},
+        "rounding": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "decimal_places"],
+          "properties": {
+            "mode": {"enum": ["half_even", "half_up", "truncate", "none"]},
+            "decimal_places": {"type": "integer", "minimum": 0, "maximum": 9}
+          }
+        }
+      }
+    },
+    "evidenceRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route_type"],
+      "properties": {
+        "route_type": {"enum": ["linear_combination", "independent_assertion_fixture"]},
+        "linear_combination": {"$ref": "#/$defs/linearCombination"},
+        "assertion_fixture_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"route_type": {"const": "linear_combination"}}, "required": ["route_type"]},
+          "then": {"required": ["linear_combination"]}
+        },
+        {
+          "if": {"properties": {"route_type": {"const": "independent_assertion_fixture"}}, "required": ["route_type"]},
+          "then": {"required": ["assertion_fixture_ids"]}
+        }
+      ]
+    },
+    "correctnessEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "route", "producer_component_id", "verifier_component_id", "shared_deciding_function", "authorship", "independence_limit"],
+      "properties": {
+        "evidence_id": {"type": "string", "pattern": "^evidence-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "route": {"$ref": "#/$defs/evidenceRoute"},
+        "producer_component_id": {"type": "string", "minLength": 1},
+        "verifier_component_id": {"type": "string", "minLength": 1},
+        "shared_deciding_function": {"const": false},
+        "authorship": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mechanism", "created_by", "created_at"],
+          "properties": {
+            "mechanism": {"enum": ["human", "ai_assisted", "deterministic_fixture"]},
+            "created_by": {"type": "string", "minLength": 1},
+            "created_at": {"type": "string", "format": "date-time"},
+            "model_id": {"type": "string", "minLength": 1}
+          },
+          "allOf": [
+            {
+              "if": {"properties": {"mechanism": {"const": "ai_assisted"}}, "required": ["mechanism"]},
+              "then": {"required": ["model_id"]}
+            }
+          ]
+        },
+        "independence_limit": {"type": "string", "minLength": 1}
+      }
+    },
+    "assumption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assumption_id", "statement", "basis"],
+      "properties": {
+        "assumption_id": {"type": "string", "pattern": "^assumption-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "statement": {"type": "string", "minLength": 1},
+        "basis": {"enum": ["explicit_in_stem", "rule_trace"]},
+        "rule_version_id": {"type": "string", "pattern": "^far-rule-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"}
+      }
+    },
+    "difficultyDimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension_id", "rubric_version_id", "rubric_status", "provisional_level", "observable_measurements"],
+      "properties": {
+        "dimension_id": {"enum": ["accounting_complexity", "reasoning_steps", "reading_fact_selection", "rule_convention_pressure", "distractor_elimination_burden", "realistic_time_pressure"]},
+        "rubric_version_id": {"type": "string", "minLength": 1},
+        "rubric_status": {"const": "proposed_for_g2"},
+        "provisional_level": {"type": "integer", "minimum": 1, "maximum": 5},
+        "observable_measurements": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/observableMeasurement"}}
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authorship", "stem", "options", "blueprint_mappings", "accounting_model_id", "facts", "assumptions", "solution", "correctness_evidence", "rule_trace", "challenge_mechanics", "difficulty_profile", "originality_boundary"],
+      "properties": {
+        "authorship": {"$ref": "#/$defs/authorship"},
+        "stem": {"type": "string", "minLength": 1},
+        "options": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": {"$ref": "#/$defs/option"},
+          "contains": {"type": "object", "properties": {"is_keyed": {"const": true}}, "required": ["is_keyed"]},
+          "minContains": 1,
+          "maxContains": 1
+        },
+        "blueprint_mappings": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/blueprintMapping"}},
+        "accounting_model_id": {"type": "string", "pattern": "^far-model-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "facts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/fact"}},
+        "assumptions": {"type": "array", "items": {"$ref": "#/$defs/assumption"}},
+        "solution": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["end_ask", "representation", "steps", "keyed_answer_option_id", "keyed_answer_rationale", "faster_or_safer_route"],
+          "properties": {
+            "end_ask": {"type": "string", "minLength": 1},
+            "representation": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["kind", "setup"],
+              "properties": {
+                "kind": {"enum": ["formula", "roll_forward", "journal_effect", "financial_statement_view", "rule_selection", "classification"]},
+                "setup": {"type": "string", "minLength": 1}
+              }
+            },
+            "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/solutionStep"}},
+            "keyed_answer_option_id": {"enum": ["A", "B", "C", "D"]},
+            "keyed_answer_rationale": {"type": "string", "minLength": 1},
+            "faster_or_safer_route": {"type": "string", "minLength": 1}
+          }
+        },
+        "correctness_evidence": {"$ref": "#/$defs/correctnessEvidence"},
+        "rule_trace": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["rule_version_id", "assertion_ids", "applied_to_fact_ids", "application"],
+            "properties": {
+              "rule_version_id": {"type": "string", "pattern": "^far-rule-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"},
+              "assertion_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^assertion-[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+              "applied_to_fact_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "pattern": "^fact-[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+              "application": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "challenge_mechanics": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/challengeMechanic"}},
+        "difficulty_profile": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"$ref": "#/$defs/difficultyDimension"}},
+        "originality_boundary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["compared_corpus_ids", "methods", "claim_limit"],
+          "properties": {
+            "compared_corpus_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+            "methods": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+            "claim_limit": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}

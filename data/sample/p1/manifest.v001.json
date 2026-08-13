@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "sample_id": "far-p1-g2-sample.v001",
+  "generated_at": "2026-08-13T20:00:00Z",
+  "purpose": "Bounded candidate-only cross-area sample for Gate G2 review; no item is learner-ready or counts toward coverage.",
+  "items": [
+    {
+      "question_id": "far-q-000101",
+      "identity_path": "data/questions/far-q-000101/identity.json",
+      "question_path": "data/questions/far-q-000101/versions/far-q-000101.v001.json",
+      "rule_path": "data/rules/far-rule-oci-components/versions/far-rule-oci-components.v001.json",
+      "reference_path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "verification_path": "data/events/verification/far-verification-000101-v001.json"
+    },
+    {
+      "question_id": "far-q-000102",
+      "identity_path": "data/questions/far-q-000102/identity.json",
+      "question_path": "data/questions/far-q-000102/versions/far-q-000102.v001.json",
+      "rule_path": "data/rules/far-rule-indirect-operating-cash-flow/versions/far-rule-indirect-operating-cash-flow.v001.json",
+      "reference_path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "verification_path": "data/events/verification/far-verification-000102-v001.json"
+    },
+    {
+      "question_id": "far-q-000103",
+      "identity_path": "data/questions/far-q-000103/identity.json",
+      "question_path": "data/questions/far-q-000103/versions/far-q-000103.v001.json",
+      "rule_path": "data/rules/far-rule-cash-equivalent-original-maturity/versions/far-rule-cash-equivalent-original-maturity.v001.json",
+      "reference_path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "verification_path": "data/events/verification/far-verification-000103-v001.json"
+    },
+    {
+      "question_id": "far-q-000104",
+      "identity_path": "data/questions/far-q-000104/identity.json",
+      "question_path": "data/questions/far-q-000104/versions/far-q-000104.v001.json",
+      "rule_path": "data/rules/far-rule-inventory-rollforward-reconciliation/versions/far-rule-inventory-rollforward-reconciliation.v001.json",
+      "reference_path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "verification_path": "data/events/verification/far-verification-000104-v001.json"
+    },
+    {
+      "question_id": "far-q-000105",
+      "identity_path": "data/questions/far-q-000105/identity.json",
+      "question_path": "data/questions/far-q-000105/versions/far-q-000105.v001.json",
+      "rule_path": "data/rules/far-rule-loss-contingency-range/versions/far-rule-loss-contingency-range.v001.json",
+      "reference_path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "verification_path": "data/events/verification/far-verification-000105-v001.json"
+    },
+    {
+      "question_id": "far-q-000106",
+      "identity_path": "data/questions/far-q-000106/identity.json",
+      "question_path": "data/questions/far-q-000106/versions/far-q-000106.v001.json",
+      "rule_path": "data/rules/far-rule-subsequent-event-recognition/versions/far-rule-subsequent-event-recognition.v001.json",
+      "reference_path": "data/references/far-ref-fasb-codification-live.v001.json",
+      "verification_path": "data/events/verification/far-verification-000106-v001.json"
+    }
+  ]
+}

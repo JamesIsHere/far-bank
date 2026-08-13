@@ -1,0 +1,75 @@
+{
+  "manifest_version": "1.0.0",
+  "source_id": "aicpa-cpa-exam-blueprints-2026",
+  "authority": {
+    "publisher": "American Institute of Certified Public Accountants",
+    "publisher_abbreviation": "AICPA",
+    "landing_page_url": "https://www.aicpa-cima.com/resources/article/learn-what-is-tested-on-the-cpa-exam",
+    "artifact_url": "https://assets.ctfassets.net/rb9cdnjh59cm/71s84dkfo3KEsoLlz4vv6G/f4314469ec5368b5b4dd0d0184f00a71/CPA_Exam_Blueprints_2026.pdf"
+  },
+  "publication": {
+    "cover_title": "Uniform CPA Examination Blueprints",
+    "approved_by": "Board of Examiners, American Institute of CPAs",
+    "approval_date": "2025-08-18",
+    "effective_period_label": "January 2026",
+    "effective_from": "2026-01-01"
+  },
+  "retrieval": {
+    "retrieved_at": "2026-08-13T01:43:45.7109621-04:00",
+    "local_file": "CPA_Exam_Blueprints_2026.pdf",
+    "media_type": "application/pdf",
+    "size_bytes": 788395,
+    "sha256": "0fca69b073bb0ed46b06ca51c2e1dfaec434346e628f6996fa34b19c2bc02680",
+    "pdf_version": "1.7",
+    "page_count": 115,
+    "encrypted": false
+  },
+  "far_scope": {
+    "section_code": "FAR",
+    "section_title": "Financial Accounting and Reporting",
+    "physical_pdf_pages": {
+      "first": 29,
+      "last": 46
+    },
+    "printed_page_labels": {
+      "first": "FAR1",
+      "last": "FAR18"
+    }
+  },
+  "verification": {
+    "pdf_header": "%PDF-1.7",
+    "text_extraction": {
+      "tool": "pdftotext",
+      "mode": "layout",
+      "result": "pass_with_warnings",
+      "warnings": [
+        "Poppler reported repeated Invalid Font Weight warnings; extracted FAR text remained readable."
+      ]
+    },
+    "visual_inspection": {
+      "tool": "pdftoppm",
+      "resolution_dpi": 144,
+      "physical_pages_checked": [
+        1,
+        29,
+        30,
+        32,
+        35,
+        46
+      ],
+      "result": "pass"
+    }
+  },
+  "recorded_anomalies": [
+    {
+      "code": "PDF_METADATA_TITLE_STALE",
+      "field": "pdfinfo.Title",
+      "observed": "CPA Exam Blueprint 2022",
+      "controlling_evidence": [
+        "The PDF cover states approval on Aug. 18, 2025 and effective date January 2026.",
+        "The official AICPA landing page links this file as CPA Exam Blueprints 2026."
+      ],
+      "disposition": "Record without altering the preserved source; use the cover and official landing-page identity."
+    }
+  ]
+}

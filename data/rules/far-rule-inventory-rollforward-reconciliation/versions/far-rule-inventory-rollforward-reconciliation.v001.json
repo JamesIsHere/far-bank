@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "rule_id": "far-rule-inventory-rollforward-reconciliation",
+  "rule_version_id": "far-rule-inventory-rollforward-reconciliation.v001",
+  "version_number": 1,
+  "content_sha256": "a1424bf3e6536edd9213b54def44dc4a8a75ef1357245679822e44889de92bd5",
+  "content": {
+    "title": "Inventory cost rollforward and physical reconciliation",
+    "rule_statement": "Inventory is measured on a cost basis subject to applicable subsequent-measurement rules; a cost rollforward adds inventory purchases and subtracts cost assigned to goods sold and supplier returns, and the resulting book balance is reconciled to inventory on hand.",
+    "applicability": "For-profit entity inventory carried at cost where no lower-measurement adjustment is stated.",
+    "assertions": [
+      {
+        "assertion_id": "assertion-inventory-cost-balance",
+        "claim": "Ending book inventory equals beginning inventory plus purchases minus cost of goods sold minus returns to suppliers for the stated fact pattern."
+      },
+      {
+        "assertion_id": "assertion-reconcile-physical",
+        "claim": "The general-ledger balance is adjusted to the supported physical inventory amount when the difference is valid and no other reconciling item remains."
+      }
+    ],
+    "source_citations": [
+      {
+        "reference_version_id": "far-ref-fasb-codification-live.v001",
+        "locator": "FASB ASC 330-10-30-1 and 330-10-35-1A through 35-1B (live official Codification)",
+        "role": "controlling",
+        "supports_assertion_ids": [
+          "assertion-inventory-cost-balance",
+          "assertion-reconcile-physical"
+        ]
+      }
+    ],
+    "currency": {
+      "assessed_at": "2026-08-13T20:00:00Z",
+      "assessment": "current",
+      "basis": "The live official Codification locators and FASB-hosted Update 2015-11 materials were cross-checked on 2026-08-13; no effective amendment affecting cost measurement for these facts was identified."
+    },
+    "authorship_provenance": {
+      "purpose": "admitted_evidence",
+      "mechanism": "ai_assisted",
+      "created_by": "Codex",
+      "model_id": "openai-codex-gpt-5",
+      "material_input_ids": [
+        "far-ref-fasb-codification-live.v001",
+        "FASB ASC 330-10-30-1 and 330-10-35-1A through 35-1B (live official Codification)"
+      ]
+    }
+  }
+}

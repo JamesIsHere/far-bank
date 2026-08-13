@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/reference-version.schema.json",
+  "title": "Versioned FAR evidence reference",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "reference_id", "reference_version_id", "version_number", "record_purpose", "authority_class", "identity", "retrieval", "currency"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "reference_id": {"type": "string", "pattern": "^far-ref-[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "reference_version_id": {"type": "string", "pattern": "^far-ref-[a-z0-9]+(?:-[a-z0-9]+)*\\.v[0-9]{3}$"},
+    "version_number": {"type": "integer", "minimum": 1},
+    "record_purpose": {"enum": ["schema_fixture", "candidate_evidence", "admitted_evidence"]},
+    "authority_class": {"enum": ["official_exam_blueprint", "authoritative_accounting", "approved_secondary"]},
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["issuer", "title", "document_id", "publication_or_update_date"],
+      "properties": {
+        "issuer": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "document_id": {"type": "string", "minLength": 1},
+        "publication_or_update_date": {"type": "string", "format": "date"},
+        "effective_from": {"type": "string", "format": "date"},
+        "effective_through": {"type": ["string", "null"], "format": "date"}
+      }
+    },
+    "retrieval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retrieved_at", "locator", "content_identity"],
+      "properties": {
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "locator": {"type": "string", "minLength": 1},
+        "content_identity": {"type": "string", "minLength": 1},
+        "preserved_path": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "currency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessed_at", "assessment", "basis"],
+      "properties": {
+        "assessed_at": {"type": "string", "format": "date-time"},
+        "assessment": {"enum": ["current", "superseded", "uncertain"]},
+        "basis": {"type": "string", "minLength": 1}
+      }
+    },
+    "admission_basis": {"type": "string", "minLength": 1}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"record_purpose": {"const": "admitted_evidence"}}, "required": ["record_purpose"]},
+      "then": {"required": ["admission_basis"]}
+    }
+  ]
+}
