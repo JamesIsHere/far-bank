@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-linked-roll-forward","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-linked-roll-forward","route_type":"linked_roll_forward",
+  "producer_component_id":"fixture-roll-forward-author","verifier_component_id":"independent-linked-roll-forward-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-opening-inventory","value_type":"number","value":100,"unit":"USD"},{"input_id":"input-purchases","value_type":"number","value":60,"unit":"USD"},{"input_id":"input-cost-of-sales","value_type":"number","value":70,"unit":"USD"}],
+  "specification":{"nodes":[{"node_id":"goods-available","terms":[{"ref_type":"input","ref_id":"input-opening-inventory","coefficient":1},{"ref_type":"input","ref_id":"input-purchases","coefficient":1}],"constant":0},{"node_id":"ending-inventory","terms":[{"ref_type":"node","ref_id":"goods-available","coefficient":1},{"ref_type":"input","ref_id":"input-cost-of-sales","coefficient":-1}],"constant":0}],"output_node_id":"ending-inventory","output_unit":"USD"},
+  "expected_output":{"value_type":"number","value":90,"unit":"USD","rounding":{"mode":"none","decimal_places":0}},
+  "independence_limit":"Synthetic two-node roll-forward; source completeness and classification remain outside this arithmetic route."
+}

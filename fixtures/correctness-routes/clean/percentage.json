@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-percentage","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-percentage","route_type":"percentage",
+  "producer_component_id":"fixture-percentage-author","verifier_component_id":"independent-percentage-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-part","value_type":"number","value":50,"unit":"USD"},{"input_id":"input-whole","value_type":"number","value":200,"unit":"USD"}],
+  "specification":{"numerator_input_id":"input-part","denominator_input_id":"input-whole","scale":100},
+  "expected_output":{"value_type":"number","value":25,"unit":"percent","rounding":{"mode":"none","decimal_places":0}},
+  "independence_limit":"Synthetic arithmetic fixture only; it does not establish an accounting premise or item correctness."
+}

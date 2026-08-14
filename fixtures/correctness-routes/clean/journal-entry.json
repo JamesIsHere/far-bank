@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-journal-entry","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-journal-entry","route_type":"journal_entry",
+  "producer_component_id":"fixture-journal-author","verifier_component_id":"independent-journal-entry-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-entry-amount","value_type":"number","value":5000,"unit":"USD"}],
+  "specification":{"lines":[{"account_id":"expense","direction":"debit","amount_input_id":"input-entry-amount","coefficient":1},{"account_id":"payable","direction":"credit","amount_input_id":"input-entry-amount","coefficient":1}],"required_account_directions":{"expense":"debit","payable":"credit"}},
+  "expected_output":{"value_type":"boolean","value":true},
+  "independence_limit":"Synthetic balance and direction fixture; account selection and recognition require an independent rule trace."
+}

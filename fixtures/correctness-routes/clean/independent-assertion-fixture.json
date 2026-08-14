@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-independent-assertion","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-independent-assertion","route_type":"independent_assertion_fixture",
+  "producer_component_id":"fixture-question-author","verifier_component_id":"independent-assertion-evaluator","reference_fixture_component_id":"separately-authored-reference-cases","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-case-id","value_type":"text","value":"case-current-asset"}],
+  "specification":{"case_id_input_id":"input-case-id","reference_fixture_path":"fixtures/correctness-routes/reference/classification-assertions.json"},
+  "expected_output":{"value_type":"array","value":["assertion-current-classification"]},
+  "independence_limit":"Synthetic reference cases test the execution boundary only and are not authoritative accounting assertions."
+}

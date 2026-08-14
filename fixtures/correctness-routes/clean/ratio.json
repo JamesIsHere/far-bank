@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-ratio","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-ratio","route_type":"ratio",
+  "producer_component_id":"fixture-ratio-author","verifier_component_id":"independent-ratio-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-current-assets","value_type":"number","value":120,"unit":"USD"},{"input_id":"input-current-liabilities","value_type":"number","value":80,"unit":"USD"}],
+  "specification":{"numerator_input_id":"input-current-assets","denominator_input_id":"input-current-liabilities"},
+  "expected_output":{"value_type":"number","value":1.5,"unit":"ratio","rounding":{"mode":"none","decimal_places":0}},
+  "independence_limit":"Synthetic ratio fixture only; classification of numerator and denominator must be independently supported by the item rule trace."
+}

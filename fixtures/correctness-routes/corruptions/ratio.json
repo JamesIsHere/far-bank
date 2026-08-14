@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-ratio-wrong-denominator","check_id":"ROUTE_RATIO","fixture_id":"route-fixture-ratio","mutations":[{"operation":"replace","path":"/inputs/1/value","value":60}]}

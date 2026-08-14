@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-present-value","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-present-value","route_type":"present_value",
+  "producer_component_id":"fixture-present-value-author","verifier_component_id":"independent-present-value-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-periodic-rate","value_type":"number","value":0.10,"unit":"decimal_rate"},{"input_id":"input-cash-flow-one","value_type":"number","value":110,"unit":"USD"}],
+  "specification":{"rate_input_id":"input-periodic-rate","cash_flows":[{"period":1,"amount_input_id":"input-cash-flow-one"}]},
+  "expected_output":{"value_type":"number","value":100,"unit":"USD","rounding":{"mode":"half_even","decimal_places":2}},
+  "independence_limit":"Synthetic single-rate fixture; timing, rate selection, and accounting classification remain separate evidence obligations."
+}

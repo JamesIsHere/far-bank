@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/production-contract.schema.json",
+  "title": "Ratified FAR production-control contract receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "contract_id", "status", "ratification", "evidence_paths", "taxonomy_id", "coverage", "variety_floors", "concentration_caps", "difficulty_rubric_id", "area_compatibility", "claim_limit"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "contract_id": {"const": "far-g2-production-contract.v001"},
+    "status": {"const": "ratified"},
+    "ratification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ratified_by", "ratified_on", "goal_path", "goal_sha256", "amendment_heading"],
+      "properties": {
+        "ratified_by": {"const": "james"},
+        "ratified_on": {"const": "2026-08-13"},
+        "goal_path": {"const": "goal.md"},
+        "goal_sha256": {"const": "e58830c7308da16485138988babc4f52b9a459e5a24696a5fa1dedb4bc315b1a"},
+        "amendment_heading": {"const": "Amendment — 2026-08-13 — Gate G2 production contract"}
+      }
+    },
+    "evidence_paths": {
+      "type": "array", "minItems": 7, "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "taxonomy_id": {"type": "string", "minLength": 1},
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["minimum_bank_items", "minimum_per_task", "area_item_floors", "area_percentage_ranges"],
+      "properties": {
+        "minimum_bank_items": {"const": 353},
+        "minimum_per_task": {"const": 3},
+        "area_item_floors": {
+          "type": "object", "additionalProperties": false,
+          "required": ["far.area.1", "far.area.2", "far.area.3"],
+          "properties": {"far.area.1": {"const": 141}, "far.area.2": {"const": 120}, "far.area.3": {"const": 92}}
+        },
+        "area_percentage_ranges": {
+          "type": "object", "additionalProperties": false,
+          "required": ["far.area.1", "far.area.2", "far.area.3"],
+          "properties": {
+            "far.area.1": {"$ref": "#/$defs/range"},
+            "far.area.2": {"$ref": "#/$defs/range"},
+            "far.area.3": {"$ref": "#/$defs/range"}
+          }
+        }
+      }
+    },
+    "variety_floors": {
+      "type": "object",
+      "minProperties": 10,
+      "additionalProperties": {
+        "type": "object",
+        "minProperties": 1,
+        "additionalProperties": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "concentration_caps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stem_template_id", "fact_pattern_id", "primary_solution_representation", "distractor_family_id", "irrelevant_facts_three_plus"],
+      "properties": {
+        "stem_template_id": {"const": 0.25},
+        "fact_pattern_id": {"const": 0.25},
+        "primary_solution_representation": {"const": 0.25},
+        "distractor_family_id": {"const": 0.25},
+        "irrelevant_facts_three_plus": {"const": 0.40}
+      }
+    },
+    "difficulty_rubric_id": {"const": "far-g2-six-dimensional-difficulty.v001"},
+    "area_compatibility": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["area_id", "applicable_skills", "applicable_representations", "excluded_combinations"],
+        "properties": {
+          "area_id": {"enum": ["far.area.1", "far.area.2", "far.area.3"]},
+          "applicable_skills": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["remembering_and_understanding", "application", "analysis"]}},
+          "applicable_representations": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/representation"}},
+          "excluded_combinations": {"type": "array", "items": {"type": "object", "required": ["combination", "rationale"], "properties": {"combination": {"type": "string", "minLength": 1}, "rationale": {"type": "string", "minLength": 1}}, "additionalProperties": false}}
+        }
+      }
+    },
+    "claim_limit": {"type": "string", "minLength": 1}
+  },
+  "$defs": {
+    "range": {"type": "object", "additionalProperties": false, "required": ["minimum", "maximum"], "properties": {"minimum": {"type": "number", "minimum": 0, "maximum": 1}, "maximum": {"type": "number", "minimum": 0, "maximum": 1}}},
+    "representation": {"enum": ["formula", "roll_forward", "journal_effect", "financial_statement_view", "rule_selection", "classification"]}
+  }
+}

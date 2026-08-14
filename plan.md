@@ -86,7 +86,7 @@ future human approvals, learner/admin product scope, hosting, or public launch.
 - Production begins only after all required rulings are folded into an explicit
   dated G2 contract amendment ratified by James.
 
-### P2.0 — Encode the ratified production contract — ACTIVE
+### P2.0 — Encode the ratified production contract — COMPLETE
 
 - Extend schemas and reports for every ratified coverage, variety,
   anti-cloning, difficulty, and prose field without rewriting existing
@@ -100,7 +100,7 @@ future human approvals, learner/admin product scope, hosting, or public launch.
   clean fixtures pass with zero waivers, and current sample history remains
   reconstructible.
 
-### P2.1 — Expand independent correctness routes — QUEUED
+### P2.1 — Expand independent correctness routes — COMPLETE
 
 - Implement and red-calibrate the formula, schedule, conditional-rule,
   journal-entry, linked-roll-forward, and nonnumeric assertion-fixture routes
@@ -110,7 +110,7 @@ future human approvals, learner/admin product scope, hosting, or public launch.
 - Exit evidence: each admitted production family has an executable independent
   route and at least one known-bad rejected fixture.
 
-### P2.2 — Rebuildable local projection and event workflow — QUEUED
+### P2.2 — Rebuildable local projection and event workflow — COMPLETE
 
 - Build the disposable SQLite projection transactionally from canonical JSON.
 - Implement hands-on Approve, Reject, Revise, and Comment flows through the
@@ -121,7 +121,7 @@ future human approvals, learner/admin product scope, hosting, or public launch.
 - Exit evidence: cold reconstruction and the local projection agree, including
   stale/superseded histories and zero mutable approval shortcuts.
 
-### P2.3 — Gate G3 review package — QUEUED
+### P2.3 — Gate G3 review package — ACTIVE: HUMAN VERDICT PENDING
 
 - Render a bounded hands-on workflow package covering all four actions,
   revision invalidation, exact-version readiness, and coverage effects.
@@ -129,6 +129,12 @@ future human approvals, learner/admin product scope, hosting, or public launch.
   checks and preserve limitations.
 - Exit evidence: James can exercise the workflow and issue the G3 verdict; no
   G3 approval is inferred from automated checks.
+
+Automated package status: deterministic receipt, structural accessibility and
+keyboard contract, integrity, reconstruction, build, lint, and rendered HTML
+checks pass. Live interaction remains the human Gate G3 exercise; the in-app
+browser had no active session during package preparation and is not recorded as
+an automated pass.
 
 ## Unit exit rule
 

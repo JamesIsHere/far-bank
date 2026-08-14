@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "far-g2-production-contract.v001",
+  "status": "ratified",
+  "ratification": {
+    "ratified_by": "james",
+    "ratified_on": "2026-08-13",
+    "goal_path": "goal.md",
+    "goal_sha256": "e58830c7308da16485138988babc4f52b9a459e5a24696a5fa1dedb4bc315b1a",
+    "amendment_heading": "Amendment — 2026-08-13 — Gate G2 production contract"
+  },
+  "evidence_paths": [
+    "data/sample/p1/manifest.json",
+    "data/sample/p1/manifest.v001.json",
+    "reports/p1-sample-verification.v002.json",
+    "reports/g2-package-manifest.json",
+    "review-surface/app/review-data-v002.json",
+    "data/events/review/",
+    "docs/gates/g2-proposed-amendment.md",
+    "docs/architecture/0001-artifact-first-hybrid.md",
+    "docs/architecture/0002-p1-record-contracts.md"
+  ],
+  "taxonomy_id": "far-2026-01",
+  "coverage": {
+    "minimum_bank_items": 353,
+    "minimum_per_task": 3,
+    "area_item_floors": {
+      "far.area.1": 141,
+      "far.area.2": 120,
+      "far.area.3": 92
+    },
+    "area_percentage_ranges": {
+      "far.area.1": {"minimum": 0.30, "maximum": 0.40},
+      "far.area.2": {"minimum": 0.30, "maximum": 0.40},
+      "far.area.3": {"minimum": 0.25, "maximum": 0.35}
+    }
+  },
+  "variety_floors": {
+    "stem_length": {"short": 0.20, "standard": 0.45, "dense": 0.15},
+    "numeric_fact_density": {"low": 0.15, "medium": 0.15, "high": 0.15},
+    "primary_accounting_work": {"conceptual_recall": 0.08, "classification_rule_selection": 0.20, "computation": 0.30, "analytical_reconciliation_inference": 0.20},
+    "dependent_steps": {"one": 0.10, "two_to_three": 0.50, "four_plus": 0.10},
+    "irrelevant_facts": {"none": 0.30, "one_to_two": 0.30, "three_plus": 0.10},
+    "ask_placement": {"direct_final_sentence": 0.60, "indirect_embedded": 0.20},
+    "rule_pressure": {"rule": 0.05, "timing": 0.05, "basis": 0.05, "measurement": 0.05, "classification": 0.05, "presentation": 0.05, "convention": 0.05},
+    "primary_solution_representation": {"formula": 0.05, "roll_forward": 0.05, "journal_effect": 0.05, "financial_statement_view": 0.05, "rule_selection": 0.05, "classification": 0.05},
+    "elimination_burden": {"low": 0.10, "medium": 0.40, "high": 0.15},
+    "realistic_time_pressure": {"low": 0.15, "moderate": 0.45, "high": 0.15}
+  },
+  "concentration_caps": {
+    "stem_template_id": 0.25,
+    "fact_pattern_id": 0.25,
+    "primary_solution_representation": 0.25,
+    "distractor_family_id": 0.25,
+    "irrelevant_facts_three_plus": 0.40
+  },
+  "difficulty_rubric_id": "far-g2-six-dimensional-difficulty.v001",
+  "area_compatibility": [
+    {
+      "area_id": "far.area.1",
+      "applicable_skills": ["remembering_and_understanding", "application", "analysis"],
+      "applicable_representations": ["formula", "roll_forward", "journal_effect", "financial_statement_view", "rule_selection", "classification"],
+      "excluded_combinations": []
+    },
+    {
+      "area_id": "far.area.2",
+      "applicable_skills": ["remembering_and_understanding", "application", "analysis"],
+      "applicable_representations": ["formula", "roll_forward", "journal_effect", "financial_statement_view", "rule_selection", "classification"],
+      "excluded_combinations": []
+    },
+    {
+      "area_id": "far.area.3",
+      "applicable_skills": ["remembering_and_understanding", "application", "analysis"],
+      "applicable_representations": ["formula", "roll_forward", "journal_effect", "financial_statement_view", "rule_selection", "classification"],
+      "excluded_combinations": []
+    }
+  ],
+  "claim_limit": "This receipt encodes the ratified G2 controls. It does not approve any production item, G3 workflow, coverage claim, learner product, hosting, or public launch."
+}

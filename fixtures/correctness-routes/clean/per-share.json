@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-per-share","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-per-share","route_type":"per_share",
+  "producer_component_id":"fixture-per-share-author","verifier_component_id":"independent-per-share-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-net-income","value_type":"number","value":500000,"unit":"USD"},{"input_id":"input-preferred-dividends","value_type":"number","value":20000,"unit":"USD"},{"input_id":"input-weighted-shares","value_type":"number","value":240000,"unit":"shares"}],
+  "specification":{"numerator_terms":[{"input_id":"input-net-income","coefficient":1},{"input_id":"input-preferred-dividends","coefficient":-1}],"denominator_input_id":"input-weighted-shares"},
+  "expected_output":{"value_type":"number","value":2,"unit":"USD_per_share","rounding":{"mode":"half_even","decimal_places":2}},
+  "independence_limit":"Synthetic basic per-share fixture; numerator adjustments and denominator weighting require item-level rule evidence."
+}

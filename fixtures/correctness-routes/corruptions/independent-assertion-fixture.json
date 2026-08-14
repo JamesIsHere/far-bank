@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-assertion-wrong-case","check_id":"ROUTE_INDEPENDENT_ASSERTION_FIXTURE","fixture_id":"route-fixture-independent-assertion","mutations":[{"operation":"replace","path":"/inputs/0/value","value":"case-noncurrent-asset"}]}

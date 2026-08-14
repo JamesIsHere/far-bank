@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-per-share-wrong-denominator","check_id":"ROUTE_PER_SHARE","fixture_id":"route-fixture-per-share","mutations":[{"operation":"replace","path":"/inputs/2/value","value":300000}]}

@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-conditional-wrong-likelihood","check_id":"ROUTE_CONDITIONAL_RULE_TABLE","fixture_id":"route-fixture-conditional-rule-table","mutations":[{"operation":"replace","path":"/inputs/0/value","value":"reasonably_possible"}]}

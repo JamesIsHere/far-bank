@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "package_id": "far-g3-review-workflow.v001",
+  "package_status": "ready_for_human_gate_not_approved",
+  "gate": "G3",
+  "verdict": {
+    "owner": "James",
+    "decision_state": "not_issued",
+    "automation_authority": false,
+    "required_outcome": "James exercises the bounded local workflow and explicitly approves or rejects Gate G3."
+  },
+  "hands_on_steps": [
+    "Choose each of Approve, Reject, Revise, and Comment and confirm the event preview binds the displayed question ID, version ID, and content hash.",
+    "Enter a reasoned comment and download a proposal; confirm downloading does not alter readiness or canonical history.",
+    "Inspect the revision boundary: the prior approved version is auto-invalidated and its approval does not carry to the new version.",
+    "Confirm the current sample remains non-production and contributes zero production coverage.",
+    "Issue an explicit G3 verdict outside the composer; generated events and automated checks cannot approve this gate."
+  ],
+  "workflow": {
+    "actions": [
+      {
+        "action": "approve",
+        "event_id": "far-review-p2-workflow-approve",
+        "ingested_exclusively": true
+      },
+      {
+        "action": "reject",
+        "event_id": "far-review-p2-workflow-reject",
+        "ingested_exclusively": true
+      },
+      {
+        "action": "revise",
+        "event_id": "far-review-p2-workflow-revise",
+        "ingested_exclusively": true
+      },
+      {
+        "action": "comment",
+        "event_id": "far-review-p2-workflow-comment",
+        "ingested_exclusively": true
+      }
+    ],
+    "exclusive_create_duplicate_rejected": true,
+    "stale_exact_version_binding_rejected": true,
+    "revision_calibration": {
+      "prior_version_id": "far-q-000101.v001",
+      "prior_content_sha256": "498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400",
+      "new_version_id": "far-q-000101.v002",
+      "new_content_sha256": "20486d46cde43d4a0a108e146289eb1fb7032d6ad8cab1c84350aa1fa20e63f9",
+      "new_version_created_exclusively": true,
+      "auto_invalidation_event_id": "far-review-p2-workflow-auto-invalidate",
+      "auto_invalidation_created_exclusively": true
+    }
+  },
+  "revision_boundary": {
+    "question_id": "far-q-000102",
+    "exact_version_state": [
+      {
+        "question_id": "far-q-000102",
+        "version_id": "far-q-000102.v001",
+        "version_number": 1,
+        "content_sha256": "0a53576a16fd6ceb945d250ebe41b079e403e2a3480ba2dfbaaa24a2670b31a4",
+        "is_latest_version": false,
+        "latest_decisive_action": "auto_invalidate",
+        "latest_decisive_event_id": "far-review-far-q-000102-auto-invalidate-20260813t201501z",
+        "latest_verification_event_id": "far-verification-000102-v001",
+        "mechanical_checks_pass": true,
+        "source_impact_clear": true,
+        "rules_current": true,
+        "references_admitted_current": true,
+        "learner_ready": false,
+        "coverage_contribution": false
+      },
+      {
+        "question_id": "far-q-000102",
+        "version_id": "far-q-000102.v002",
+        "version_number": 2,
+        "content_sha256": "6b3fe7f5b502ff45cb2e52be012132a75485945ec0aa902f970c865d40c2d8d3",
+        "is_latest_version": true,
+        "latest_decisive_action": "approve",
+        "latest_decisive_event_id": "far-review-far-q-000102-approve-20260813t1757462466055z",
+        "latest_verification_event_id": "far-verification-000102-v002",
+        "mechanical_checks_pass": true,
+        "source_impact_clear": true,
+        "rules_current": true,
+        "references_admitted_current": true,
+        "learner_ready": true,
+        "coverage_contribution": false
+      }
+    ],
+    "prior_approval_carried_forward": false
+  },
+  "projection": {
+    "manifest_id": "far-projection-inputs-6b8b5267b6e5792fc8ab4d432c67fd1a0f250479d053706897b876f8390251b4",
+    "canonical_input_count": 48,
+    "equivalent_to_cold_reconstruction": true,
+    "ddl_sha256": "9f5bba7083208eaab7257953ef9233618ff109f49fe57c3272cf613587bfe294",
+    "state_summary": {
+      "question_identity_count": 6,
+      "question_version_count": 11,
+      "latest_version_count": 6,
+      "learner_ready_count": 6,
+      "coverage_contribution_count": 0,
+      "superseded_approved_or_invalidated_count": 3
+    }
+  },
+  "sample": {
+    "sample_id": "far-p1-g2-sample.v002",
+    "item_count": 6,
+    "mechanically_ready_count": 6,
+    "production_coverage_contribution": 0,
+    "exact_version_ids": [
+      "far-q-000101.v001",
+      "far-q-000102.v002",
+      "far-q-000103.v002",
+      "far-q-000104.v002",
+      "far-q-000105.v002",
+      "far-q-000106.v002"
+    ]
+  },
+  "evidence_artifacts": [
+    {
+      "path": "reports/p2-review-workflow-verification.json",
+      "sha256": "eaa456e6bb656275f9baf54d8a749de1e8a7e5afa4489ee2d705755d9a9beb66"
+    },
+    {
+      "path": "reports/p2-projection-reconstruction.json",
+      "sha256": "97e9344d5f4061b1ba87ef1efdc1786ddc5064522605b9429772284d2ce6b5be"
+    },
+    {
+      "path": "review-surface/app/review-data-v002.json",
+      "sha256": "0716a8b3d009074f533fc1d348ce11f1683a450ac92308ef4a1b511032daaa99"
+    },
+    {
+      "path": "data/contracts/far-g2-production-contract.v001.json",
+      "sha256": "32ad2be612be9903c23da3cfd493a4889d3585c9c0877160622eb750c8c9a7ad"
+    },
+    {
+      "path": "schema/review-event.schema.json",
+      "sha256": "7fe2bdfcc69668c02e072a1ba064dd7ccfca68f0c590c10e2d2b56082ad7bd57"
+    },
+    {
+      "path": "schema/review-projection.sql",
+      "sha256": "9f5bba7083208eaab7257953ef9233618ff109f49fe57c3272cf613587bfe294"
+    },
+    {
+      "path": "review-surface/app/page.tsx",
+      "sha256": "832598d1ee7cb7e15840b0bd6e83a5edd413f0514651b14f4721bcc691633b26"
+    },
+    {
+      "path": "review-surface/app/evidence/page.tsx",
+      "sha256": "5cd8d6b6ed4c33565f0c69bf2b04ae919c74dee47ee03f52a192ea3e6d87acd5"
+    },
+    {
+      "path": "review-surface/app/review-actions.tsx",
+      "sha256": "d90b8aba3304bbd0be4fa0241cbfeeac6c7fe115b55978f0037a569a1be9d572"
+    },
+    {
+      "path": "review-surface/app/globals.css",
+      "sha256": "688fa24d64b7cd8db529612a07aa8599bf887310330bfcda5a6a084b79421324"
+    }
+  ],
+  "limitations": [
+    "Local-only internal review package; no hosted persistence, accounts, or public deployment.",
+    "The composer downloads proposals only; canonical ingestion remains a separate schema-validating exclusive-create boundary.",
+    "The six historical G2 sample items are not production-bank questions and contribute zero production coverage.",
+    "Automated accessibility, integrity, reconstruction, build, and lint checks support inspection but cannot issue the human G3 verdict."
+  ]
+}

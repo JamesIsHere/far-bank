@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-effective-interest","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-effective-interest","route_type":"effective_interest",
+  "producer_component_id":"fixture-effective-interest-author","verifier_component_id":"independent-effective-interest-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-carrying-amount","value_type":"number","value":95000,"unit":"USD"},{"input_id":"input-effective-rate","value_type":"number","value":0.08,"unit":"decimal_rate"},{"input_id":"input-cash-interest","value_type":"number","value":7000,"unit":"USD"}],
+  "specification":{"carrying_amount_input_id":"input-carrying-amount","effective_rate_input_id":"input-effective-rate","cash_interest_input_id":"input-cash-interest","output":"discount_amortization"},
+  "expected_output":{"value_type":"number","value":600,"unit":"USD","rounding":{"mode":"half_even","decimal_places":2}},
+  "independence_limit":"Synthetic one-period fixture; the route does not decide whether the instrument, rate, or amortization method is appropriate."
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0.0",
+  "checker_id": "far-production-control-verifier",
+  "checker_version": "1.0.0",
+  "required_check_set_id": "far-g2-production-controls.v001",
+  "contract_id": "far-g2-production-contract.v001",
+  "contract_canonical_sha256": "7dae5c70e23e52028bf851473670285f3853dcd583af32ff926827eeaacc1a45",
+  "ratified_goal_sha256": "e58830c7308da16485138988babc4f52b9a459e5a24696a5fa1dedb4bc315b1a",
+  "baseline": {
+    "purpose": "calibration_fixture",
+    "synthetic_item_count": 353,
+    "claim_limit": "Synthetic records exercise controls only; they are not canonical questions, learner-ready items, human approvals, or production coverage."
+  },
+  "checks": [
+    {
+      "check_id": "RATIFICATION_BINDING",
+      "category": "CONTRACT",
+      "clean_outcome": "pass",
+      "clean_detail": "Contract, goal hash, and all exact-version evidence envelopes are bound.",
+      "calibration_fixture_id": "production-red-ratification-binding",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "contract receipt hash 9607fc06a24bab1c08f6a845fa4ba40ecf0d15bbd331cd517b19069eb2e759b3 is not the checker-bound ratified receipt; ['ratification', 'goal_sha256']: 'e58830c7308da16485138988babc4f52b9a459e5a24696a5fa1dedb4bc315b1a' was expected; goal hash e58830c7308da16485138988babc4f52b9a459e5a24696a5fa1dedb4bc315b1a does not match the ratification receipt"
+    },
+    {
+      "check_id": "ITEM_OBSERVABLE_CONSISTENCY",
+      "category": "ITEM_CONTROLS",
+      "clean_outcome": "pass",
+      "clean_detail": "Exact subjects, taxonomy paths, observable counts, and derived bins agree.",
+      "calibration_fixture_id": "production-red-item-observable-consistency",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "far-q-900001.v001 stem_length_bin=dense, expected short"
+    },
+    {
+      "check_id": "DIFFICULTY_OBSERVABLE_CONSISTENCY",
+      "category": "DIFFICULTY",
+      "clean_outcome": "pass",
+      "clean_detail": "All six unaveraged levels are supported by observable conditions.",
+      "calibration_fixture_id": "production-red-difficulty-observable-consistency",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "far-q-900001.v001 reasoning_steps level 5 is not supported level 1"
+    },
+    {
+      "check_id": "PROSE_FAIRNESS_EVIDENCE",
+      "category": "PROSE",
+      "clean_outcome": "pass",
+      "clean_detail": "Every item carries the targeted, auditable prose/fairness evidence fields.",
+      "calibration_fixture_id": "production-red-prose-fairness-evidence",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "far-q-900001.v001 prose control double_negative_screen_passed failed"
+    },
+    {
+      "check_id": "COVERAGE_FLOORS",
+      "category": "COVERAGE",
+      "clean_outcome": "pass",
+      "clean_detail": "The calibration bank meets all task, area, total, and area-share floors.",
+      "calibration_fixture_id": "production-red-coverage-floors",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "bank has 352 records, below 353; far.area.1.group.a.topic.1.task.001 has 2 primary items, below 3; far.area.1 has 140 items, below 141"
+    },
+    {
+      "check_id": "VARIETY_FLOORS",
+      "category": "VARIETY",
+      "clean_outcome": "pass",
+      "clean_detail": "All ten ratified variety dimensions meet their ceiling-rounded floors.",
+      "calibration_fixture_id": "production-red-variety-floors",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "ask_placement.indirect_embedded has 0, below ceil(353×0.2)=71"
+    },
+    {
+      "check_id": "WITHIN_TASK_DIVERSITY",
+      "category": "ANTI_CLONING",
+      "clean_outcome": "pass",
+      "clean_detail": "Every task minimum has representation, mechanic, fact-pattern, and distractor-model diversity.",
+      "calibration_fixture_id": "production-red-within-task-diversity",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "far.area.1.group.a.topic.1.task.001 minimum has fewer than two solution representations; far.area.1.group.a.topic.1.task.001 minimum has only 3 distinct distractor models; far.area.1.group.a.topic.1.task.001 repeats a complete three-model distractor set; far.area.1.group.a.topic.1.task.001 contains a cloned fact-pattern/distractor-set pair; far.area.1.group.a.topic.1.task.001 contains a cloned fact-pattern/distractor-set pair; far.area.1.group.a.topic.1.task.001 contains a cloned fact-pattern/distractor-set pair"
+    },
+    {
+      "check_id": "BANK_CONCENTRATION_CAPS",
+      "category": "ANTI_CLONING",
+      "clean_outcome": "pass",
+      "clean_detail": "Template, fact-pattern, representation, distractor-family, and noise caps pass.",
+      "calibration_fixture_id": "production-red-bank-concentration-caps",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "stem_template_id=stem-template-monoculture occupies 353/353, above 25%"
+    },
+    {
+      "check_id": "AREA_COMPATIBILITY_MATRIX",
+      "category": "COMPATIBILITY",
+      "clean_outcome": "pass",
+      "clean_detail": "Every area covers each ratified applicable skill and compatible representation.",
+      "calibration_fixture_id": "production-red-area-compatibility-matrix",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "far.area.1 lacks compatible representation roll_forward; far.area.1 lacks compatible representation journal_effect; far.area.1 lacks compatible representation financial_statement_view; far.area.1 lacks compatible representation rule_selection; far.area.1 lacks compatible representation classification"
+    }
+  ],
+  "calibration_summary": {
+    "individual_check_count": 9,
+    "purpose_built_red_fixture_count": 9,
+    "waiver_count": 0,
+    "uncalibrated_check_ids": []
+  }
+}

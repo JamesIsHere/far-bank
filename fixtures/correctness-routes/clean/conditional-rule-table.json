@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-conditional-rule-table","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-conditional-rule-table","route_type":"conditional_rule_table",
+  "producer_component_id":"fixture-conditional-author","verifier_component_id":"independent-conditional-table-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-likelihood","value_type":"text","value":"probable"},{"input_id":"input-estimable","value_type":"boolean","value":true}],
+  "specification":{"rows":[{"conditions":[{"input_id":"input-likelihood","operator":"eq","value":"probable"},{"input_id":"input-estimable","operator":"eq","value":true}],"result":"accrue"},{"conditions":[{"input_id":"input-likelihood","operator":"in","value":["probable","reasonably_possible"]}],"result":"disclose"}],"default_result":"no_action"},
+  "expected_output":{"value_type":"text","value":"accrue"},
+  "independence_limit":"Synthetic conditional table; its thresholds are fixture facts and not authoritative accounting guidance."
+}

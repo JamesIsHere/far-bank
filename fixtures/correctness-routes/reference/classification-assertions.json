@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_id": "assertion-reference-classification",
+  "authorship": {
+    "component_id": "separately-authored-reference-cases",
+    "mechanism": "independent_fixture_pass",
+    "created_by": "Codex independent reference-fixture pass",
+    "created_at": "2026-08-13T22:00:00Z"
+  },
+  "cases": [
+    {
+      "case_id": "case-current-asset",
+      "expected_assertion_ids": ["assertion-current-classification"],
+      "provenance": "Synthetic reference classification created separately from the route evaluator and question-producer component."
+    },
+    {
+      "case_id": "case-noncurrent-asset",
+      "expected_assertion_ids": ["assertion-noncurrent-classification"],
+      "provenance": "Synthetic reference classification created separately from the route evaluator and question-producer component."
+    }
+  ],
+  "claim_limit": "Calibration-only reference cases; not accounting authority, production content, or human approval."
+}

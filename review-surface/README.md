@@ -1,11 +1,19 @@
 # FAR Bank internal review surface
 
-Local P1.3 evidence surface for inspecting one exact FAR question version and
-composing append-only review-event proposals.
+Local Gate G3 hands-on package for inspecting exact FAR question versions,
+exercising all four review actions, and composing append-only event proposals.
 
-This directory is not a learner-facing site and is not approved as the G3
-workflow. The current record is a synthetic schema fixture, contributes zero
-coverage, and cannot become learner-ready.
+This directory is not a learner-facing site and Gate G3 is not yet approved.
+The six records are the historical G2 sample, contribute zero production
+coverage, and are not production-bank questions. Only James can issue the G3
+verdict after exercising the bounded workflow.
+
+The local interface is split into two focused routes:
+
+- `/` is a four-exercise G3 decision-flow test. One sample stem and the action
+  controls remain visible; the full question dossier is one disclosure away.
+- `/evidence` holds gate-level reconstruction, revision, coverage, package,
+  and limitation evidence.
 
 ## Rebuild the evidence input
 
@@ -13,10 +21,12 @@ From the `far-bank/` project root:
 
 ```text
 python scripts/build_review_surface_data.py
+python scripts/build_g3_package.py
 ```
 
-The generated `app/review-data.json` binds the question version and content
-hash and includes its source-file manifest. Do not hand-edit it.
+The generated `app/review-data-v002.json` binds each question version and
+content hash. `app/g3-workflow-package.json` mirrors the deterministic G3
+receipt in `reports/g3-package-manifest.json`. Do not hand-edit them.
 
 ## Run locally
 

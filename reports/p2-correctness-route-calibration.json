@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0.0",
+  "checker_id": "far-independent-correctness-route-verifier",
+  "checker_version": "1.0.0",
+  "required_check_set_id": "far-p2-independent-routes.v001",
+  "contract_id": "far-g2-production-contract.v001",
+  "route_types": [
+    "percentage",
+    "ratio",
+    "present_value",
+    "effective_interest",
+    "per_share",
+    "date_period_schedule",
+    "conditional_rule_table",
+    "journal_entry",
+    "linked_roll_forward",
+    "independent_assertion_fixture"
+  ],
+  "baseline": {
+    "purpose": "calibration_fixture",
+    "fixture_count": 10,
+    "claim_limit": "Route fixtures calibrate independent evaluator behavior only; they are not accounting authority, canonical questions, human approvals, or production coverage."
+  },
+  "checks": [
+    {
+      "check_id": "ROUTE_PERCENTAGE",
+      "route_type": "percentage",
+      "clean_fixture_id": "route-fixture-percentage",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent percentage route executed and matched its structured expected output.",
+      "corruption_id": "route-red-percentage-wrong-numerator",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('20.0') percent does not match expected 25 percent"
+    },
+    {
+      "check_id": "ROUTE_RATIO",
+      "route_type": "ratio",
+      "clean_fixture_id": "route-fixture-ratio",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent ratio route executed and matched its structured expected output.",
+      "corruption_id": "route-red-ratio-wrong-denominator",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('2') ratio does not match expected 1.5 ratio"
+    },
+    {
+      "check_id": "ROUTE_PRESENT_VALUE",
+      "route_type": "present_value",
+      "clean_fixture_id": "route-fixture-present-value",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent present_value route executed and matched its structured expected output.",
+      "corruption_id": "route-red-present-value-wrong-rate",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('91.66666666666666666666666667') USD does not match expected 100 USD"
+    },
+    {
+      "check_id": "ROUTE_EFFECTIVE_INTEREST",
+      "route_type": "effective_interest",
+      "clean_fixture_id": "route-fixture-effective-interest",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent effective_interest route executed and matched its structured expected output.",
+      "corruption_id": "route-red-effective-interest-wrong-rate",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('1550.00') USD does not match expected 600 USD"
+    },
+    {
+      "check_id": "ROUTE_PER_SHARE",
+      "route_type": "per_share",
+      "clean_fixture_id": "route-fixture-per-share",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent per_share route executed and matched its structured expected output.",
+      "corruption_id": "route-red-per-share-wrong-denominator",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('1.6') USD_per_share does not match expected 2 USD_per_share"
+    },
+    {
+      "check_id": "ROUTE_DATE_PERIOD_SCHEDULE",
+      "route_type": "date_period_schedule",
+      "clean_fixture_id": "route-fixture-date-period-schedule",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent date_period_schedule route executed and matched its structured expected output.",
+      "corruption_id": "route-red-date-period-wrong-end-date",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('89') days does not match expected 90 days"
+    },
+    {
+      "check_id": "ROUTE_CONDITIONAL_RULE_TABLE",
+      "route_type": "conditional_rule_table",
+      "clean_fixture_id": "route-fixture-conditional-rule-table",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent conditional_rule_table route executed and matched its structured expected output.",
+      "corruption_id": "route-red-conditional-wrong-likelihood",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output 'disclose'  does not match expected 'accrue'"
+    },
+    {
+      "check_id": "ROUTE_JOURNAL_ENTRY",
+      "route_type": "journal_entry",
+      "clean_fixture_id": "route-fixture-journal-entry",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent journal_entry route executed and matched its structured expected output.",
+      "corruption_id": "route-red-journal-wrong-direction",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output False  does not match expected True"
+    },
+    {
+      "check_id": "ROUTE_LINKED_ROLL_FORWARD",
+      "route_type": "linked_roll_forward",
+      "clean_fixture_id": "route-fixture-linked-roll-forward",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent linked_roll_forward route executed and matched its structured expected output.",
+      "corruption_id": "route-red-roll-forward-wrong-purchases",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output Decimal('80') USD does not match expected 90 USD"
+    },
+    {
+      "check_id": "ROUTE_INDEPENDENT_ASSERTION_FIXTURE",
+      "route_type": "independent_assertion_fixture",
+      "clean_fixture_id": "route-fixture-independent-assertion",
+      "clean_outcome": "pass",
+      "clean_detail": "Independent independent_assertion_fixture route executed and matched its structured expected output.",
+      "corruption_id": "route-red-assertion-wrong-case",
+      "corrupt_outcome": "fail",
+      "corrupt_detail": "independent output ['assertion-noncurrent-classification']  does not match expected ['assertion-current-classification']"
+    }
+  ],
+  "calibration_summary": {
+    "route_check_count": 10,
+    "known_bad_fixture_count": 10,
+    "waiver_count": 0,
+    "uncalibrated_route_types": []
+  }
+}

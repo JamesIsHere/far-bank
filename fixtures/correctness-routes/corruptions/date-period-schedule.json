@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-date-period-wrong-end-date","check_id":"ROUTE_DATE_PERIOD_SCHEDULE","fixture_id":"route-fixture-date-period-schedule","mutations":[{"operation":"replace","path":"/inputs/1/value","value":"2026-03-31"}]}

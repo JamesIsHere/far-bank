@@ -33,6 +33,7 @@ def ingest_review_event(
     schema: dict[str, Any],
     *,
     allow_fixture: bool = False,
+    superseding_question: dict[str, Any] | None = None,
 ) -> Path:
     errors = sorted(
         Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(event),
@@ -49,6 +50,14 @@ def ingest_review_event(
     if event["action"] == "auto_invalidate":
         if event["actor"]["actor_type"] != "system":
             raise ValueError("auto-invalidation requires a system actor")
+        if superseding_question is None:
+            raise ValueError("auto-invalidation requires the canonical superseding question version")
+        if event["superseding_version_id"] != superseding_question["version_id"]:
+            raise ValueError("auto-invalidation does not bind the supplied superseding version")
+        if superseding_question["question_id"] != question["question_id"]:
+            raise ValueError("superseding version belongs to a different question identity")
+        if superseding_question["version_number"] <= question["version_number"]:
+            raise ValueError("superseding version is not newer than the invalidated version")
     elif event["actor"]["actor_id"] != "james":
         raise ValueError("P1/G2 canonical human review events require reviewer actor_id james")
 
@@ -68,6 +77,7 @@ def main() -> int:
     if not question_path.is_file():
         raise SystemExit(f"No canonical exact question version at {question_path}")
     question = load_json(question_path)
+    superseding_question = None
     superseding_version_id = event.get("superseding_version_id")
     if superseding_version_id:
         superseding_path = (
@@ -80,12 +90,14 @@ def main() -> int:
         )
         if not superseding_path.is_file():
             raise SystemExit(f"No canonical superseding question version at {superseding_path}")
+        superseding_question = load_json(superseding_path)
     schema = load_json(PROJECT_ROOT / "schema" / "review-event.schema.json")
     target = ingest_review_event(
         event,
         question,
         PROJECT_ROOT / "data" / "events" / "review",
         schema,
+        superseding_question=superseding_question,
     )
     print(f"PASS ingested append-only review event {target.relative_to(PROJECT_ROOT).as_posix()}")
     return 0

@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-present-value-wrong-rate","check_id":"ROUTE_PRESENT_VALUE","fixture_id":"route-fixture-present-value","mutations":[{"operation":"replace","path":"/inputs/0/value","value":0.20}]}

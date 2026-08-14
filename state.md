@@ -2,75 +2,89 @@
 
 ## Status
 
-LIVE — Gate G2 passed on 2026-08-13. James ratified the dated production
-contract amendment in `goal.md`. P1 is complete and P2.0, encoding and
-red-calibrating the ratified production controls, is active.
+LIVE — Gate G2 and P2.0 through P2.2 are complete. The bounded P2.3 Gate G3
+workflow package is deterministically built and ready for James's local
+hands-on verdict. G3 has not been approved, and no production-bank question
+exists.
 
-## Ratified contract
+## Completed P2 enforcement layers
 
-- The ratified amendment begins at `goal.md` under
-  `Amendment — 2026-08-13 — Gate G2 production contract` and has SHA-256
+- Ratified contract canonical SHA-256:
+  `7dae5c70e23e52028bf851473670285f3853dcd583af32ff926827eeaacc1a45`;
+  ratified `goal.md` SHA-256:
   `e58830c7308da16485138988babc4f52b9a459e5a24696a5fa1dedb4bc315b1a`.
-- It makes operative the 353-item coverage floor, ten-row variety matrix, five
-  anti-cloning rules, six-dimensional difficulty rubric and application rules,
-  prose/fairness rules, independent correctness-route expansion, and
-  artifact-first hybrid architecture.
-- G2 ratification authorizes P2 only. It does not approve G3, future question
-  versions, final-bank coverage, learner/admin products, accounts, hosting, or
-  public launch.
+- P2.0: nine production-control gates, nine red corruptions, zero waivers.
+- P2.1: ten independent correctness routes, ten known-bad fixtures, zero
+  waivers.
+- P2.2: a transactional disposable SQLite build from canonical JSON,
+  independently derived cold state, exact required-check policy matching,
+  immutable normalized rows, and derived review/readiness/coverage views.
+- Current projection manifest:
+  `far-projection-inputs-6b8b5267b6e5792fc8ab4d432c67fd1a0f250479d053706897b876f8390251b4`.
+- Projection receipt: `reports/p2-projection-reconstruction.json`, SHA-256
+  `97e9344d5f4061b1ba87ef1efdc1786ddc5064522605b9429772284d2ce6b5be`.
+- Workflow receipt: `reports/p2-review-workflow-verification.json`, SHA-256
+  `eaa456e6bb656275f9baf54d8a749de1e8a7e5afa4489ee2d705755d9a9beb66`.
+- Review DDL SHA-256:
+  `9f5bba7083208eaab7257953ef9233618ff109f49fe57c3272cf613587bfe294`.
 
-## G2 sample outcome
+## P2.2 reconstruction outcome
 
-- Current queue: `far-p1-g2-sample.v002` at
-  `data/sample/p1/manifest.json`.
-- Current exact versions: `far-q-000101.v001` and
-  `far-q-000102.v002` through `far-q-000106.v002`.
-- Key distribution: A=1, B=2, C=2, D=1.
-- All six current versions have exact James approval, pass 48/48 checks, and
-  reconstruct `learner_ready=true`. Coverage contribution remains zero because
-  the sample is gate evidence, not the production bank.
-- Canonical review ledger contains 13 events: current approvals, superseded
-  v001 approvals and system invalidations for candidates 2–4, and candidate
-  5's historical v001 answer-position Comment.
-- Current sample report:
-  `reports/p1-sample-verification.v002.json`, SHA-256
-  `321b412244ae85dd12cbc5506b73b6576b0c2f91a1e220e35c289ea0fbb7abc3`.
-- Current review data: `review-surface/app/review-data-v002.json`, SHA-256
-  `0716a8b3d009074f533fc1d348ce11f1683a450ac92308ef4a1b511032daaa99`.
-- Historical G2 opening evidence remains preserved by
-  `reports/g2-package-manifest.json`, `data/sample/p1/manifest.v001.json`, and
-  `reports/p1-sample-verification.v001.json`.
+- Canonical inputs: 48 across 6 identities, 11 exact question versions, 1
+  reference version, 6 rule versions, 11 verification events, and 13 review
+  events.
+- JSON and SQLite agree for every version: 6 latest, 6 learner-ready, and zero
+  production coverage.
+- Approve, Reject, Revise, and Comment all pass schema validation and exclusive
+  ingestion. Duplicate event IDs and stale hashes are rejected.
+- Revision creates a new hash-bound immutable version. Automatic invalidation
+  binds the prior version and canonical newer version. The preserved
+  `far-q-000102.v001` approval does not carry to `v002`; `v002` required its own
+  James approval.
+- Comments remain non-decisive. Superseded, rejected, revised, invalidated, or
+  mechanically incomplete versions cannot become learner-ready through SQL.
 
-## Active P2.0 unit
+## P2.3 package ready for human gate
 
-1. Extend schemas for the ratified coverage, variety, anti-cloning, difficulty,
-   prose, and ratification metadata without mutating prior question versions.
-2. Build whole-bank and item checks for floors, caps, within-task diversity,
-   within-area compatibility, and observable six-dimensional ratings.
-3. Create purpose-built red corruptions for every new gating check before any
-   check can admit production content.
-4. Preserve cold reconstruction and the existing G2 sample/history while the
-   contract enforcement layer is added.
-
-Exit requires every new check to reject its named corruption, clean fixtures to
-pass with zero waivers, and the existing sample to remain reconstructible.
+- `reports/g3-package-manifest.json` and the mirrored surface input bind four
+  action routes, the canonical revision boundary, exact-version hashes,
+  reconstruction agreement, and zero production coverage.
+- Package SHA-256:
+  `48a8d5cdd739a1bd90bfa7fa896164ae5ebf623c10b4df61ba3742712d99b18d`.
+- The local interface now separates the one-question-at-a-time review queue
+  from `/evidence`, which holds the five-step checklist, explicit NOT ISSUED
+  verdict, reconstruction/revision proof, hashes, and local-only limitations.
+- Structural keyboard/accessibility checks pass: unique IDs, skip link,
+  semantic native controls, pressed state, live preview, labels, focus styles,
+  responsive layout, and reduced-motion handling.
+- The in-app browser had no active session to attach during preparation, so no
+  live browser interaction is claimed. James's actual local exercise and
+  explicit verdict remain required.
+- The review rail is decision-first: no preselected action, combined compact
+  state/version binding, action-specific guidance, a conditional revision
+  warning, and collapsed technical/next-step mechanics.
+- The default route now states the actual G3 scope and presents four guided
+  decision exercises. The sample stem remains visible, while answer, solution,
+  source, checks, hashes, and history sit behind one full-evidence disclosure.
 
 ## Verification receipt
 
-- P1 record validation: PASS.
-- Official taxonomy/source verification: PASS, 13/13 and 113 tasks.
-- Existing question verifier calibration: PASS, 8/8 red corruptions, zero
-  waivers.
-- Current sample: PASS, six items, six ready, 48/48 checks.
-- Python tests: PASS, 35/35. Python compilation: PASS.
-- Review-surface lint: PASS. Production build and rendered HTML: PASS, 2/2.
-- Amendment arithmetic: 47×3=141; 40×3=120; 26×3+14=92; total=353.
+- P1 records and official taxonomy/source: PASS, 13/13 and 113 tasks.
+- P1 item verifier: PASS, 8/8 red corruptions, zero waivers.
+- P2.0 controls: PASS, 9/9 red corruptions, zero waivers.
+- P2.1 routes: PASS, 10/10 known-bad fixtures, zero waivers.
+- P2.2 reconstruction/workflow: PASS, all 11 exact states equivalent and all
+  four actions exercised.
+- Current sample: PASS, six ready items and 48/48 checks.
+- Python tests: PASS, 52/52. Python compilation: PASS.
+- Review-surface lint: PASS. Production build/rendered HTML: PASS, 4/4 across
+  both routes.
 
 ## Preserved fences
 
-- No production generator or production-bank item exists yet.
-- No `result.md`, G3 approval, full-bank coverage claim, hosted persistence,
-  learner/admin product, account system, analytics, or public deployment
-  exists.
-- A production family cannot begin until its independent correctness route and
-  every applicable new gating check are red-calibrated.
+- No production generator, production-bank item, `data/production/`, or final
+  coverage claim exists.
+- No `result.md`, G3 approval, hosted persistence, learner/admin product,
+  account system, analytics, or public deployment exists.
+- SQLite remains disposable and local; workflow calibration is not the human
+  G3 verdict.

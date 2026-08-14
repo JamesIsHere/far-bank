@@ -1562,3 +1562,317 @@ Kill sweep and phase receipt:
 - All six current G2 versions remain exact-approved and reconstructible; the
   historical opening package and superseded-version events remain intact.
 - P1.6 exit evidence is satisfied. P2.0 is the active unit.
+
+### P2.0 — ratified production controls encoded and red-calibrated
+
+Date: 2026-08-13.
+
+- Added the machine-readable receipt
+  `data/contracts/far-g2-production-contract.v001.json`, bound to the ratified
+  `goal.md` SHA-256, amendment heading, and exact G2 evidence paths. Its
+  canonical JSON SHA-256 is
+  `7dae5c70e23e52028bf851473670285f3853dcd583af32ff926827eeaacc1a45`.
+- Added closed schemas for the receipt and an exact-version production-control
+  evidence companion. The companion transports coverage mapping and explicit
+  full-task scope, all ten variety observations, stable anti-cloning IDs,
+  distractor reproduction support, six unaveraged difficulty dimensions, and
+  targeted prose/fairness evidence without storing approval or readiness.
+- Preserved every immutable P1/G2 question version. Production observations
+  bind alongside content; they do not rewrite it.
+- Implemented nine gates: `RATIFICATION_BINDING`,
+  `ITEM_OBSERVABLE_CONSISTENCY`, `DIFFICULTY_OBSERVABLE_CONSISTENCY`,
+  `PROSE_FAIRNESS_EVIDENCE`, `COVERAGE_FLOORS`, `VARIETY_FLOORS`,
+  `WITHIN_TASK_DIVERSITY`, `BANK_CONCENTRATION_CAPS`, and
+  `AREA_COMPATIBILITY_MATRIX`.
+- Added one purpose-built corruption per gate and a deterministic calibration
+  report. Each of the 9/9 named gates rejects its targeted corruption; waivers
+  and uncalibrated checks are zero.
+- The clean 353-record baseline exercises 113 task floors and exact Area counts
+  141/120/92, ceiling-rounded variety floors, and 25%/40% caps. It is generated
+  in memory, marked `calibration_fixture`, creates no canonical question or
+  review event, and contributes zero production coverage.
+- Documented the companion boundary and calibration limitation in ADR 0003.
+
+Verification receipt:
+
+- `python scripts/validate_p1_records.py` — PASS.
+- `python scripts/verify_taxonomy.py data/far-taxonomy.json` — PASS, 13/13 and
+  113 representative tasks.
+- `python scripts/calibrate_question_verifier.py` — PASS, 8/8 red
+  corruptions, zero waivers.
+- `python scripts/calibrate_production_controls.py` — PASS, 9/9 red
+  corruptions, zero waivers.
+- `python scripts/verify_production_controls.py` — PASS, all nine controls.
+- `python scripts/verify_p1_sample.py` — PASS, six exact-approved ready items,
+  48/48 checks.
+- `python -m unittest discover -s tests -p "test_*.py" -v` — PASS, 40/40.
+- `python -m compileall -q scripts tests` — PASS.
+- `npm run lint` in `review-surface/` — PASS.
+- `npm test` in `review-surface/` — PASS build and 2/2 rendered-HTML tests.
+- `git diff --check` — PASS.
+
+Kill sweep and phase receipt:
+
+- No production generator, production-bank data, `data/production/`, G3
+  approval, final coverage claim, learner/admin application, accounts,
+  analytics, hosted persistence, public deployment, or `result.md` exists.
+- The six-item G2 queue, 13-event canonical review history, superseded versions,
+  invalidations, exact hashes, and historical gate evidence remain
+  reconstructible.
+- P2.0 exit evidence is satisfied. P2.1 independent correctness-route expansion
+  is active; percentage and ratio routes are first.
+
+### P2.1 — independent correctness routes implemented and red-calibrated
+
+Date: 2026-08-13.
+
+- Added `schema/correctness-route.schema.json`, a contract-bound companion that
+  preserves approved P1 content while requiring any future production route
+  evidence to bind an exact question ID, version ID, and content SHA-256.
+  Calibration fixtures are forbidden from carrying a production subject.
+- Implemented independent Decimal-based evaluators for percentage, ratio,
+  present value, effective interest, per-share, date/period schedule,
+  conditional rule table/classification, journal-entry balance and direction,
+  linked roll-forward, and nonnumeric assertion-fixture routes.
+- Added structured failure boundaries for zero denominators, unit mismatch,
+  invalid schedule boundaries, unresolved or forward references, journal
+  imbalance/direction defects, missing conditional inputs, and missing
+  assertion cases.
+- Added a separately stored nonnumeric reference artifact with a closed schema.
+  Its producer, verifier, and reference-fixture component identities are all
+  distinct. Its SHA-256 is
+  `41c432eee248c6cf7824aa1203835e08becba32acbe25d0b176829deb562c24f`.
+- Added ten clean route fixtures and one route-specific known-bad corruption
+  for each. All 10/10 named route checks reject their bad fixture; waivers and
+  uncalibrated route types are zero.
+- Deterministic report:
+  `reports/p2-correctness-route-calibration.json`, SHA-256
+  `d3bfd04271bf3857e8601da21a77288e127cf032ce90b283944bc2bf2fe2a385`.
+- Documented the independent-route and nonnumeric-reference boundary in ADR
+  0004. Fixtures remain synthetic, establish no accounting authority, and
+  create no production question, approval, readiness, or coverage.
+
+Verification receipt:
+
+- `python scripts/validate_p1_records.py` — PASS.
+- `python scripts/verify_taxonomy.py data/far-taxonomy.json` — PASS, 13/13 and
+  113 representative tasks.
+- `python scripts/calibrate_question_verifier.py` — PASS, 8/8 red
+  corruptions, zero waivers.
+- `python scripts/calibrate_production_controls.py` — PASS, 9/9 red
+  corruptions, zero waivers.
+- `python scripts/calibrate_correctness_routes.py` — PASS, 10/10 known-bad
+  fixtures, zero waivers.
+- `python scripts/verify_production_controls.py` and
+  `python scripts/verify_correctness_routes.py` — PASS.
+- `python scripts/verify_p1_sample.py` — PASS, six exact-approved ready items,
+  48/48 checks.
+- `python -m unittest discover -s tests -p "test_*.py" -v` — PASS, 46/46.
+- `python -m compileall -q scripts tests` — PASS.
+- `npm run lint` and `npm test` in `review-surface/` — PASS, including build
+  and 2/2 rendered-HTML tests.
+- `git diff --check` — PASS.
+
+Kill sweep and phase receipt:
+
+- No production generator, production-bank data, `data/production/`, G3
+  approval, final coverage claim, learner/admin application, accounts,
+  analytics, hosted persistence, public deployment, or `result.md` exists.
+- The six-item G2 queue, 13-event review history, superseded versions,
+  invalidations, exact hashes, and historical evidence remain reconstructible.
+- P2.1 exit evidence is satisfied. P2.2 rebuildable projection and exact-version
+  event workflow is active.
+
+### P2.2 — rebuildable projection and exact event workflow completed
+
+Date: 2026-08-13.
+
+- Extended `schema/review-projection.sql` with normalized rule/source and
+  question/rule links, exact required-check policy rows, source-impact state,
+  and derived learner-readiness and coverage views. No table stores editable
+  approval, readiness, or coverage truth.
+- Added update/delete guards for every normalized canonical parent and child
+  row, including verification checks. Direct SQL edits remain unsupported and
+  disappear on rebuild.
+- Implemented `scripts/rebuild_review_projection.py`: validate all canonical
+  schemas, content hashes, identities, references, event subjects, contiguous
+  versions, supersession links, and decisive-event ordering; derive state in
+  Python; load a fresh SQLite transaction; verify foreign keys/integrity;
+  compare every SQL state row with cold JSON; atomically replace the disposable
+  database only after agreement.
+- Current manifest covers 48 canonical records and is
+  `far-projection-inputs-6b8b5267b6e5792fc8ab4d432c67fd1a0f250479d053706897b876f8390251b4`.
+  All 11 exact-version states agree: 6 current, 6 learner-ready, zero production
+  coverage.
+- Strengthened automatic invalidation so ingestion requires and validates the
+  canonical newer same-identity version. Non-invalidation events cannot carry a
+  superseding version.
+- Added exclusive immutable revision creation with canonical rehash and full
+  question-contract validation. A revision cannot reuse prior content or
+  overwrite an existing version.
+- Exercised Approve, Reject, Revise, and Comment through the real exclusive
+  ingestion boundary. Also rejected a duplicate event ID and stale exact hash,
+  created a new revision/invalidation pair, and replayed the preserved
+  `far-q-000102.v001`→`v002` no-approval-carry example.
+- Documented the reconstruction and workflow boundary in ADR 0005.
+
+Deterministic evidence:
+
+- `reports/p2-projection-reconstruction.json` SHA-256:
+  `97e9344d5f4061b1ba87ef1efdc1786ddc5064522605b9429772284d2ce6b5be`.
+- `reports/p2-review-workflow-verification.json` SHA-256:
+  `eaa456e6bb656275f9baf54d8a749de1e8a7e5afa4489ee2d705755d9a9beb66`.
+- `schema/review-projection.sql` SHA-256:
+  `9f5bba7083208eaab7257953ef9233618ff109f49fe57c3272cf613587bfe294`.
+
+Verification receipt:
+
+- Full deterministic chain—P1 records, taxonomy/source, 8 item calibrations, 9
+  production controls, 10 correctness routes, current six-item sample, SQLite
+  rebuild, and workflow exercise—PASS with zero waivers.
+- `python -m unittest discover -s tests -p "test_*.py" -v` — PASS, 50/50.
+- `python -m compileall -q scripts tests` — PASS.
+- `npm run lint` and `npm test` in `review-surface/` — PASS, including build
+  and 2/2 rendered-HTML tests.
+- `git diff --check` — PASS.
+
+Kill sweep and phase receipt:
+
+- No production generator, production-bank data, `data/production/`, G3
+  approval, final coverage claim, learner/admin application, accounts,
+  analytics, hosted persistence, public deployment, or `result.md` exists.
+- The six-item G2 queue, 13-event review history, superseded versions,
+  invalidations, exact hashes, and historical evidence remain reconstructible.
+- P2.2 exit evidence is satisfied. P2.3 Gate G3 hands-on package preparation is
+  active; no automated result is treated as the G3 verdict.
+
+### P2.3 — bounded Gate G3 package ready for human verdict
+
+Date: 2026-08-13.
+
+- Added `scripts/build_g3_package.py` and a deterministic mirrored receipt at
+  `reports/g3-package-manifest.json` and
+  `review-surface/app/g3-workflow-package.json`.
+- Bound the package to the four calibrated review actions, exclusive-create and
+  stale-hash rejections, the canonical `far-q-000102.v001` to `v002` revision
+  boundary, all exact hashes, cold-reconstruction equivalence, and zero
+  production coverage.
+- Reframed the local review surface as the bounded G3 hands-on package. It now
+  presents a five-step exercise, an explicit NOT ISSUED human-verdict state,
+  the prior-version auto-invalidation/new-version exact-approval comparison,
+  evidence hashes, and local-only limitations.
+- Kept the event composer proposal-only. Downloading an event cannot mutate
+  canonical history or readiness; schema-validating exclusive ingestion
+  remains separate.
+- Fixed duplicate composer IDs across the six-item queue and added unique
+  labels, `aria-pressed` action states, a polite event-preview live region, a
+  skip link, consistent focus-visible styles, responsive package layouts, and
+  reduced-motion preservation.
+
+Deterministic evidence:
+
+- Gate G3 package SHA-256:
+  `c6a0c6f296d8a5d87112ae19f82c25a2802deba3310b5e1c95b6a02b6509e785`.
+- Package state is `ready_for_human_gate_not_approved`; verdict state is
+  `not_issued`; automation authority is false.
+
+Verification receipt:
+
+- Full deterministic chain—taxonomy/source, all calibrated item and production
+  controls, all correctness routes, current sample, SQLite reconstruction,
+  workflow exercise, review data, and G3 receipt—PASS with zero waivers.
+- `python -m unittest discover -s tests -p "test_*.py" -v` — PASS, 52/52.
+- `python -m compileall -q scripts tests` — PASS.
+- `npm run lint` and `npm test` in `review-surface/` — PASS, including build
+  and 3/3 rendered-HTML checks.
+- Structural keyboard/accessibility assertions cover unique IDs, the skip
+  target, labels, pressed states, and the event-preview live region.
+- The local server started successfully at `http://localhost:3000/`. The
+  in-app Browser plugin reported no active browser session, so live interaction
+  is deliberately not claimed as passed and remains part of James's G3
+  exercise.
+
+Kill sweep and handoff:
+
+- No canonical review event, G3 verdict, production question, coverage claim,
+  account, hosted persistence, public deployment, or `result.md` was created.
+- Temporary preview processes and logs were stopped and removed.
+- P2.3's automated package is ready. Gate G3 remains active until James
+  exercises the local workflow and explicitly approves or rejects it.
+
+### P2.3 usability revision — review queue separated from audit evidence
+
+Date: 2026-08-13.
+
+- James found the combined briefing, queue, and audit dossier too busy. The
+  agreed correction was progressive disclosure and two explicit surfaces.
+- Replaced six full vertically stacked dossiers with a one-question-at-a-time
+  queue. The current item, answers, core explanation, exact state, and action
+  composer now form the primary workspace.
+- Moved Blueprint/source, facts/distractors, difficulty/checks, full hashes,
+  and review history behind labeled native disclosure controls.
+- Added `/evidence` for the gate checklist, reconstruction agreement, revision
+  invalidation, zero coverage effect, limitations, and artifact hashes.
+- Shortened the visible fingerprint while preserving the full SHA-256 in
+  version details and every proposed event subject. Changing items resets the
+  composer through exact-version component identity.
+- Updated responsive layouts, focus behavior, rendered checks, and the package
+  builder so the separate evidence route is hash-bound.
+
+Verification receipt:
+
+- Gate G3 package SHA-256:
+  `d65aeeda8f1796a2ff6b40d135831c5a085848c9a3cad503c2300aa7f546c309`.
+- Review-surface lint and production build — PASS; `/` and `/evidence` emit.
+- Rendered route separation, accessibility structure, exact binding, and local
+  scope checks — PASS, 4/4.
+- The local server is healthy at `http://localhost:3000/`. The Browser plugin
+  again reported no active browser backend, so live visual interaction remains
+  James's exercise and is not reported as an automated pass.
+
+### P2.3 usability revision — decision-first action rail
+
+Date: 2026-08-13.
+
+- Combined the separate readiness and exact-version cards into one compact,
+  expandable binding. The short fingerprint remains visible; full SHA-256 and
+  readiness reasons remain one disclosure away.
+- Removed the default Comment selection. A reviewer must intentionally choose
+  Approve, Reject, Request revision, or Comment before entering evidence or
+  downloading a decision file.
+- Added action-specific prompts and renamed Revise to Request revision. The
+  approval-invalidation warning now appears only for that action.
+- Collapsed raw JSON under Technical details and the proposal/ingestion
+  explanation under What happens next. Removed the duplicate Gate evidence
+  card because the top navigation already provides that route.
+- Changed the primary label from Download event for validation to Download
+  decision file while preserving proposal-only behavior and exact binding.
+- Gate G3 package SHA-256:
+  `f1fd42714c84809b6da457d8c50b32189b4eaef5a110775b2bc7e71f61c45b65`.
+- Review-surface lint, two-route build, and 4/4 rendered checks pass. The
+  deterministic package tests pass. No live browser backend was available, so
+  James's visual interaction remains the human G3 exercise.
+
+### P2.3 usability revision — workflow scope made explicit
+
+Date: 2026-08-14.
+
+- James correctly identified that the prior screen still looked like a second
+  accounting-content review. G2 already owned that decision; G3 owns the
+  review workflow.
+- Renamed the primary task to Test the review decision flow and explicitly says
+  the exercise does not re-approve accounting content.
+- Replaced the six-item content queue with four guided paths: Approve, Reject,
+  Request revision, and Comment. Each path states the workflow behavior James
+  is evaluating.
+- Reduced the always-visible sample to its exact version, current state, and
+  stem. Answer choices, keyed explanation, solution, Blueprint/source, facts,
+  distractors, difficulty, checks, hashes, and history now sit behind one View
+  full question evidence disclosure.
+- The explanation form, proposal note, and decision-file inspection appear
+  only after a reviewer intentionally chooses an action.
+- Gate G3 package SHA-256:
+  `48a8d5cdd739a1bd90bfa7fa896164ae5ebf623c10b4df61ba3742712d99b18d`.
+- Review-surface lint, two-route build, 4/4 rendered checks, deterministic G3
+  package tests, and patch hygiene pass. No G3 verdict or canonical event was
+  inferred or created.

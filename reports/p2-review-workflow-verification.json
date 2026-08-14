@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0.0",
+  "workflow_id": "far-p2-review-workflow-calibration.v001",
+  "actions": [
+    {
+      "action": "approve",
+      "event_id": "far-review-p2-workflow-approve",
+      "ingested_exclusively": true
+    },
+    {
+      "action": "reject",
+      "event_id": "far-review-p2-workflow-reject",
+      "ingested_exclusively": true
+    },
+    {
+      "action": "revise",
+      "event_id": "far-review-p2-workflow-revise",
+      "ingested_exclusively": true
+    },
+    {
+      "action": "comment",
+      "event_id": "far-review-p2-workflow-comment",
+      "ingested_exclusively": true
+    }
+  ],
+  "exclusive_create_duplicate_rejected": true,
+  "stale_exact_version_binding_rejected": true,
+  "revision": {
+    "prior_version_id": "far-q-000101.v001",
+    "prior_content_sha256": "498115370269dc604843721dcd928931d6d57cd3e488b1a87143ddda42988400",
+    "new_version_id": "far-q-000101.v002",
+    "new_content_sha256": "20486d46cde43d4a0a108e146289eb1fb7032d6ad8cab1c84350aa1fa20e63f9",
+    "new_version_created_exclusively": true,
+    "auto_invalidation_event_id": "far-review-p2-workflow-auto-invalidate",
+    "auto_invalidation_created_exclusively": true
+  },
+  "canonical_revision_example": {
+    "question_id": "far-q-000102",
+    "exact_version_state": [
+      {
+        "version_id": "far-q-000102.v001",
+        "is_latest_version": false,
+        "latest_decisive_action": "auto_invalidate",
+        "learner_ready": false
+      },
+      {
+        "version_id": "far-q-000102.v002",
+        "is_latest_version": true,
+        "latest_decisive_action": "approve",
+        "learner_ready": true
+      }
+    ],
+    "prior_approval_carried_forward": false
+  },
+  "projection_equivalent_to_cold_reconstruction": true,
+  "projection_manifest_id": "far-projection-inputs-6b8b5267b6e5792fc8ab4d432c67fd1a0f250479d053706897b876f8390251b4",
+  "claim_limit": "This is local workflow and reconstruction evidence, not G3 approval, production content, or authorization for a hosted reviewer system."
+}

@@ -1,0 +1,1 @@
+{"corruption_id":"route-red-journal-wrong-direction","check_id":"ROUTE_JOURNAL_ENTRY","fixture_id":"route-fixture-journal-entry","mutations":[{"operation":"replace","path":"/specification/lines/1/direction","value":"debit"}]}

@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cpa-learning.local/schema/production-control-evidence.schema.json",
+  "title": "Exact-version FAR production-control observations",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "purpose", "contract_id", "subject", "mapping", "observations", "difficulty_profile", "prose_evidence"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "purpose": {"enum": ["calibration_fixture", "production_evidence"]},
+    "contract_id": {"const": "far-g2-production-contract.v001"},
+    "subject": {
+      "type": "object", "additionalProperties": false,
+      "required": ["question_id", "version_id", "content_sha256"],
+      "properties": {
+        "question_id": {"type": "string", "pattern": "^far-q-[0-9]{6}$"},
+        "version_id": {"type": "string", "pattern": "^far-q-[0-9]{6}\\.v[0-9]{3}$"},
+        "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "mapping": {
+      "type": "object", "additionalProperties": false,
+      "required": ["area_id", "representative_task_ids", "primary_task_id", "skill_level", "multi_task_justification", "full_task_exercised", "full_task_evidence", "mcq_scope_limit"],
+      "properties": {
+        "area_id": {"enum": ["far.area.1", "far.area.2", "far.area.3"]},
+        "representative_task_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "primary_task_id": {"type": "string", "minLength": 1},
+        "skill_level": {"enum": ["remembering_and_understanding", "application", "analysis"]},
+        "multi_task_justification": {"type": ["string", "null"]},
+        "full_task_exercised": {"type": "boolean"},
+        "full_task_evidence": {"type": ["string", "null"]},
+        "mcq_scope_limit": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {"if": {"properties": {"full_task_exercised": {"const": true}}, "required": ["full_task_exercised"]}, "then": {"properties": {"full_task_evidence": {"type": "string", "minLength": 1}}}},
+        {"if": {"properties": {"full_task_exercised": {"const": false}}, "required": ["full_task_exercised"]}, "then": {"properties": {"full_task_evidence": {"type": "null"}}}}
+      ]
+    },
+    "observations": {
+      "type": "object", "additionalProperties": false,
+      "required": ["stem_word_count", "stem_length_bin", "numeric_fact_count", "total_fact_count", "numeric_fact_density_bin", "primary_accounting_work", "dependent_step_count", "branch_or_reconciliation_loop", "dependent_steps_bin", "irrelevant_fact_count", "conditional_clause_count", "irrelevant_facts_bin", "ask_placement", "indirect_ask_deliberate", "solution_end_ask", "rule_pressure_tags", "rule_boundary_count", "accounting_interaction_count", "accounting_has_exception_or_judgment", "primary_solution_representation", "elimination_burden", "estimated_time_seconds", "observed_time_seconds", "realistic_time_pressure_bin", "operation_count", "stem_template_id", "fact_pattern_id", "distractor_family_id", "distractor_error_model_ids", "distractor_reproduction_supported_ids", "challenge_mechanic_tags"],
+      "properties": {
+        "stem_word_count": {"type": "integer", "minimum": 1},
+        "stem_length_bin": {"enum": ["short", "standard", "dense"]},
+        "numeric_fact_count": {"type": "integer", "minimum": 0},
+        "total_fact_count": {"type": "integer", "minimum": 1},
+        "numeric_fact_density_bin": {"enum": ["low", "medium", "high"]},
+        "primary_accounting_work": {"enum": ["conceptual_recall", "classification_rule_selection", "computation", "analytical_reconciliation_inference"]},
+        "dependent_step_count": {"type": "integer", "minimum": 1},
+        "branch_or_reconciliation_loop": {"type": "boolean"},
+        "dependent_steps_bin": {"enum": ["one", "two_to_three", "four_plus"]},
+        "irrelevant_fact_count": {"type": "integer", "minimum": 0},
+        "conditional_clause_count": {"type": "integer", "minimum": 0},
+        "irrelevant_facts_bin": {"enum": ["none", "one_to_two", "three_plus"]},
+        "ask_placement": {"enum": ["direct_final_sentence", "indirect_embedded"]},
+        "indirect_ask_deliberate": {"type": "boolean"},
+        "solution_end_ask": {"type": "string", "minLength": 1},
+        "rule_pressure_tags": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["rule", "timing", "basis", "measurement", "classification", "presentation", "convention"]}},
+        "rule_boundary_count": {"type": "integer", "minimum": 0},
+        "accounting_interaction_count": {"type": "integer", "minimum": 1},
+        "accounting_has_exception_or_judgment": {"type": "boolean"},
+        "primary_solution_representation": {"enum": ["formula", "roll_forward", "journal_effect", "financial_statement_view", "rule_selection", "classification"]},
+        "elimination_burden": {"enum": ["low", "medium", "high"]},
+        "estimated_time_seconds": {"type": "integer", "minimum": 1},
+        "observed_time_seconds": {"type": ["integer", "null"], "minimum": 1},
+        "realistic_time_pressure_bin": {"enum": ["low", "moderate", "high"]},
+        "operation_count": {"type": "integer", "minimum": 0},
+        "stem_template_id": {"type": "string", "minLength": 1},
+        "fact_pattern_id": {"type": "string", "minLength": 1},
+        "distractor_family_id": {"type": "string", "minLength": 1},
+        "distractor_error_model_ids": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": {"type": "string", "pattern": "^error-[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "distractor_reproduction_supported_ids": {"type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": {"type": "string", "pattern": "^error-[a-z0-9]+(?:-[a-z0-9]+)*$"}},
+        "challenge_mechanic_tags": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "difficulty_profile": {
+      "type": "array", "minItems": 6, "maxItems": 6,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["dimension_id", "rubric_version_id", "level", "observable_evidence", "human_review_flag"],
+        "properties": {
+          "dimension_id": {"enum": ["accounting_complexity", "reasoning_steps", "reading_fact_selection", "rule_convention_pressure", "distractor_elimination_burden", "realistic_time_pressure"]},
+          "rubric_version_id": {"const": "far-g2-six-dimensional-difficulty.v001"},
+          "level": {"type": "integer", "minimum": 1, "maximum": 5},
+          "observable_evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "human_review_flag": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "prose_evidence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["structured_token_count", "stem_token_count", "irrelevant_fact_annotations", "framework", "framework_named_when_required", "answer_changing_assumptions_traced", "negative_exception_deliberate", "double_negative_screen_passed", "options_parallel", "options_mutually_exclusive", "options_normalized_unique", "options_units_consistent", "absolute_claims", "absolute_claims_traced", "explanation_element_ids", "distractor_explanation_count"],
+      "properties": {
+        "structured_token_count": {"type": "integer", "minimum": 0},
+        "stem_token_count": {"type": "integer", "minimum": 0},
+        "irrelevant_fact_annotations": {"type": "integer", "minimum": 0},
+        "framework": {"enum": ["for_profit_us_gaap", "nfp", "governmental", "public_company", "special_purpose"]},
+        "framework_named_when_required": {"type": "boolean"},
+        "answer_changing_assumptions_traced": {"type": "boolean"},
+        "negative_exception_deliberate": {"type": "boolean"},
+        "double_negative_screen_passed": {"type": "boolean"},
+        "options_parallel": {"type": "boolean"},
+        "options_mutually_exclusive": {"type": "boolean"},
+        "options_normalized_unique": {"type": "boolean"},
+        "options_units_consistent": {"type": "boolean"},
+        "absolute_claims": {"type": "integer", "minimum": 0},
+        "absolute_claims_traced": {"type": "integer", "minimum": 0},
+        "explanation_element_ids": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "distractor_explanation_count": {"const": 3}
+      }
+    }
+  }
+}

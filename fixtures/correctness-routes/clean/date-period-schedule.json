@@ -1,0 +1,8 @@
+{
+  "schema_version":"1.0.0","fixture_id":"route-fixture-date-period-schedule","purpose":"calibration_fixture","contract_id":"far-g2-production-contract.v001","route_id":"route-date-period-schedule","route_type":"date_period_schedule",
+  "producer_component_id":"fixture-date-schedule-author","verifier_component_id":"independent-date-schedule-evaluator","shared_deciding_function":false,
+  "inputs":[{"input_id":"input-start-date","value_type":"date","value":"2026-01-01"},{"input_id":"input-end-date","value_type":"date","value":"2026-04-01"}],
+  "specification":{"start_input_id":"input-start-date","end_input_id":"input-end-date","unit":"days","boundary_rule":"elapsed"},
+  "expected_output":{"value_type":"number","value":90,"unit":"days","rounding":{"mode":"none","decimal_places":0}},
+  "independence_limit":"Synthetic elapsed-day fixture; the controlling convention for inclusive dates or day-count basis must be explicit in a real item."
+}

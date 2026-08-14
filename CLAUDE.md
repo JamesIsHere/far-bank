@@ -12,9 +12,9 @@ build the learner-facing website.
 
 | Field | Value |
 | --- | --- |
-| Status | LIVE — G1 and G2 passed; P2 contract-enforcement phase active |
-| Last session | James ratified the dated G2 production-contract amendment |
-| Next action | P2.0: encode and red-calibrate the ratified production controls |
+| Status | LIVE — G1/G2 and P2.0–P2.2 passed; P2.3 G3 package active |
+| Last session | P2.2 proved cold SQLite reconstruction and exact event workflow |
+| Next action | P2.3: render the bounded hands-on G3 workflow package |
 
 `state.md` is the authoritative fine-grained resume snapshot. This table is
 only a signpost.
